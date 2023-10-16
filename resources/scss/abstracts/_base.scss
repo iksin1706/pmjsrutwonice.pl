@@ -23,7 +23,7 @@
         } //1200px
     }
     @if $breakpoint == big-screen {
-        @media (min-width: 112.5em) {
+        @media (min-width: 130em) {
             @content;
         } //1800px
     }
@@ -48,7 +48,6 @@ body {
     background-color: $color-dark-2;
 }
 .section {
-    width: 100vw;
     min-height: 100vh;
     padding: 10rem;
     @include respond(phone) {

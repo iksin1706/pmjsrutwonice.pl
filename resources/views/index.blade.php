@@ -10,44 +10,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
 
-    @vite(['resources/scss/app.scss', 'resources/scss/pages/home.scss', 'resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 
 <body>
     @include('nav')
-
-    <section class="section hero">
-        <video autoplay muted loop id="myVideo" class="bg-video">
-            <source src="videos/background.m4v" type="video/mp4">
-            Video couldn't be loaded
-        </video>
-        <div class="bg-video__gradient"></div>
-        <div class="bg-video__content">
-            <header class="hero__header side-line ml-3">
-                <h1 class="header-with-roller">Z naszymi produktami zregenerujesz
-                    <div class="roller">
-                        <span class="roller__rolltext">Felgi<br />
-                            Zaciski<br />
-                            Turbiny<br />
-                            <span class="roller__last">i wiele innych ...</span><br />
+    <main>
+        <section class="section hero">
+            <video autoplay muted loop id="myVideo" class="bg-video">
+                <source src="videos/background.m4v" type="video/mp4">
+                Video couldn't be loaded
+            </video>
+            <div class="bg-video__gradient"></div>
+            <div class="bg-video__content">
+                <header class="hero__header side-line">
+                    <h1 class="header">Z naszymi produktami zregenerujesz
+                        <div class="header__roller">
+                            <span class="header__roller__rolltext">Felgi<br />
+                                Zaciski<br />
+                                Turbiny<br />
+                                <span class="header__roller__last">i wiele innych ...</span><br />
+                        </div>
+                    </h1>
+                    <div class="mt-">
+                        <a href="/produkty" class="btn btn--empty">Nasze produkty</a>
+                        <a href="/o-nas" class="btn btn-text">O nas</a>
                     </div>
-                </h1>
-                <div class="btn-wrapper">
-                    <a href="/produkty" class="btn btn--empty">Nasze produkty</a>
-                    <a href="/o-nas" class="btn btn-text btn-text--animated">O nas</a>
-                </div>
-            </header>
-        </div>
-        <div class="scroll-down-animation">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </section>
-
-
-
+                </header>
+            </div>
+            <div class="scroll-down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+    </main>
     @include('footer')
 </body>
 

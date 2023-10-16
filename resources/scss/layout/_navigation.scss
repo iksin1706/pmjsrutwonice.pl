@@ -1,13 +1,14 @@
 .nav {
     position: fixed;
-    width: 100vw;
+    width: calc(100vw - 20rem);
     transition: 0.3s ease-out;
     color: white;
     font-size: $font-size-2;
     z-index: 999;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0rem 10rem 0rem 10rem;
 
     &__logo {
         height: 4rem;
@@ -262,6 +263,10 @@
 
 
     @include respond(phone) {
+        & {
+            padding: 0rem 3rem 0rem 3rem;
+            width: calc(100vw - 6rem);
+        }
         &__list{
             display: none;
         }

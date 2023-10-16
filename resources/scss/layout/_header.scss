@@ -5,7 +5,6 @@
     font-weight: 100;
     font-size: $font-size-default;
     letter-spacing: 1.5rem;
-    width: 200%;
 
     &__roller {
         margin-top: 2rem;
@@ -19,7 +18,7 @@
         align-items: center;
       
         &__last {
-          font-size: 2.5rem;
+          font-size: 2.5rem !important;
           line-height: 4rem;
           font-style: italic;
           letter-spacing: 1rem;

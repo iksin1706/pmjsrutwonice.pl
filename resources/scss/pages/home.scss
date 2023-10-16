@@ -1,1 +1,18 @@
-@import '../components/scroll-down'
+.hero {
+    height: 100vh;
+    color: $color-white;
+
+    //transform: translateZ(-200px) scale(3);
+
+    &__header {
+        position: absolute;
+        top: 50vh;
+        transform: translateY(-50%);
+        left: 10rem;
+        @include respond(tab-land) {
+            & {
+                left: 3rem;
+            }
+        }
+    }
+}

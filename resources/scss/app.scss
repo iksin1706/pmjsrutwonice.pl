@@ -1,9 +1,18 @@
 
 @import 'abstracts/variables';
 @import 'abstracts/base';
+@import 'abstracts/animations';
 
 @import 'base/typography';
 @import 'base/utilities';
 
 @import 'layout/navigation';
 @import 'layout/footer';
+
+
+@import 'components/scroll-down';
+@import 'components/bg-video';
+@import 'components/button';
+@import 'layout/header';
+
+@import 'pages/home';
