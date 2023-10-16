@@ -1,0 +1,40 @@
+.header{
+    text-align: left;
+    text-transform: uppercase;
+    color: #f1faee;
+    font-weight: 100;
+    font-size: $font-size-default;
+    letter-spacing: 1.5rem;
+    width: 200%;
+
+    &__roller {
+        margin-top: 2rem;
+        height: 6.25rem;
+        line-height: 6rem;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+      
+        &__last {
+          font-size: 2.5rem;
+          line-height: 4rem;
+          font-style: italic;
+          letter-spacing: 1rem;
+          margin-top: 0;
+          color: $color-white;
+        }
+      
+        &__rolltext {
+          position: absolute;
+          font-weight: 900;
+          font-size: 6rem;
+          letter-spacing: 2rem;
+          color: white;
+          animation-delay: 1s;
+          animation: roll 8s infinite cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        }
+  }
+}

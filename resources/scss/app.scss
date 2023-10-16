@@ -1,6 +1,9 @@
-.container {
-    background-color: red;
-    h1 {
-        color: orange;
-    }
-}
+
+@import 'abstracts/variables';
+@import 'abstracts/base';
+
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'layout/navigation';
+@import 'layout/footer';
