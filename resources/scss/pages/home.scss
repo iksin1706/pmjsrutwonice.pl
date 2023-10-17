@@ -8,11 +8,63 @@
         position: absolute;
         top: 50vh;
         transform: translateY(-50%);
-        left: 10rem;
-        @include respond(tab-land) {
+        left: $page-padding-desktop;
+        @include respond(tab-port) {
             & {
-                left: 3rem;
+                left: $page-padding-mobile;
             }
         }
     }
+}
+
+.about {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -20vh;
+        left: 0;
+        width: 100vw;
+        height: 20vh;
+
+        background-image: linear-gradient(to top, #000000 10%, #00000000 100%);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -20vh;
+        left: 0;
+        width: 100vw;
+        height: 20vh;
+        background-image: linear-gradient(to bottom, #000000 10%, #00000000 100%);
+    }
+    background: linear-gradient(to bottom, #000, #000);
+    background-size: contain;
+
+    &__description {
+        min-height: 100vh;
+        background: #000;
+
+        &__text {
+            width: clamp(30rem,50%,70rem);
+        }
+        &__image {
+            opacity: 1;
+            aspect-ratio: 3/2;
+            width: clamp(40rem,40%,80rem);
+            object-fit: cover;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 5rem;
+    }
+
+    &__text {
+        font-size: 2.3rem;
+    }
+}
+
+.company-info{
+
 }

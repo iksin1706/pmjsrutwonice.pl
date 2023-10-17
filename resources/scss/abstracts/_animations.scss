@@ -1,21 +1,32 @@
 @keyframes roll {
-    0%,
-    10% {
-      top: 0;
-    }
-    25%,
-    35% {
-      top: -6rem;
-    }
-    50%,
-    60% {
-      top: -12rem;
-    }
-    75%,
-    85% {
-      top: -18.5rem;
-    }
-    100% {
-      top: 0rem;
-    }
+  0%,
+  10% {
+    top: 0;
   }
+  25%,
+  35% {
+    top: -6rem;
+  }
+  50%,
+  60% {
+    top: -12rem;
+  }
+  75%,
+  85% {
+    top: -18.5rem;
+  }
+  100% {
+    top: 0rem;
+  }
+}
+
+@keyframes arrow-animation {
+  0% {
+    width: 0%;
+    scale: 0;
+  }
+  100% {
+    width: 100%;
+    scale: 1;
+  }
+}

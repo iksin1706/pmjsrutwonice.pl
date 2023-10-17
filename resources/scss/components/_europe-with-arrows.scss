@@ -1,0 +1,96 @@
+.europe {
+    max-width: 50rem;
+    
+    &__image {
+        width: clamp(15rem,90%,50rem);
+        padding: 2rem;
+        display: block;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 32%;
+            left: 49%;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: $color-primary;
+        }
+    }
+
+}
+
+.arrow {
+    position: absolute;
+    top: 66%;
+    left: 52%;
+    animation-delay: 2s;
+    overflow: hidden;
+    width: 0%;
+    height: 20rem;
+    z-index: 100;
+
+    transform-origin: 0 0;
+    & > img {
+        width: 20%;
+    }
+}
+
+.animated > .arrow {
+    animation: arrow-animation cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards 1.5s;
+}
+
+.arrow:nth-child(1) {
+    transform: rotate(150deg);
+    & > img {
+        width: 35%;
+    }
+}
+.arrow:nth-child(2) {
+    transform: rotate(90deg);
+
+    & > img {
+        width: 25%;
+    }
+    animation-delay: 0.5s;
+}
+.arrow:nth-child(3) {
+    transform: rotate(-155deg);
+
+    & > img {
+        width: 30%;
+    }
+    animation-delay: 1s;
+}
+.arrow:nth-child(4) {
+    transform: rotate(-10deg);
+
+    & > img {
+        width: 10%;
+    }
+    animation-delay: 1.5s;
+}
+.arrow:nth-child(5) {
+    transform: rotate(130deg);
+
+    & > img {
+        width: 100px;
+    }
+    animation-delay: 2s;
+}
+
+.stats {
+    max-width: 40rem;
+    width: 100%;
+    padding: 5rem;
+}
+
+.stat {
+    &__number {
+        font-size: 7rem;
+        color: #aaaaaa;
+    }
+    &__description {
+        font-size: $font-size-2;
+    }
+}
