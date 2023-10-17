@@ -205,7 +205,7 @@
                     </div>
                 </div>
         </section>
-        <section class="section contact" id="contact">
+        <section class="section contact pt-3" id="contact">
             <h2 class="contact__label trigger text-center w-100">Jesteś zainteresowany? Zadzowń <span
                     class="underlined">726 120 051</span> </h2>
 
@@ -213,7 +213,7 @@
                 <div class="contact__left">
                     <div class="contact__card ">
                         <div class="d-flex flex-center">
-                            <ul class="contact__list text-left">
+                            <ul class="contact__list">
                                 <li>Mateusz Jasiński</li>
                                 <li>biuro@pmjśrutownice.pl</li>
                                 <li>726 120 051</li>

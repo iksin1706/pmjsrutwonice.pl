@@ -64,11 +64,12 @@
 .banner {
     position: absolute;
     overflow: hidden;
-
+    filter: drop-shadow(0px 10px 10px #202020);
     &.dev {
         transform: skew(0deg);
         border-right: rgba(white, 0.5) solid 4px;
         width: 50%;
+
         .banner-content {
             transform: skew(0deg);
         }

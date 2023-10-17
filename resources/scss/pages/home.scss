@@ -66,6 +66,7 @@
     animation: flagship-background 10s infinite ease-in-out;
     background: url("img/123123.jpg");
     background-position: 100% 50%;
+    background-attachment: fixed;
     background-color: #000000;
 
     z-index: 2;
@@ -140,7 +141,6 @@
     background-size: 100%;
     background-repeat: repeat-x;
     background-position: 0 120%;
-    padding: 15rem 5rem 15rem 5rem;
     &::after {
         content: "";
         position: absolute;
@@ -155,6 +155,15 @@
         padding-bottom: 10rem;
         flex-wrap: wrap;
     }
+
+    &__right{
+        @include respond(tab-port) {
+            & {
+                margin-top: 10rem;
+            }
+        }
+    }
+
     &__label {
         font-size: 4rem;
         color: $color-white;
@@ -191,11 +200,14 @@
             margin: 2rem;
             margin-left: 0rem;
         }
+        @include respond(tab-port) {
+            & {
+                text-align: center;
+            }
+        }
     }
 }
 
-.contact {
-}
 
 .write-to-us {
     background-image: linear-gradient(105deg, rgba($color-black, 0.9) 0%, rgba($color-black, 0.9) 50%, transparent 50%),
