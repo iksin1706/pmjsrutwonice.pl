@@ -50,39 +50,40 @@
                 <div class="about__description__text side-line--fade clamp">
                     <h2 class="heading-2 ">O nas</h2>
                     <p class="paragraph">
-                    Jesteśmy polską firmą, która doskonale rozumie potrzeby
-                    firm renowacyjnych i regeneracyjnych w całej Europie.
-                    Nasza mocna historia w renowacji felg stanowi solidne
-                    fundamenty naszego know-how.
-                    Obecnie skupiamy się na produkcji wysokiej jakości
-                    maszyn oraz dostarczaniu nowatorskich rozwiązań,
-                    aby wesprzeć rozwój branży. Tworzymy partnerskie
-                    relacje oparte na wiedzy i doświadczeniu, gotowe sprostać wyzwaniom Twojego
-                    biznesu.
+                        Jesteśmy polską firmą, która doskonale rozumie potrzeby
+                        firm renowacyjnych i regeneracyjnych w całej Europie.
+                        Nasza mocna historia w renowacji felg stanowi solidne
+                        fundamenty naszego know-how.
+                        Obecnie skupiamy się na produkcji wysokiej jakości
+                        maszyn oraz dostarczaniu nowatorskich rozwiązań,
+                        aby wesprzeć rozwój branży. Tworzymy partnerskie
+                        relacje oparte na wiedzy i doświadczeniu, gotowe sprostać wyzwaniom Twojego
+                        biznesu.
                     </p>
                 </div>
-                <img class="about__description__image clamp" src="{{asset('img/logo2.png')}}" alt="Logo of Company">
+                <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}" alt="Logo of Company">
             </section>
-            <section class="section company-info background--dark--gradient">
-                <h2 class="heading-2 bottom-line--fade w-50 mb-3 clamp">Nasza firma w liczbach</h2>
-                <div class="row">
+            <section class="section company-info background--dark--gradient p-3">
+                {{-- <h2 class="heading-2 bottom-line--fade w-50 mb-3 clamp">Nasza firma w liczbach</h2> --}}
+                <div class="row flex-sa">
                     <div class="europe clamp">
-                        <img class="europe__image" loading="lazy" src="{{asset('img/europe.svg')}}" alt="Map of Europe">
+                        <img class="europe__image" loading="lazy" src="{{ asset('img/europe.svg') }}"
+                            alt="Map of Europe">
                         <div class="europe__arrows trigger">
                             <div class="arrow">
-                                <img src="{{asset('img/arrow.svg')}}">
+                                <img src="{{ asset('img/arrow.svg') }}">
                             </div>
                             <div class="arrow">
-                                <img src="{{asset('img/arrow.svg')}}">
+                                <img src="{{ asset('img/arrow.svg') }}">
                             </div>
                             <div class="arrow">
-                                <img src="{{asset('img/arrow.svg')}}">
+                                <img src="{{ asset('img/arrow.svg') }}">
                             </div>
                             <div class="arrow">
-                                <img src="{{asset('img/arrow.svg')}}">
+                                <img src="{{ asset('img/arrow.svg') }}">
                             </div>
                             <div class="arrow">
-                                <img src="{{asset('img/arrow.svg')}}">
+                                <img src="{{ asset('img/arrow.svg') }}">
                             </div>
                         </div>
                     </div>
@@ -100,7 +101,118 @@
                     </div>
                 </div>
             </section>
+            <section>
+                <h2 class="heading-2 mt-3 text--center w-100" id="products">Odkryj naszą oferte</h2>
+                </p>
+                <div class="slider trigger animation-finished">
+                    <div class="slide">
+                        <div class="slide__image-container">
+                            <img class="slide__image " src="{{ asset('img/rb11.JPG') }}" alt="">
+                        </div>
+                        <h3 class="slide__preview">Śrutownice</h3>
+                        <div class="slide__text">
+                            <h3>Śrutownice</h3>
+                            <p>Nasze flagowe produkty, idealna alternatywa dla piaskarek</p>
+
+                        </div>
+                        <a class="slide__btn btn btn--filled"
+                            onclick="document.querySelector('.pop-up').classList.add('pop-up--active')">Zobacz
+                            oferte</a>
+                    </div>
+                    <div class="slide active">
+                        <div class="slide__image-container">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                        </div>
+                        <h3 class="slide__preview">Piaskarki</h3>
+                        <div class="slide__text">
+                            <h3>Piaskarki</h3>
+                            <p>Oprócz śrutownic mamy dostępne również tradycyjne piaskarki</p>
+                        </div>
+                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__image-container">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                        </div>
+                        <h3 class="slide__preview">Napylarki</h3>
+                        <div class="slide__text">
+                            <h3>Napylarki</h3>
+                            <p>Innowacyjne urządzenie do uzupełniania braków np w felgach</p>
+                        </div>
+                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                    </div>
+                    <div class="slide">
+                        <div class=" slide__image-container">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                        </div>
+                        <h3 class="slide__preview">Piece</h3>
+                        <div class="slide__text">
+                            <h3>Piece</h3>
+                            <p>Elektryczne piece do malowania proszkowego</p>
+                        </div>
+                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                    </div>
+                    <div class="slide">
+                        <div class="slide__image-container">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                        </div>
+                        <h3 class="slide__preview">Kabiny</h3>
+                        <div class="slide__text">
+                            <h3>Kabiny do malowania</h3>
+                            <p>Idealnie przystowane do malowania proszkowego kabiny</p>
+                        </div>
+                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                    </div>
+                </div>
+            </section>
         </article>
+        <section class="flagship">
+            <div class="d-flex flex-center  p-4">
+                <div class="row">
+                    <div class="flagship__text clamp">
+                        <h2 class="heading-2">Nasz flagowy produkt</h2>
+                        <p class="paragraph">
+                        <p id="rb11"><span>Śrutownica RB11 jest urządzeniem, które automatyzuje - a co
+                                za tym
+                                idzie
+                                znacznie ułatwia proces obróbki strumieniowo-ściernej. Wbrew stereotypom poprzez
+                                śrutowanie
+                                nie
+                                uzyskujemy dużo bardziej chropowatej powierzchni, niż podczas procesu piaskowania.
+                                Śrutowanie
+                                śrutem o symbolu S110 odpowiada piaskowaniu przy użyciu poligritu o gradacji 0,2-1.2
+                                przy
+                                ciśnieniu 7 bar, co pozwala na feldze aluminiowej uzyskać powierzchnie o
+                                chropowatości
+                                28um-35um, co zapewnia bardzo dobra przyczepność,
+                                na przykład dla farb proszkowych, przy czym nie ma problemu z wyrównaniem felgi
+                                warstwą
+                                podkładową.</span></p>
+                        <div class="rb11__btn btn btn--filled">Dowiedz się więcej</div>
+                    </div>
+                    <img class="flagship__image clamp" src="{{asset('img/rb1111.png')}}" alt="">
+                </div>
+                <div class="beforeafter">
+                    <div class="color-black">PRZED</div>
+                    <div class="color-primary">PO</div>
+                </div>
+
+                <div class="banner-container">
+                    <div id="banner-wrapper" class="banner-wrapper">
+                        <div class="banner design">
+                            <div class="banner-content">
+                                <img src="images/normal2.png" />
+                            </div>
+                        </div>
+                        <div class="banner dev">
+                            <div class="banner-content">
+                                <img src="images/rust2.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
     </main>
     @include('footer')
 </body>

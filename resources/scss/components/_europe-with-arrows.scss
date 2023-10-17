@@ -1,8 +1,9 @@
 .europe {
-    max-width: 50rem;
+
+    position: relative;
     
     &__image {
-        width: clamp(15rem,90%,50rem);
+        width: 100%;
         padding: 2rem;
         display: block;
         position: relative;

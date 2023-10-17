@@ -65,6 +65,30 @@
     }
 }
 
-.company-info{
-
-}
+.flagship {
+    width: 100vw;
+  
+    background-image: url("images/123123.jpg");
+    animation: test 10s infinite ease-in-out;
+    transform: rotate();
+  
+    background-position: 100% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #000000;
+   // transform: translateZ(-100px) scale(2);
+    margin-top: 50rem;
+    padding-top: 25rem;
+    padding-bottom: 25rem;
+    z-index: 2;
+  
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $color-primary;
+      z-index: 3;
+    }
+  }

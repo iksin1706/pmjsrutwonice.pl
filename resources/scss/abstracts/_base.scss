@@ -47,9 +47,10 @@ html {
 body {
     background-color: $color-dark-2;
     overflow-x: hidden;
+    width: 100vw;
 }
 .section {
-    min-height: 100vh;
+    min-height: 65vh;
     padding: 0rem $page-padding-desktop 0rem $page-padding-desktop;
     @include respond(tab-port) {
         & {
