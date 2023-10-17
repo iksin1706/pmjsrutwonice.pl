@@ -59,31 +59,33 @@ function sliderPluggin(activeslide = 0) {
   
   });
   
-//   document.addEventListener('DOMContentLoaded', function () {
-//     let banner = document.getElementById('banner-wrapper');
-//     let devLayer = banner.querySelector('.dev');
-//     let delta = 0;
+  document.addEventListener('DOMContentLoaded', function () {
+    let banner = document.getElementById('banner-wrapper');
+    let devLayer = banner.querySelector('.dev');
+    let delta = 0;
   
-//     banner.addEventListener('mousemove', function (e) {
-//       delta = e.clientX - banner.offsetLeft + 500;
-//       devLayer.style.width = delta + 'px';
-//       if (banner.offsetWidth / 2 + 500 > delta) {
-//         devLayer.style.borderRight = "solid 7px #000000";
-//       }
-//       else devLayer.style.borderRight = "solid 7px #FBDB04"
-//     });
-//   });
+    function handleMoveEvent(xPosition) {
+      delta = xPosition - banner.offsetLeft;
+      devLayer.style.width = delta + 'px';
+      if (banner.offsetWidth / 2 > delta) {
+        devLayer.style.borderRight = "solid 5px #ffffff99";
+      } else {
+        devLayer.style.borderRight = "solid 5px #ffffff99";
+      }
+    }
   
-  // navbar = document.querySelector(".navbar");
-  // scrollPostion = 0;
+    banner.addEventListener('mousemove', function (e) {
+      handleMoveEvent(e.clientX);
+    });
   
-  // window.addEventListener("scroll", () => {
-  //   if (scrollPostion > window.scrollY) navbar.style.display = 'none';
-  //   else navbar.style.display = 'block'
-  //   scrollPostion = window.scrollY;
-  // })
-  
-  
+    banner.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+
+      if (e.touches && e.touches.length > 0) {
+        handleMoveEvent(e.touches[0].clientX);
+      }
+    });
+  });
   
   function animateCountUp(targetElement, endValue, duration) {
     let currentValue = 0;

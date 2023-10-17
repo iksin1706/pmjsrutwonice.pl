@@ -79,12 +79,7 @@
                             <div class="arrow">
                                 <img src="{{ asset('img/arrow.svg') }}">
                             </div>
-                            <div class="arrow">
-                                <img src="{{ asset('img/arrow.svg') }}">
-                            </div>
-                            <div class="arrow">
-                                <img src="{{ asset('img/arrow.svg') }}">
-                            </div>
+
                         </div>
                     </div>
                     <div class="company-info__stats trigger clamp">
@@ -101,10 +96,10 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <h2 class="heading-2 mt-3 text--center w-100" id="products">Odkryj naszą oferte</h2>
+            <section class="pb-3">
+                <h2 class="heading-2 mt-3 mb-2 text--center w-100" id="products">Odkryj naszą oferte</h2>
                 </p>
-                <div class="slider trigger animation-finished">
+                <div class="slider trigger animation-finished pb-3">
                     <div class="slide">
                         <div class="slide__image-container">
                             <img class="slide__image " src="{{ asset('img/rb11.JPG') }}" alt="">
@@ -119,7 +114,7 @@
                             onclick="document.querySelector('.pop-up').classList.add('pop-up--active')">Zobacz
                             oferte</a>
                     </div>
-                    <div class="slide active">
+                    <div class="slide">
                         <div class="slide__image-container">
                             <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
                         </div>
@@ -166,52 +161,116 @@
                 </div>
             </section>
         </article>
-        <section class="flagship">
-            <div class="d-flex flex-center  p-4">
-                <div class="row">
-                    <div class="flagship__text clamp">
-                        <h2 class="heading-2">Nasz flagowy produkt</h2>
-                        <p class="paragraph">
-                        <p id="rb11"><span>Śrutownica RB11 jest urządzeniem, które automatyzuje - a co
-                                za tym
-                                idzie
-                                znacznie ułatwia proces obróbki strumieniowo-ściernej. Wbrew stereotypom poprzez
-                                śrutowanie
-                                nie
-                                uzyskujemy dużo bardziej chropowatej powierzchni, niż podczas procesu piaskowania.
-                                Śrutowanie
-                                śrutem o symbolu S110 odpowiada piaskowaniu przy użyciu poligritu o gradacji 0,2-1.2
-                                przy
-                                ciśnieniu 7 bar, co pozwala na feldze aluminiowej uzyskać powierzchnie o
-                                chropowatości
-                                28um-35um, co zapewnia bardzo dobra przyczepność,
-                                na przykład dla farb proszkowych, przy czym nie ma problemu z wyrównaniem felgi
-                                warstwą
-                                podkładową.</span></p>
-                        <div class="rb11__btn btn btn--filled">Dowiedz się więcej</div>
-                    </div>
-                    <img class="flagship__image clamp" src="{{asset('img/rb1111.png')}}" alt="">
+        <section class="flagship section pt-4" style="background-image: url('{{ asset('img/background.jpg') }}');">
+            <div class="row">
+                <div class="flagship__text clamp ">
+                    <h2 class="heading-2 color--black">Nasz flagowy produkt</h2>
+                    <p class="paragraph mt-2 mb-2 color--black text--normal"><span>Śrutownica RB11 jest urządzeniem,
+                            które automatyzuje - a co
+                            za tym
+                            idzie
+                            znacznie ułatwia proces obróbki strumieniowo-ściernej. Wbrew stereotypom poprzez
+                            śrutowanie
+                            nie
+                            uzyskujemy dużo bardziej chropowatej powierzchni, niż podczas procesu piaskowania.
+                            Śrutowanie
+                            śrutem o symbolu S110 odpowiada piaskowaniu przy użyciu poligritu o gradacji 0,2-1.2
+                            przy
+                            ciśnieniu 7 bar, co pozwala na feldze aluminiowej uzyskać powierzchnie o
+                            chropowatości
+                            28um-35um, co zapewnia bardzo dobra przyczepność,
+                            na przykład dla farb proszkowych, przy czym nie ma problemu z wyrównaniem felgi
+                            warstwą
+                            podkładową.</span></p>
+                    <div class="flagship__btn btn btn--filled">Dowiedz się więcej</div>
                 </div>
-                <div class="beforeafter">
-                    <div class="color-black">PRZED</div>
-                    <div class="color-primary">PO</div>
-                </div>
+                <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}" alt="">
+            </div>
+            <div class="beforeafter">
+                <h3 class="color--black">PRZED</h3>
+                <h3 class="color--primary">PO</h3>
+            </div>
 
-                <div class="banner-container">
-                    <div id="banner-wrapper" class="banner-wrapper">
-                        <div class="banner design">
-                            <div class="banner-content">
-                                <img src="images/normal2.png" />
-                            </div>
+            <div class="banner-container">
+                <div id="banner-wrapper" class="banner-wrapper">
+                    <div class="banner design">
+                        <div class="banner-content">
+                            <img src="{{ asset('img/normal2.png') }}" />
                         </div>
-                        <div class="banner dev">
-                            <div class="banner-content">
-                                <img src="images/rust2.png" />
-                            </div>
+                    </div>
+                    <div class="banner dev">
+                        <div class="banner-content">
+                            <img src="{{ asset('img/rust2.png') }}" />
                         </div>
                     </div>
                 </div>
+        </section>
+        <section class="section contact" id="contact">
+            <h2 class="contact__label trigger text-center w-100">Jesteś zainteresowany? Zadzowń <span
+                    class="underlined">726 120 051</span> </h2>
 
+            <div class="row contact__container d-flex flex-sb">
+                <div class="contact__left">
+                    <div class="contact__card ">
+                        <div class="d-flex flex-center">
+                            <ul class="contact__list text-left">
+                                <li>Mateusz Jasiński</li>
+                                <li>biuro@pmjśrutownice.pl</li>
+                                <li>726 120 051</li>
+                                <li>Moderówka 322</li>
+                            </ul>
+                            <div class="social-media">
+                                <button class="social-media__item">
+                                    <i class="fa fa-facebook"></i>
+                                </button>
+                                <button class="social-media__item">
+                                    <i class="fa fa-youtube"></i>
+                                </button>
+                                <button class="social-media__item">
+                                    <i class="fa fa-instagram"></i>
+                                </button>
+                                <button class="social-media__item">
+                                    <i class="fa fa-viadeo"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact__right clamp">
+                    <picture class="poland">
+                        <source srcset="{{asset('img/poland.svg')}}" media="(orientation: portrait)" />
+                        <img src="{{asset('img/poland.svg')}}" alt="">
+                    </picture>
+                </div>
+            </div>
+            <h2 class="contact__label text-center trigger">Masz pytanie? <span class="underlined "> Kilknij
+                    tutaj</span> by przejść do FAQ</h2>
+            <div class="contact__label">lub</div>
+            <div class="write-to-us">
+                <div class="book__form">
+                    <form action="#" class="form">
+                        <h3 class="heading-2 u-margin-bottom-medium">
+                            Napisz do nas
+                        </h3>
+                        <div class="form__group">
+                            <input id="email" type="email" class="form__input" placeholder="Email" required />
+                            <label for="email" class="form__label">Email</label>
+                        </div>
+
+                        <div class="form__group">
+                            <textarea rows="10" id="name" type="text-area" class="form__input area" placeholder="Treść" required></textarea>
+                            <label for="name" class="form__label">Treść</label>
+                        </div>
+
+
+
+                        <div class="form-group u-margin-top-medium">
+                            <button class="btn btn--filled">Wyślij &rarr;</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     @include('footer')

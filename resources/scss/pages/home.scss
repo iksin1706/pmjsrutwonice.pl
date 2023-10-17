@@ -2,8 +2,6 @@
     height: 100vh;
     color: $color-white;
 
-    //transform: translateZ(-200px) scale(3);
-
     &__header {
         position: absolute;
         top: 50vh;
@@ -42,16 +40,15 @@
     background-size: contain;
 
     &__description {
-        min-height: 100vh;
         background: #000;
 
         &__text {
-            width: clamp(30rem,50%,70rem);
+            width: clamp(30rem, 50%, 70rem);
         }
         &__image {
             opacity: 1;
             aspect-ratio: 3/2;
-            width: clamp(40rem,40%,80rem);
+            width: clamp(40rem, 40%, 80rem);
             object-fit: cover;
         }
     }
@@ -66,29 +63,151 @@
 }
 
 .flagship {
-    width: 100vw;
-  
-    background-image: url("images/123123.jpg");
-    animation: test 10s infinite ease-in-out;
-    transform: rotate();
-  
+    animation: flagship-background 10s infinite ease-in-out;
+    background: url("img/123123.jpg");
     background-position: 100% 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     background-color: #000000;
-   // transform: translateZ(-100px) scale(2);
-    margin-top: 50rem;
-    padding-top: 25rem;
-    padding-bottom: 25rem;
+
     z-index: 2;
-  
-    &::before {
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-color: $color-primary;
-      z-index: 3;
+    @include respond(tab-port) {
+        & {
+            text-align: center;
+            background: $color-primary !important;
+        }
     }
-  }
+
+    &__text {
+        @include respond(tab-port) {
+            & {
+                text-align: center;
+            }
+        }
+    }
+    &__image {
+        @include respond(tab-port) {
+            & {
+                margin-top: 10rem;
+            }
+        }
+    }
+
+    &__btn {
+        background: #000 !important;
+        color: white;
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $color-primary;
+        z-index: 3;
+    }
+}
+
+.social-media {
+    margin-top: 2rem;
+    margin-left: 0rem;
+    display: flex;
+    justify-content: space-around;
+    width: 32rem;
+    & .fa {
+        font-size: 3rem;
+    }
+    &__item {
+        width: 6rem;
+        height: 6rem;
+        margin: 10px;
+        outline: none;
+        border: none;
+        background: #1d1d1d;
+        box-shadow: 5px 5px 10px #000000, -5px -5px 10px #141414;
+        border-radius: 50%;
+        transition: 0.2;
+        &:hover {
+            cursor: pointer;
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+.contact {
+    position: relative;
+    background-color: #0f0f0f;
+    background-image: radial-gradient(circle at 50% 100%, #303030, #000);
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: 0 120%;
+    padding: 15rem 5rem 15rem 5rem;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -20vh;
+        left: 0;
+        width: 100vw;
+        height: 20vh;
+
+        background-image: linear-gradient(to top, #000000 10%, #00000000 100%);
+    }
+    &__container {
+        padding-bottom: 10rem;
+        flex-wrap: wrap;
+    }
+    &__label {
+        font-size: 4rem;
+        color: $color-white;
+        text-align: center;
+        margin-top: 5rem;
+        margin-bottom: 7rem;
+    }
+
+    &__heading {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+        color: white;
+        text-align: left;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        padding: 5rem;
+        text-align: left;
+        box-shadow: 0 1.5rem 4rem rgb(0, 0, 0);
+        background: radial-gradient(circle at 5% 0%, #333, #000);
+    }
+    &__list {
+        color: $color-white;
+        font-size: $font-size-2;
+        list-style-type: none;
+        align-items: center;
+        text-align: left;
+        & > li {
+            margin: 2rem;
+            margin-left: 0rem;
+        }
+    }
+}
+
+.contact {
+}
+
+.write-to-us {
+    background-image: linear-gradient(105deg, rgba($color-black, 0.9) 0%, rgba($color-black, 0.9) 50%, transparent 50%),
+        url("../../images/tire-rim-1.webp");
+
+    background-size: cover;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
+    height: 75rem;
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+    }
+}

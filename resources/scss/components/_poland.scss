@@ -1,0 +1,15 @@
+.poland {
+    position: relative;
+}
+
+.poland::after {
+    content: "";
+    position: absolute;
+    bottom: 675%;
+    right: 22%;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    animation: 1s blink infinite ease-in-out;
+}

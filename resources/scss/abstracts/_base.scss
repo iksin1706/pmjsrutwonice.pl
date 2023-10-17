@@ -52,6 +52,11 @@ body {
 .section {
     min-height: 65vh;
     padding: 0rem $page-padding-desktop 0rem $page-padding-desktop;
+    @include respond(tab-land) {
+        & {
+            padding: $page-padding-tab;
+        }
+    }
     @include respond(tab-port) {
         & {
             padding: $page-padding-mobile;
@@ -69,3 +74,4 @@ body {
         }
     }
 }
+
