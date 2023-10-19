@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
 
@@ -63,27 +64,78 @@
                 </div>
                 <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}" alt="Logo of Company">
             </section>
-            <section class="section company-info background--dark--gradient p-3">
-                {{-- <h2 class="heading-2 bottom-line--fade w-50 mb-3 clamp">Nasza firma w liczbach</h2> --}}
+            <section class="section company-info background--dark--gradient pt-3 pb-3">
                 <div class="row flex-sa">
                     <div class="europe clamp">
                         <img class="europe__image" loading="lazy" src="{{ asset('img/europe.svg') }}"
                             alt="Map of Europe">
                         <div class="europe__arrows trigger">
                             <div class="arrow">
-                                <img src="{{ asset('img/arrow.svg') }}">
+                                <svg xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                    y="0px" viewBox="0 0 776.1 693.7" style="enable-background:new 0 0 776.1 693.7;"
+                                    xml:space="preserve">
+
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path class="st0"
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,25,28.2" />
+                                            <g>
+                                                <path class="st1"
+                                                    d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
                             <div class="arrow">
-                                <img src="{{ asset('img/arrow.svg') }}">
+                                <svg xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                    y="0px" viewBox="0 0 776.1 693.7" style="enable-background:new 0 0 776.1 693.7;"
+                                    xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path class="st0"
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,25,28.2" />
+                                            <g>
+                                                <path class="st1"
+                                                    d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
                             <div class="arrow">
-                                <img src="{{ asset('img/arrow.svg') }}">
+                                <svg xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                    y="0px" viewBox="0 0 776.1 693.7" style="enable-background:new 0 0 776.1 693.7;"
+                                    xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path class="st0"
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,25,28.2" />
+                                            <g>
+                                                <path class="st1"
+                                                    d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
 
                         </div>
                     </div>
                     <div class="company-info__stats trigger clamp">
-                        <div class="stat">
+                        <div class="stats trigger">
                             <div class="stat__number" id="number1">0</div>
                             <div class="stat__description">Lat doświadczenia</div>
 
@@ -205,14 +257,14 @@
                     </div>
                 </div>
         </section>
-        <section class="section contact pt-3" id="contact">
+        <section class="section contact pt-3 pb-3" id="contact">
             <h2 class="contact__label trigger text-center w-100">Jesteś zainteresowany? Zadzowń <span
                     class="underlined">726 120 051</span> </h2>
 
             <div class="row contact__container d-flex flex-sb">
-                <div class="contact__left">
+                <div class="contact__left clamp">
                     <div class="contact__card ">
-                        <div class="d-flex flex-center">
+                        <div class="">
                             <ul class="contact__list">
                                 <li>Mateusz Jasiński</li>
                                 <li>biuro@pmjśrutownice.pl</li>
@@ -220,52 +272,49 @@
                                 <li>Moderówka 322</li>
                             </ul>
                             <div class="social-media">
-                                <button class="social-media__item">
+                                <a class="social-media__item">
                                     <i class="fa fa-facebook"></i>
-                                </button>
-                                <button class="social-media__item">
+                                </a>
+                                <a class="social-media__item">
                                     <i class="fa fa-youtube"></i>
-                                </button>
-                                <button class="social-media__item">
+                                </a>
+                                <a class="social-media__item">
                                     <i class="fa fa-instagram"></i>
-                                </button>
-                                <button class="social-media__item">
-                                    <i class="fa fa-viadeo"></i>
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact__right clamp">
                     <picture class="poland">
-                        <source srcset="{{asset('img/poland.svg')}}" media="(orientation: portrait)" />
-                        <img src="{{asset('img/poland.svg')}}" alt="">
+                        <source srcset="{{ asset('img/poland.svg') }}" media="(orientation: portrait)" />
+                        <img src="{{ asset('img/poland.svg') }}" alt="">
                     </picture>
                 </div>
             </div>
             <h2 class="contact__label text-center trigger">Masz pytanie? <span class="underlined "> Kilknij
                     tutaj</span> by przejść do FAQ</h2>
             <div class="contact__label">lub</div>
-            <div class="write-to-us">
-                <div class="book__form">
-                    <form action="#" class="form">
-                        <h3 class="heading-2 u-margin-bottom-medium">
+            <div class="write-to-us"
+                style="background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 50%, transparent 50%), url('{{ asset('img/contact-background.webp') }}')">
+                <div class="write-to-us__form">
+                    <form action="#" class="form" id="email-form">
+                        @csrf
+                        <h3 class="heading-2 mb-2">
                             Napisz do nas
                         </h3>
                         <div class="form__group">
-                            <input id="email" type="email" class="form__input" placeholder="Email" required />
+                            <input id="recipient" name="recipient" type="email" class="form__input" placeholder="Email" required />
                             <label for="email" class="form__label">Email</label>
                         </div>
 
                         <div class="form__group">
-                            <textarea rows="10" id="name" type="text-area" class="form__input area" placeholder="Treść" required></textarea>
+                            <textarea id="messgae" name="message" rows="10" id="name" type="text-area" class="form__input area" placeholder="Treść" required></textarea>
                             <label for="name" class="form__label">Treść</label>
                         </div>
 
-
-
-                        <div class="form-group u-margin-top-medium">
-                            <button class="btn btn--filled">Wyślij &rarr;</button>
+                        <div class="form-group">
+                            <button class="email-send btn btn--filled">Wyślij &rarr;</button>
                         </div>
 
                     </form>
@@ -274,6 +323,20 @@
         </section>
     </main>
     @include('footer')
+
+    <div class="email-popup" style="display: none">
+        <div class="email-popup__container">
+            <div class="email-popup__info">
+                <div class="email-popup__loader">
+                </div>
+                <div class="email-popup__success">
+                    <i class="fa fa-check"></i>
+                </div>
+            </div>
+            <div class="email-popup__status text--center mt-1">Wysyłanie...</div>
+        </div>
+
+    </div>
 </body>
 
 </html>

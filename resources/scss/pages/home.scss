@@ -111,25 +111,13 @@
     margin-left: 0rem;
     display: flex;
     justify-content: space-around;
-    width: 32rem;
+    width: 20rem;
     & .fa {
         font-size: 3rem;
     }
     &__item {
-        width: 6rem;
-        height: 6rem;
-        margin: 10px;
-        outline: none;
-        border: none;
-        background: #1d1d1d;
-        box-shadow: 5px 5px 10px #000000, -5px -5px 10px #141414;
-        border-radius: 50%;
-        transition: 0.2;
         &:hover {
             cursor: pointer;
-            animation-name: pulse;
-            animation-duration: 1s;
-            animation-iteration-count: infinite;
         }
     }
 }
@@ -156,7 +144,7 @@
         flex-wrap: wrap;
     }
 
-    &__right{
+    &__right {
         @include respond(tab-port) {
             & {
                 margin-top: 10rem;
@@ -189,15 +177,20 @@
         text-align: left;
         box-shadow: 0 1.5rem 4rem rgb(0, 0, 0);
         background: radial-gradient(circle at 5% 0%, #333, #000);
+        @include respond(tab-port) {
+            & {
+                padding: 3rem;
+            }
+        }
     }
     &__list {
         color: $color-white;
         font-size: $font-size-2;
         list-style-type: none;
         align-items: center;
-        text-align: left;
+        text-align: center;
         & > li {
-            margin: 2rem;
+            margin-top: 2rem;
             margin-left: 0rem;
         }
         @include respond(tab-port) {
@@ -208,18 +201,108 @@
     }
 }
 
-
 .write-to-us {
     background-image: linear-gradient(105deg, rgba($color-black, 0.9) 0%, rgba($color-black, 0.9) 50%, transparent 50%),
-        url("../../images/tire-rim-1.webp");
+        url("img/contact-background.webp");
 
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.3);
     height: 75rem;
 
-    &__form {
-        width: 50%;
-        padding: 6rem;
+    @include respond(tab-port) {
+        & {
+            background: #000 !important;
+            width: 100%;
+        }
     }
+
+    &__form {
+        width: 40%;
+        padding: 6rem;
+        @include respond(tab-port) {
+            & {
+                width: 85%;
+                padding: 3rem;
+            }
+        }
+    }
+}
+
+.email-popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000099;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 50rem;
+        height: 20rem;
+        padding: 2rem;
+        border-radius: 2rem;
+        background-image: radial-gradient(circle at 20% 20%, #202020, #000);
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__success{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0); 
+        transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        
+        &>i {
+            font-size: 10rem;
+            color: $color-primary
+        
+        }
+    }
+
+    &__loader {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        border: 5px solid #303030;
+        border-top: 5px solid $color-primary;
+        transform: translate(-50%, -50%) scale(1); 
+        transition: all 1s ease-in-out;
+        animation: spin 2s ease-in-out infinite;
+    }
+
+    &__status {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: $font-size-2;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0) scale(1);
+        }
+        to {
+            transform: rotate(360deg) scale(1);
+        }
+    }
+}
+
+.hidd {
+    transform: scale(0); 
+    animation: none;
+}
+.shown{
+    transform: translate(-50%, -50%) scale(1); 
 }

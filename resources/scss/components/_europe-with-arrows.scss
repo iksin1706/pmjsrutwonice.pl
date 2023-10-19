@@ -1,7 +1,6 @@
 .europe {
-
     position: relative;
-    
+
     &__image {
         width: 100%;
         padding: 2rem;
@@ -18,7 +17,6 @@
             background-color: $color-primary;
         }
     }
-
 }
 
 .arrow {
@@ -27,56 +25,73 @@
     left: 52%;
     animation-delay: 2s;
     overflow: hidden;
-    width: 0%;
-    height: 20rem;
+    height: 15%;
     z-index: 100;
+    transform: scale(1.5);
 
     transform-origin: 0 0;
-    & > img {
-        width: 20%;
+    & > svg {
+        height: 100%;
+        width: 100%;
+
+        & > .st1 {
+        }
     }
 }
+.st1 {
+    fill: #ffe500;
+    animation: blink 1s ease-in-out infinite;
+}
+.st0 {
+    fill: none;
+    stroke: #ffe500;
+    stroke-width: 15;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 11.9948, 9.9956;
+    animation: dash-animation infinite 100s linear;
+}
+
+@keyframes dash-animation {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 10000;
+    }
+    
+}
+@keyframes blink {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
 
 .animated > .arrow {
-    animation: arrow-animation cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards 1.5s;
+    animation: arrow-animation ease-in-out forwards 1.5s;
 }
 
 .arrow:nth-child(1) {
-    transform: rotate(150deg);
-    & > img {
-        width: 35%;
-    }
+    transform: rotate(150deg) scale(1.5);
 }
 .arrow:nth-child(2) {
     transform: rotate(90deg);
-
-    & > img {
-        width: 25%;
-    }
     animation-delay: 0.5s;
 }
 .arrow:nth-child(3) {
-    transform: rotate(-155deg);
-
-    & > img {
-        width: 30%;
-    }
+    transform: rotate(-155deg), scale(1.5);
     animation-delay: 1s;
 }
 .arrow:nth-child(4) {
-    transform: rotate(-10deg);
-
-    & > img {
-        width: 10%;
-    }
+    transform: rotate(-10deg), scale(1.5);
     animation-delay: 1.5s;
 }
 .arrow:nth-child(5) {
-    transform: rotate(130deg);
-
-    & > img {
-        width: 100px;
-    }
+    transform: rotate(130deg), scale(1.5);
     animation-delay: 2s;
 }
 
