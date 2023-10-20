@@ -3,7 +3,6 @@
 
     &__image {
         width: 100%;
-        padding: 2rem;
         display: block;
         position: relative;
         &:after {
@@ -21,11 +20,12 @@
 
 .arrow {
     position: absolute;
-    top: 66%;
-    left: 52%;
-    animation-delay: 2s;
+    top: 69%;
+    left: 59%;
+
     overflow: hidden;
     height: 15%;
+    width: 20%;
     z-index: 100;
     transform: scale(1.5);
 
@@ -33,9 +33,6 @@
     & > svg {
         height: 100%;
         width: 100%;
-
-        & > .st1 {
-        }
     }
 }
 .st1 {
@@ -47,8 +44,9 @@
     stroke: #ffe500;
     stroke-width: 15;
     stroke-miterlimit: 10;
-    stroke-dasharray: 11.9948, 9.9956;
+    stroke-dasharray: 750;
     animation: dash-animation infinite 100s linear;
+
 }
 
 @keyframes dash-animation {
@@ -56,7 +54,7 @@
         stroke-dashoffset: 0;
     }
     to {
-        stroke-dashoffset: 10000;
+        stroke-dashoffset: 100000;
     }
     
 }
@@ -76,28 +74,27 @@
 }
 
 .arrow:nth-child(1) {
-    transform: rotate(150deg) scale(1.5);
+    transform: scaleY(-1) rotate(70deg) scale(1.5);
 }
 .arrow:nth-child(2) {
-    transform: rotate(90deg);
+    transform: scaleY(-1) rotate(125deg) scale(0.7);
     animation-delay: 0.5s;
 }
 .arrow:nth-child(3) {
-    transform: rotate(-155deg), scale(1.5);
+    transform: scaleY(-1) rotate(125deg) scale(1.8);
     animation-delay: 1s;
 }
 .arrow:nth-child(4) {
-    transform: rotate(-10deg), scale(1.5);
-    animation-delay: 1.5s;
+    transform: scaleY(-1) rotate(125deg) scale(1.15);
+    animation-delay: 0.5s;
 }
-.arrow:nth-child(5) {
-    transform: rotate(130deg), scale(1.5);
+.arrow:nth-child(6) {
+    transform: scaleY(-1) rotate(180deg) scale(1);
     animation-delay: 2s;
 }
 
 .stats {
     max-width: 40rem;
-    width: 100%;
     padding: 5rem;
 }
 

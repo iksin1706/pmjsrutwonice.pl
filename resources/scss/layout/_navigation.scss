@@ -4,11 +4,11 @@
     transition: 0.3s ease-out;
     color: white;
     font-size: $font-size-2;
-    z-index: 999;
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 15rem 0rem 15rem;
+    padding: 0rem $page-padding-desktop 0rem $page-padding-desktop;
 
     &__logo {
         height: 4rem;
@@ -50,6 +50,9 @@
         &:hover .nav__dropdown {
             transform: scaleY(1);
         }
+        &:hover .nav__languages__dropdown {
+            transform: scaleY(1);
+        }
     }
 
 
@@ -58,7 +61,7 @@
         background-color: #000000;
         list-style-type: none;
         left: 0;
-        top: 9rem;
+        top: 8.5rem;
         z-index: 1;
         height: 40rem;
         width: 100vw;
@@ -79,6 +82,8 @@
             a {
                 text-align: center;
                 width: 20rem;
+                color: $color-white;
+                text-decoration: none;
 
                 display: flex;
                 flex-wrap: wrap;
@@ -89,16 +94,31 @@
                 }
             }
         }
+
+    }
+
+    &__languages__dropdown{
+        width: 15rem;
+        background-color: #000000;
+        position: absolute;
+        transform: scaleY(0);
+        list-style-type: none;
+        padding: 2rem;
+        top: 8.5rem;
+        left: -2rem;
+        & > li > a {
+            color: white;
+            text-decoration: none;
+
+            &:hover,&:active {
+                color: $color-primary;
+            }
+        }
     }
 
 
-    &__language {
-        width: 5rem;
-        aspect-ratio: 2/1;
-        margin-left: 1rem;
-        &:hover{
-            cursor: pointer;
-        }
+    &__languages {
+        padding: 3rem 0rem 3rem 0rem;
     }
 
 
@@ -264,7 +284,7 @@
 
     @include respond(phone) {
         & {
-            padding: 0rem 5rem 0rem 5rem;
+            padding: 0rem $page-padding-mobile 0rem $page-padding-mobile;
             width: calc(100vw - 10rem);
         }
         &__list{

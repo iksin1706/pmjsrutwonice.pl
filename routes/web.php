@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmailController;
 
@@ -13,6 +14,10 @@ use App\Http\Controllers\EmailController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/{lang}', function ($lang) {
+    App::setLocale(($lang));
+    return view('index');
+});
 
 Route::get('/', function () {
     return view('index');

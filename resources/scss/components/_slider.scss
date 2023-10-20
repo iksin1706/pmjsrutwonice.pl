@@ -38,11 +38,8 @@
     }
 
     &__image-container {
-        width: 100%;
         height: 100%;
-        object-fit: cover;
         overflow: hidden;
-        transition: 1s;
     }
 
     &__image {

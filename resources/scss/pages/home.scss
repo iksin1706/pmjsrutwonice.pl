@@ -1,6 +1,7 @@
 .hero {
     height: 100vh;
     color: $color-white;
+    position: relative;
 
     &__header {
         position: absolute;
@@ -13,20 +14,21 @@
             }
         }
     }
-}
-
-.about {
-    position: relative;
     &::after {
         content: "";
         position: absolute;
-        top: -20vh;
+        bottom: 0vh;
         left: 0;
         width: 100vw;
         height: 20vh;
 
         background-image: linear-gradient(to top, #000000 10%, #00000000 100%);
     }
+}
+
+.about {
+    position: relative;
+
     &::before {
         content: "";
         position: absolute;
@@ -50,6 +52,12 @@
             aspect-ratio: 3/2;
             width: clamp(40rem, 40%, 80rem);
             object-fit: cover;
+
+            @include respond(tab-port) {
+                & {
+                    display: none; 
+                }
+            }
         }
     }
 
@@ -74,6 +82,7 @@
         & {
             text-align: center;
             background: $color-primary !important;
+            background-attachment: local;
         }
     }
 

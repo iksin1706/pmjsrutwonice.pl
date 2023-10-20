@@ -86,7 +86,7 @@ a, a:hover {
 			padding-top: 25px;
 			color: #ffffff;
 			font-family: sans-serif;" class="header">
-				Wiadomość od {{$email}}
+				Dziękujemy za wiadomość
 		</td>
 	</tr>
 	
@@ -148,9 +148,9 @@ a, a:hover {
 		<td align="center" valign="top" style="border-collapse: collapse; border-spacing: 0; margin: 0; padding: 0; padding-left: 6.25%; padding-right: 6.25%; width: 87.5%; font-size: 13px; font-weight: 400; line-height: 150%;
 			padding-top: 40px;
 			padding-bottom: 40px;
-			color: #fff;
+			color: #9b9b9b;
 			font-family: sans-serif;" class="footer">
-			www.pmjsrutownice.pl
+			Postaramy się odpowiedzieć tak szybko jak to możliwe
 		</td>
 	</tr>
 

@@ -26,17 +26,17 @@
             <div class="bg-video__gradient"></div>
             <div class="bg-video__content">
                 <header class="hero__header side-line">
-                    <h1 class="header">Z naszymi produktami zregenerujesz
+                    <h1 class="header">{{ __('messages.header') }}
                         <div class="header__roller">
-                            <span class="header__roller__rolltext">Felgi<br />
-                                Zaciski<br />
-                                Turbiny<br />
-                                <span class="header__roller__last">i wiele innych ...</span><br />
+                            <span class="header__roller__rolltext">{{ __('messages.rims') }}<br />
+                                {{ __('messages.calipers') }}<br />
+                                {{ __('messages.turbins') }}<br />
+                                <span class="header__roller__last">{{ __('messages.more') }}</span><br />
                         </div>
                     </h1>
                     <div class="mt-1">
-                        <a href="/produkty" class="btn btn--empty">Nasze produkty</a>
-                        <a href="/o-nas" class="btn btn-text">O nas</a>
+                        <a href="/produkty" class="btn btn--empty">{{ __('messages.ourProducts') }}</a>
+                        <a href="/o-nas" class="btn btn-text">{{ __('messages.about') }}</a>
                     </div>
                 </header>
             </div>
@@ -49,17 +49,9 @@
         <article class="about">
             <section class="section about__description row" id="about" name="about">
                 <div class="about__description__text side-line--fade clamp">
-                    <h2 class="heading-2 ">O nas</h2>
+                    <h2 class="heading-2 ">{{ __('messages.about') }}</h2>
                     <p class="paragraph">
-                        Jesteśmy polską firmą, która doskonale rozumie potrzeby
-                        firm renowacyjnych i regeneracyjnych w całej Europie.
-                        Nasza mocna historia w renowacji felg stanowi solidne
-                        fundamenty naszego know-how.
-                        Obecnie skupiamy się na produkcji wysokiej jakości
-                        maszyn oraz dostarczaniu nowatorskich rozwiązań,
-                        aby wesprzeć rozwój branży. Tworzymy partnerskie
-                        relacje oparte na wiedzy i doświadczeniu, gotowe sprostać wyzwaniom Twojego
-                        biznesu.
+                        {{ __('messages.aboutUsDescription') }}
                     </p>
                 </div>
                 <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}" alt="Logo of Company">
@@ -82,7 +74,7 @@
                                     <g xmlns="http://www.w3.org/2000/svg">
                                         <g>
                                             <path class="st0"
-                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,25,28.2" />
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,0,0" />
                                             <g>
                                                 <path class="st1"
                                                     d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
@@ -102,7 +94,7 @@
                                     <g xmlns="http://www.w3.org/2000/svg">
                                         <g>
                                             <path class="st0"
-                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,25,28.2" />
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,0,0" />
                                             <g>
                                                 <path class="st1"
                                                     d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
@@ -122,7 +114,67 @@
                                     <g xmlns="http://www.w3.org/2000/svg">
                                         <g>
                                             <path class="st0"
-                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,25,28.2" />
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,0,0" />
+                                            <g>
+                                                <path class="st1"
+                                                    d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="arrow">
+                                <svg xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                    y="0px" viewBox="0 0 776.1 693.7" style="enable-background:new 0 0 776.1 693.7;"
+                                    xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path class="st0"
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,0,0" />
+                                            <g>
+                                                <path class="st1"
+                                                    d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="arrow">
+                                <svg xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                    y="0px" viewBox="0 0 776.1 693.7" style="enable-background:new 0 0 776.1 693.7;"
+                                    xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path class="st0"
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,0,0" />
+                                            <g>
+                                                <path class="st1"
+                                                    d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="arrow">
+                                <svg xmlns:cc="http://creativecommons.org/ns#"
+                                    xmlns:dc="http://purl.org/dc/elements/1.1/"
+                                    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                                    xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px"
+                                    y="0px" viewBox="0 0 776.1 693.7" style="enable-background:new 0 0 776.1 693.7;"
+                                    xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path class="st0"
+                                                d="M750.2,668.9c-10.8-82.4-55.1-295.7-249.3-461.9C316.2,48.9,108.3,29.8,0,0" />
                                             <g>
                                                 <path class="st1"
                                                     d="M776.2,664.6c1.6,14.4-8.8,27.5-23.2,29.1s-27.5-8.8-29.1-23.2c-1.6-14.4,8.8-27.5,23.2-29.1     C761.5,639.8,774.6,650.1,776.2,664.6z" />
@@ -304,12 +356,14 @@
                             Napisz do nas
                         </h3>
                         <div class="form__group">
-                            <input id="recipient" name="recipient" type="email" class="form__input" placeholder="Email" required />
+                            <input id="recipient" name="recipient" type="email" class="form__input"
+                                placeholder="Email" required />
                             <label for="email" class="form__label">Email</label>
                         </div>
 
                         <div class="form__group">
-                            <textarea id="messgae" name="message" rows="10" id="name" type="text-area" class="form__input area" placeholder="Treść" required></textarea>
+                            <textarea id="messgae" name="message" rows="10" id="name" type="text-area" class="form__input area"
+                                placeholder="Treść" required></textarea>
                             <label for="name" class="form__label">Treść</label>
                         </div>
 

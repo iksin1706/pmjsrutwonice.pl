@@ -56,7 +56,7 @@
     overflow: hidden;
     @include respond(tab-port) {
         & {
-            height: 40rem;
+            height: 60rem;
         }
     }
 }

@@ -18,7 +18,7 @@ class QuestionEmail extends Mailable
      */
     public $subject = "Zapytanie";
 
-    public function __construct(protected string $message)
+    public function __construct(protected string $message,protected string $recipient)
     {
         
     }
@@ -41,6 +41,7 @@ class QuestionEmail extends Mailable
             view: 'question-email',
             with: [
                 'messages' => $this->message,
+                'email' => $this->recipient,
             ],
         );
     }

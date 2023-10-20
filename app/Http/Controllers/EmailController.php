@@ -20,7 +20,7 @@ class EmailController extends Controller
         ]);
     
         // Send the email
-        Mail::to("jasinskilukasz7@gmail.com")->send((new QuestionEmail($request->message)));
+        Mail::to("biuro@pmjsrutownice.pl")->send((new QuestionEmail($request->message,$request->recipient)));
     
         return response()->json(['message' => 'Email sent successfully']);
     }
