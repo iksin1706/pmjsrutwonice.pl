@@ -64,14 +64,21 @@
         opacity: 1;
         font-weight: 1000;
         color: #fff;
-        transform: rotate(-90deg) translate(-28rem, 11.5rem);
+        transform: rotate(-90deg) translate(-28rem, 70%);
         font-size: 5rem;
         padding: 0;
         margin: 0;
         line-height: 10rem;
+        white-space:nowrap;
         @include respond(tab-land) {
             & {
                 transform: translateY(-4rem);
+                
+            }
+        }
+        @include respond(tab-port) {
+            & {
+                white-space:inherit;
             }
         }
     }
@@ -158,7 +165,8 @@
         opacity: 1 !important;
         position: absolute;
         bottom: 2rem;
-        width: 13rem;
+        width: 20rem;
+        text-align: center;
         left: 50%;
         transform: translateX(-50%) !important;
     }

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         loader.classList.add("hidd")
         success.classList.add("shown")
-        document.querySelector('.email-popup__status').innerHTML = "Dziękujemy za wiadomość.";
+        document.querySelector('.email-popup__status').innerHTML = "";
         setTimeout(() => {
           document.querySelector('.email-popup').style.display = "none";
         }, 5000);
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.email-popup__status').innerHTML = "Nie udało sie wysłac wiadomosci";
         setTimeout(() => {
           document.querySelector('.email-popup').style.display = "none";
-        }, 5000);
+        }, 2000);
       });
   });
 });

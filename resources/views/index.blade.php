@@ -26,17 +26,17 @@
             <div class="bg-video__gradient"></div>
             <div class="bg-video__content">
                 <header class="hero__header side-line">
-                    <h1 class="header">{{ __('messages.header') }}
+                    <h1 class="header">{{ __('home.header') }}
                         <div class="header__roller">
-                            <span class="header__roller__rolltext">{{ __('messages.rims') }}<br />
-                                {{ __('messages.calipers') }}<br />
-                                {{ __('messages.turbins') }}<br />
-                                <span class="header__roller__last">{{ __('messages.more') }}</span><br />
+                            <span class="header__roller__rolltext">{{ __('home.rims') }}<br />
+                                {{ __('home.calipers') }}<br />
+                                {{ __('home.turbins') }}<br />
+                                <span class="header__roller__last">{{ __('home.more') }}</span><br />
                         </div>
                     </h1>
                     <div class="mt-1">
-                        <a href="/produkty" class="btn btn--empty">{{ __('messages.ourProducts') }}</a>
-                        <a href="/o-nas" class="btn btn-text">{{ __('messages.about') }}</a>
+                        <a href="/produkty" class="btn btn--empty">{{ __('home.ourProducts') }}</a>
+                        <a href="/o-nas" class="btn btn-text">{{ __('home.about') }}</a>
                     </div>
                 </header>
             </div>
@@ -49,18 +49,18 @@
         <article class="about">
             <section class="section about__description row" id="about" name="about">
                 <div class="about__description__text side-line--fade clamp">
-                    <h2 class="heading-2 ">{{ __('messages.about') }}</h2>
+                    <h2 class="heading-2 ">{{ __('home.about') }}</h2>
                     <p class="paragraph">
-                        {{ __('messages.aboutUsDescription') }}
+                        {{ __('home.aboutUsDescription') }}
                     </p>
                 </div>
-                <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}" alt="Logo of Company">
+                <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}" alt="{{ __('home.logoAlt') }}">
             </section>
             <section class="section company-info background--dark--gradient pt-3 pb-3">
                 <div class="row flex-sa">
                     <div class="europe clamp">
                         <img class="europe__image" loading="lazy" src="{{ asset('img/europe.svg') }}"
-                            alt="Map of Europe">
+                            alt="{{ __('home.europeAlt') }}">
                         <div class="europe__arrows trigger">
                             <div class="arrow">
                                 <svg xmlns:cc="http://creativecommons.org/ns#"
@@ -189,78 +189,77 @@
                     <div class="company-info__stats trigger clamp">
                         <div class="stats trigger">
                             <div class="stat__number" id="number1">0</div>
-                            <div class="stat__description">Lat doświadczenia</div>
+                            <div class="stat__description">{{ __('home.experience') }}</div>
 
                             <div class="stat__number" id="number2">0</div>
-                            <div class="stat__description">Krajów sprzedażowych</div>
+                            <div class="stat__description">{{ __('home.countries') }}</div>
 
                             <div class="stat__number" id="number3">0</div>
-                            <div class="stat__description">Zadowolonych klientów</div>
+                            <div class="stat__description">{{ __('home.happyClients') }}</div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="pb-3">
-                <h2 class="heading-2 mt-3 mb-2 text--center w-100" id="products">Odkryj naszą oferte</h2>
+                <h2 class="heading-2 mt-3 mb-2 text--center w-100" id="products">{{ __('home.discover') }}</h2>
                 </p>
                 <div class="slider trigger animation-finished pb-3">
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image " src="{{ asset('img/rb11.JPG') }}" alt="">
+                            <img class="slide__image " src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.rimBlastersAlt') }}">
                         </div>
-                        <h3 class="slide__preview">Śrutownice</h3>
+                        <h3 class="slide__preview">{{ __('home.rimBlasters') }}</h3>
                         <div class="slide__text">
-                            <h3>Śrutownice</h3>
-                            <p>Nasze flagowe produkty, idealna alternatywa dla piaskarek</p>
+                            <h3>{{ __('home.rimBlasters') }}</h3>
+                            <p>{{ __('home.rimBlastersDescription') }}</p>
 
                         </div>
                         <a class="slide__btn btn btn--filled"
-                            onclick="document.querySelector('.pop-up').classList.add('pop-up--active')">Zobacz
-                            oferte</a>
+                            onclick="document.querySelector('.pop-up').classList.add('pop-up--active')">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.dustCollectorsAlt') }}">
                         </div>
-                        <h3 class="slide__preview">Piaskarki</h3>
+                        <h3 class="slide__preview">{{ __('home.dustCollectors') }}</h3>
                         <div class="slide__text">
-                            <h3>Piaskarki</h3>
-                            <p>Oprócz śrutownic mamy dostępne również tradycyjne piaskarki</p>
+                            <h3>{{ __('home.dustCollectors') }}</h3>
+                            <p>{{ __('home.dustCollectorsDescription') }}</p>
                         </div>
-                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.sandblastersAlt') }}">
                         </div>
-                        <h3 class="slide__preview">Napylarki</h3>
+                        <h3 class="slide__preview">{{ __('home.sandblasters') }}</h3>
                         <div class="slide__text">
-                            <h3>Napylarki</h3>
-                            <p>Innowacyjne urządzenie do uzupełniania braków np w felgach</p>
+                            <h3>{{ __('home.sandblasters') }}</h3>
+                            <p>{{ __('home.sandblastersDescription') }}</p>
                         </div>
-                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
                         <div class=" slide__image-container">
-                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.ovenAlt') }}">
                         </div>
-                        <h3 class="slide__preview">Piece</h3>
+                        <h3 class="slide__preview">{{ __('home.oven') }}</h3>
                         <div class="slide__text">
-                            <h3>Piece</h3>
-                            <p>Elektryczne piece do malowania proszkowego</p>
+                            <h3>{{ __('home.oven') }}</h3>
+                            <p>{{ __('home.ovenDescription') }}</p>
                         </div>
-                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="">
+                            <img class="slide__image" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.otherAlt') }}">
                         </div>
-                        <h3 class="slide__preview">Kabiny</h3>
+                        <h3 class="slide__preview">{{ __('home.other') }}</h3>
                         <div class="slide__text">
-                            <h3>Kabiny do malowania</h3>
-                            <p>Idealnie przystowane do malowania proszkowego kabiny</p>
+                            <h3>{{ __('home.other') }}</h3>
+                            <p>{{ __('home.otherDescription') }}</p>
                         </div>
-                        <a class="slide__btn btn btn--filled">Zobacz oferte</a>
+                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                 </div>
             </section>
@@ -268,50 +267,35 @@
         <section class="flagship section pt-4" style="background-image: url('{{ asset('img/background.jpg') }}');">
             <div class="row">
                 <div class="flagship__text clamp ">
-                    <h2 class="heading-2 color--black">Nasz flagowy produkt</h2>
-                    <p class="paragraph mt-2 mb-2 color--black text--normal"><span>Śrutownica RB11 jest urządzeniem,
-                            które automatyzuje - a co
-                            za tym
-                            idzie
-                            znacznie ułatwia proces obróbki strumieniowo-ściernej. Wbrew stereotypom poprzez
-                            śrutowanie
-                            nie
-                            uzyskujemy dużo bardziej chropowatej powierzchni, niż podczas procesu piaskowania.
-                            Śrutowanie
-                            śrutem o symbolu S110 odpowiada piaskowaniu przy użyciu poligritu o gradacji 0,2-1.2
-                            przy
-                            ciśnieniu 7 bar, co pozwala na feldze aluminiowej uzyskać powierzchnie o
-                            chropowatości
-                            28um-35um, co zapewnia bardzo dobra przyczepność,
-                            na przykład dla farb proszkowych, przy czym nie ma problemu z wyrównaniem felgi
-                            warstwą
-                            podkładową.</span></p>
-                    <div class="flagship__btn btn btn--filled">Dowiedz się więcej</div>
+                    <h2 class="heading-2 color--black">{{ __('home.flagship') }}</h2>
+                    <p class="paragraph mt-2 mb-2 color--black text--normal">
+                        {{ __('home.flagshipDescription') }}
+                    </p>
+                    <div class="flagship__btn btn btn--filled">{{ __('home.learnMore') }}</div>
                 </div>
-                <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}" alt="">
+                <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}" alt="{{ __('home.rimBlastersAlt') }}">
             </div>
             <div class="beforeafter">
-                <h3 class="color--black">PRZED</h3>
-                <h3 class="color--primary">PO</h3>
+                <h3 class="color--black">{{ __('home.before') }}</h3>
+                <h3 class="color--primary">{{ __('home.after') }}</h3>
             </div>
 
             <div class="banner-container">
                 <div id="banner-wrapper" class="banner-wrapper">
                     <div class="banner design">
                         <div class="banner-content">
-                            <img src="{{ asset('img/normal2.png') }}" />
+                            <img src="{{ asset('img/normal2.png') }}" alt="{{ __('home.normalRimAlt') }}"/>
                         </div>
                     </div>
                     <div class="banner dev">
                         <div class="banner-content">
-                            <img src="{{ asset('img/rust2.png') }}" />
+                            <img src="{{ asset('img/rust2.png') }}" alt="{{ __('home.rustRimAlt') }}"/>
                         </div>
                     </div>
                 </div>
         </section>
         <section class="section contact pt-3 pb-3" id="contact">
-            <h2 class="contact__label trigger text-center w-100">Jesteś zainteresowany? Zadzowń <span
-                    class="underlined">726 120 051</span> </h2>
+            <h2 class="contact__label trigger text-center w-100">{{ __('home.interested') }} <a href="tel:+48726120051" > <span class="underlined">+48 726 120 051</span></a> </h2>
 
             <div class="row contact__container d-flex flex-sb">
                 <div class="contact__left clamp">
@@ -319,9 +303,9 @@
                         <div class="">
                             <ul class="contact__list">
                                 <li>Mateusz Jasiński</li>
-                                <li>biuro@pmjśrutownice.pl</li>
-                                <li>726 120 051</li>
-                                <li>Moderówka 322</li>
+                                <li><a href="mail:biuro@pmjśrutownice.pl">biuro@pmjśrutownice.pl</a></li>
+                                <li><a href="tel:+48726120051">+48 726 120 051</a></li>
+                                <li>Ustrobna 302</li>
                             </ul>
                             <div class="social-media">
                                 <a class="social-media__item">
@@ -340,20 +324,19 @@
                 <div class="contact__right clamp">
                     <picture class="poland">
                         <source srcset="{{ asset('img/poland.svg') }}" media="(orientation: portrait)" />
-                        <img src="{{ asset('img/poland.svg') }}" alt="">
+                        <img src="{{ asset('img/poland.svg') }}" alt="{{ __('home.polandAlt') }}">
                     </picture>
                 </div>
             </div>
-            <h2 class="contact__label text-center trigger">Masz pytanie? <span class="underlined "> Kilknij
-                    tutaj</span> by przejść do FAQ</h2>
-            <div class="contact__label">lub</div>
+            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <span class="underlined "> {{ __('home.clickHere') }}</span> {{ __('home.toFAQ') }}</h2>
+            <div class="contact__label">{{ __('home.or') }}</div>
             <div class="write-to-us"
                 style="background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 50%, transparent 50%), url('{{ asset('img/contact-background.webp') }}')">
                 <div class="write-to-us__form">
                     <form action="#" class="form" id="email-form">
                         @csrf
                         <h3 class="heading-2 mb-2">
-                            Napisz do nas
+                            {{ __('home.contactUs') }}
                         </h3>
                         <div class="form__group">
                             <input id="recipient" name="recipient" type="email" class="form__input"
@@ -364,11 +347,11 @@
                         <div class="form__group">
                             <textarea id="messgae" name="message" rows="10" id="name" type="text-area" class="form__input area"
                                 placeholder="Treść" required></textarea>
-                            <label for="name" class="form__label">Treść</label>
+                            <label for="name" class="form__label">{{ __('home.question') }}</label>
                         </div>
 
                         <div class="form-group">
-                            <button class="email-send btn btn--filled">Wyślij &rarr;</button>
+                            <button class="email-send btn btn--filled">{{ __('home.send') }} &rarr;</button>
                         </div>
 
                     </form>
@@ -387,7 +370,7 @@
                     <i class="fa fa-check"></i>
                 </div>
             </div>
-            <div class="email-popup__status text--center mt-1">Wysyłanie...</div>
+            <div class="email-popup__status text--center mt-1">{{ __('home.sending') }}...</div>
         </div>
 
     </div>

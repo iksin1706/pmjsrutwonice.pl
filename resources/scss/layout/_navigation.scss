@@ -51,7 +51,7 @@
             transform: scaleY(1);
         }
         &:hover .nav__languages__dropdown {
-            transform: scaleY(1);
+            transform: translateX(-50%) scaleY(1)
         }
     }
 
@@ -105,10 +105,11 @@
         list-style-type: none;
         padding: 2rem;
         top: 8.5rem;
-        left: -2rem;
+        transform: translateX(-50%) scale(0);
         & > li > a {
             color: white;
             text-decoration: none;
+            text-align: center;
 
             &:hover,&:active {
                 color: $color-primary;
@@ -118,7 +119,13 @@
 
 
     &__languages {
-        padding: 3rem 0rem 3rem 0rem;
+        padding: 3rem ;
+        padding-left: 6rem ;
+        padding-right: 6rem;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
 
