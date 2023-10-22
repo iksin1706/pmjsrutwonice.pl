@@ -1,6 +1,6 @@
 .footer {
     background: radial-gradient(circle at 10% 10%,#202020,#000);
-    padding:  10rem;
+    padding:  5rem $page-padding-desktop;
     min-height: 30rem;
     font-size: 1.6rem;
     color: $color-white;
@@ -12,7 +12,12 @@
     @include respond(tab-land) {
         & {
             justify-content: center;
-            padding: 3rem;
+        }
+    }
+    @include respond(tab-port) {
+        & {
+            justify-content: center;
+            padding: $page-padding-mobile;
         }
     }
 

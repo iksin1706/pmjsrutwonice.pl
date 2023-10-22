@@ -308,13 +308,13 @@
                                 <li>Ustrobna 302</li>
                             </ul>
                             <div class="social-media">
-                                <a class="social-media__item">
+                                <a class="social-media__item" href="" aria-label="Link to Facebook">
                                     <i class="fa fa-facebook"></i>
                                 </a>
-                                <a class="social-media__item">
+                                <a class="social-media__item" aria-label="Link to Youtube">
                                     <i class="fa fa-youtube"></i>
                                 </a>
-                                <a class="social-media__item">
+                                <a class="social-media__item" aria-label="Link to Instagram">
                                     <i class="fa fa-instagram"></i>
                                 </a>
                             </div>

@@ -33,7 +33,7 @@
     justify-content: space-between;
     @include respond(tab-port) {
         & {
-            font-size: 5rem;
+            font-size: 3rem;
             & > .color--primary {
                 color: black !important;
             }

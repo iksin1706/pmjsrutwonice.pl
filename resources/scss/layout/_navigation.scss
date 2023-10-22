@@ -1,6 +1,6 @@
 .nav {
     position: fixed;
-    width: calc(100vw - 30rem);
+    width: calc(100vw - $page-padding-desktop * 2);
     transition: 0.3s ease-out;
     color: white;
     font-size: $font-size-2;
@@ -27,7 +27,7 @@
     &__list {
         list-style-type: none;
         display: flex;
-        gap: 10rem;
+        gap: 5rem;
         z-index: 10;
 
         a {
@@ -51,20 +51,20 @@
             transform: scaleY(1);
         }
         &:hover .nav__languages__dropdown {
-            transform: translateX(-50%) scaleY(1)
+            transform: translateX(-50%) scaleY(1);
         }
     }
 
-
     &__dropdown {
         position: fixed;
-        background-color: #000000;
+        background-color: #000000aa;
         list-style-type: none;
         left: 0;
-        top: 8.5rem;
         z-index: 1;
-        height: 40rem;
-        width: 100vw;
+        padding: $page-padding-desktop;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        width: calc(100vw - $page-padding-desktop * 2);
         transform-origin: top;
         transition: 0.2s ease-in-out;
         transform: scaleY(0);
@@ -72,32 +72,60 @@
         backdrop-filter: blur(8px) brightness(0.5);
         -webkit-backdrop-filter: blur(100px) brightness(0);
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
+
+        &--mobile {
+            position: relative;
+            transform: none;
+            flex-direction: column;
+            height: 0;
+            padding: 0;
+            width: auto;
+            li {
+                white-space: nowrap;
+
+                a {
+                    width: 0rem !important;
+                }
+            }
+        }
 
         li {
             white-space: nowrap;
-            padding: 2rem;
 
             a {
                 text-align: center;
                 width: 20rem;
                 color: $color-white;
                 text-decoration: none;
-
+                font-size: 2rem;
+                font-weight: 300;
+                color: $color-white;
+                text-decoration: none;
+                font-style: italic;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 img {
                     object-fit: contain;
                     height: 20rem;
+                    @include respond(tab-land) {
+                        & {
+                            height: 13rem;
+                        }
+                    }
+                }
+                @include respond(tab-land) {
+                    & {
+                        width: 13rem;
+                    }
                 }
             }
         }
-
     }
 
-    &__languages__dropdown{
+    &__languages__dropdown {
         width: 15rem;
         background-color: #000000;
         position: absolute;
@@ -111,16 +139,16 @@
             text-decoration: none;
             text-align: center;
 
-            &:hover,&:active {
+            &:hover,
+            &:active {
                 color: $color-primary;
             }
         }
     }
 
-
     &__languages {
-        padding: 3rem ;
-        padding-left: 6rem ;
+        padding: 3rem;
+        padding-left: 6rem;
         padding-right: 6rem;
 
         &:hover {
@@ -128,23 +156,22 @@
         }
     }
 
-
-
-    &--mobile{
-        position: relative;
+    &--mobile {
         display: none;
+        position: relative;
         z-index: 1000000;
+
         &__checkbox {
             display: none;
         }
-    
+
         &__label {
             position: absolute;
             left: -60%;
             color: white;
             font-size: 2rem;
         }
-    
+
         &__button {
             background-color: none;
             height: 7rem;
@@ -155,68 +182,82 @@
             z-index: 300;
             cursor: pointer;
         }
-    
-        &__background {
+
+        &__nav {
             height: 100vh;
             width: 0rem;
             position: fixed;
             top: 9rem;
             right: 0rem;
-            background-color: #000000ee;
+            background-color: #000000;
             z-index: 100;
             transition: width 0.8s ease-in-out;
-        }
-    
-        &__nav {
-            height: 100vh;
-            position: fixed;
-            top: 9rem;
-            right: 0;
-            z-index: 200;
-            opacity: 0;
-            width: 0;
             transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+            white-space: nowrap;
         }
-    
+
         &__list {
             width: 100%;
             position: absolute;
             list-style: none;
             text-decoration: none;
-            top: 50%;
+            height: calc(100vh - 10rem);
+            padding-bottom: 10rem ;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%);
             text-align: center;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
-    
+
         &__item {
-            margin: 1rem;
+            font-size: 2rem;
+            font-weight: 300;
+            color: $color-white;
+            text-decoration: none;
+            font-style: italic;
+            text-transform: uppercase;
+            padding: 1rem;
         }
-    
+
         &__link {
+            &,
             &:link,
             &:visited {
                 display: inline-block;
-                padding: 1rem 2rem;
-                font-size: 3rem;
+                padding: 0 2rem;
+                font-size: 2rem;
                 font-weight: 300;
                 color: $color-white;
                 text-decoration: none;
                 font-style: italic;
                 text-transform: uppercase;
-                background-image: linear-gradient(120deg, transparent, transparent 0%, transparent 50%, $color-primary 50%);
+                background-image: linear-gradient(
+                    120deg,
+                    transparent,
+                    transparent 0%,
+                    transparent 50%,
+                    $color-primary 50%
+                );
                 background-size: 240%;
                 transition: all 0.4s;
-    
+
                 &:hover,
                 &:active {
+                    cursor: pointer;
                     background-position: 100%;
                     color: black;
                     font-weight: 600;
+
+                    & ~ .nav__dropdown--mobile {
+                        transform: scaleY(1);
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
             }
         }
-    
+
         &__checkbox:checked ~ &__background {
             width: 100%;
         }
@@ -224,7 +265,7 @@
             opacity: 1;
             width: 100%;
         }
-    
+
         &__icon {
             position: relative;
             margin-left: 2.1rem;
@@ -244,14 +285,14 @@
             &::before {
                 width: 5rem;
             }
-    
+
             &::before,
             &::after {
                 content: "";
                 position: absolute;
                 left: 0;
             }
-    
+
             &::before {
                 top: -1rem;
             }
@@ -259,14 +300,14 @@
                 top: 1rem;
             }
         }
-    
+
         &__button:hover &__icon::before {
             transform: translateY(-0.5rem);
         }
         &__button:hover &__icon::after {
             transform: translateY(0.5rem);
         }
-    
+
         &__checkbox:checked + &__button &__icon {
             background-color: transparent;
             &:hover {
@@ -288,31 +329,31 @@
         }
     }
 
-
-    @include respond(phone) {
+    @include respond(tab-port) {
         & {
             padding: 0rem $page-padding-mobile 0rem $page-padding-mobile;
-            width: calc(100vw - 10rem);
+            width: calc(100vw - $page-padding-mobile * 2);
         }
-        &__list{
+        &__list {
             display: none;
         }
         &--mobile {
             display: block;
         }
-        &__languages{
+        &__languages {
             display: none;
         }
-        &__logo{
+        &__logo {
             margin-top: 2rem;
             margin-bottom: 2rem;
         }
-      }
-
-
-
-
-
+    }
 }
 
-
+.show-products {
+    margin-top: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    height: 90rem;
+    background-color: #050505;
+}

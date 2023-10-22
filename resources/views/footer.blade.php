@@ -1,33 +1,33 @@
 <footer class="footer color-white">
     <div class="d-flex footer__section">
-        <img class="footer__logo" src="{{ asset('img/logo.png') }}" alt="Company Logo">
+        <img class="footer__logo" src="{{ asset('img/logo.png') }}" alt="{{ __('footer.logoAlt') }}">
         <p>Mateusz Jasiński</p>
-        <p><a href="tel:+48720126051">720-126-051</a></p>
+        <p><a href="tel:+48720126051">+48 720 126 051</a></p>
         <p><a href="mailto:biuro@pmjsrutownice.pl">biuro@pmjsrutownice.pl</a></p>
     </div>
     <div class="d-flex footer__section">
-        <h5 class="footer__header">Strona główna</h5>
-        <a href="#">O nas</a>
-        <a href="#">Produkty</a>
-        <a href="#">Kontakt</a>
-        <a href="#">Napisz do nas</a>
+        <h5 class="footer__header">{{ __('footer.homePage') }}</h5>
+        <a href="#about">{{ __('footer.about') }}</a>
+        <a href="#products">{{ __('footer.products') }}</a>
+        <a href="#contact">{{ __('footer.contact') }}</a>
+        <a href="#contactUs">{{ __('footer.writeToUs') }}</a>
     </div>
     <div class="d-flex footer__section">
-        <h5 class="footer__header">Produkty</h5>
-        <a href="#">RB11</a>
-        <a href="#">RB7</a>
-        <a href="#">PF90</a>
-        <a href="#">PK1</a>
+        <h5 class="footer__header">{{ __('footer.products') }}</h5>
+        <a href="rb11">RB11</a>
+        <a href="rb7">RB7</a>
+        <a href="pf90">PF90</a>
+        <a href="pk1">PK1</a>
     </div>
     <div class="d-flex footer__section">
-        <h5 class="footer__header">Social Media</h5>
+        <h5 class="footer__header">{{ __('footer.socialMedia') }}</h5>
         <a href="#">Facebook</a>
         <a href="#">Instagram</a>
         <a href="#">Tiktok</a>
         <a href="#">YouTube</a>
     </div>
-    <div>
-        <p>Projekt i realizacja >> <a href="https://iksin1706.github.io/portfolio" target="_blank">Łukasz Jasiński</a></p>
-        <p>Wszelkie prawa zastrzeżone &copy; 2018-2023</p>
+    <div class="w-100">
+        <p class="text--center">{{ __('footer.design') }} >> <a href="https://iksin1706.github.io/portfolio" target="_blank">Łukasz Jasiński</a></p>
+        <p class="text--center">Copyright &copy;2023</p>
     </div>
 </footer>
