@@ -14,10 +14,7 @@ use App\Http\Controllers\EmailController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/{lang}', function ($lang) {
-    App::setLocale(($lang));
-    return view('index');
-});
+
 
 Route::get('/', function () {
     return view('index');
@@ -36,5 +33,9 @@ Route::get('pf90', function () {
 });
 Route::get('faq', function () {
     return view('faq');
+});
+Route::get('/{lang}', function ($lang) {
+    App::setLocale(($lang));
+    return view('index');
 });
 Route::post('/send-email', [EmailController::class, 'sendEmail']);

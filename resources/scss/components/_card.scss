@@ -1,0 +1,102 @@
+.card {
+  border-radius: 1rem;
+  position: relative;
+  width: clamp(5rem, 100%, 30rem);
+  height: 50rem;
+  padding: 6rem;
+  color: #fff;
+  font-size: $font-size-default;
+  transition: all 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: 0.2s;
+  box-shadow: 0 1.5rem 4rem $color-dark-0;
+  z-index: 0;
+  overflow: hidden;
+  // &:hover {
+  //   transform: scale(1.03);
+  // }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: conic-gradient($color-primary,#00000000 50%);
+    animation: rotate 6s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    top: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    background: radial-gradient(circle at 0 0, $color-dark-2, $color-dark-0 50%);
+    border-radius: 15px;
+  }
+
+  &__heading {
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  &__header {
+    font-size: 4rem;
+    letter-spacing: 1.3rem;
+  }
+
+  &__paragraph {
+    font-size: $font-size-default;
+    color: $color-white;
+  }
+
+  &__image {
+    width: 20rem;
+    height: 15rem;
+    object-fit: contain;
+    &--big {
+      height: 40rem;
+    }
+  }
+
+  &__price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &-box {
+      text-align: center;
+      color: $color-white;
+    }
+
+    &-only {
+      font-size: 1.5rem;
+    }
+
+    &-value {
+      font-weight: 200;
+      font-size: 6rem;
+      margin-bottom: 5rem;
+    }
+  }
+}

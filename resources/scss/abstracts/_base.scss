@@ -50,7 +50,7 @@ body {
     width: 100vw;
 }
 .section {
-    min-height: 65vh;
+    min-height: 40vh;
     padding: 0rem $page-padding-desktop 0rem $page-padding-desktop;
     @include respond(tab-land) {
         & {

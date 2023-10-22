@@ -1,0 +1,184 @@
+.product {
+    &__hero {
+        background-size: cover;
+        height: 100vh;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position: center;
+        z-index: 14;
+
+        &__heading {
+            position: absolute;
+            top: 10%;
+            color: #202020;
+            text-transform: uppercase;
+            font-size: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 20vh;
+            z-index: -1;
+            background-image: linear-gradient(to top, #000000 10%, #00000000 100%);
+        }
+        &__stats {
+            position: absolute;
+            width: clamp(20rem, 100%, 80rem);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            bottom: 10%;
+            gap: 5remrem;
+
+            h5 {
+                font-size: 3rem;
+                text-align: center;
+                width: 100%;
+            }
+            p {
+                width: 100%;
+                font-weight: 300;
+                font-size: 2rem;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    &__list {
+        font-size: 3rem;
+        color: white;
+    }
+
+    &__about {
+        padding: 5rem;
+        background-color: $color-dark-0;
+
+        &__text {
+            max-width: 70rem;
+            font-size: $font-size-2;
+        }
+
+        &__image {
+            height: 45rem;
+        }
+    }
+
+    &__modes {
+        background: linear-gradient(#000, #20202000 15%, #20202000 85%, #000 100%),
+            linear-gradient(to right, #080808, #303030);
+    }
+
+    &__dimensions {
+        max-width: 100rem;
+        width: 100%;
+    }
+
+    &__info {
+        background-size: 50% 35%, 100% 82%;
+        background-repeat: no-repeat;
+        background-position: 0% -15%, 20% 100%;
+    }
+
+    &__about {
+        background-repeat: no-repeat;
+        &--right {
+            background-image: url("images/bg-left.png");
+            background-position: -30rem;
+        }
+        &--left {
+            background-image: url("images/bg-right.png");
+            background-position: calc(100% + 30rem);
+        }
+    }
+
+    &__form {
+        min-height: 100vh;
+    }
+
+    &__cards {
+        background-color: #0a0a0a;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100vh;
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    &__usages {
+        min-height: 100vh;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: 100% -10rem;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+
+        &__image {
+            height: 50rem;
+        }
+
+        &__item {
+            padding: 2rem;
+            color: $color-white;
+            fill: $color_white;
+            max-width: 40rem;
+            transition: 0.2s ease-in-out;
+            &__icon {
+                fill: inherit;
+                color: $color-white;
+                height: 5rem;
+                width: 5rem;
+                margin-right: 2rem;
+                margin-bottom: 2rem;
+            }
+            &__header {
+                font-size: $font-size-2;
+                line-height: 5rem;
+            }
+
+            &__text {
+                font-size: $font-size-default;
+            }
+
+            &:hover {
+                color: $color-black;
+                fill: $color-black;
+                cursor: pointer;
+                background: $color-primary;
+
+                & > .product__usages__item__icon {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+
+    &__video {
+        background-size: 100% 100%;
+        background-attachment: fixed;
+
+        height: 100vh;
+        background-image: url("images/darkbg.jpg");
+        background-position: 100% 100%;
+        background-repeat: no-repeat;
+
+        &__box {
+            box-shadow: 1px 10px 40px #0a0a0a;
+        }
+    }
+
+    &__form {
+        background-position: 130%;
+        background-repeat: no-repeat;
+    }
+}

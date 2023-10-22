@@ -14,6 +14,27 @@ body {
   & span {
     line-height: 3rem !important;
   }
+  @include respond(tab-port) {
+    & {
+      font-size: 3rem;
+    }
+  }
+}
+
+.heading-3 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: left;
+  & span {
+    line-height: 7rem !important;
+  }
+  @include respond(tab-port) {
+    & {
+      font-size: 2rem;
+    }
+  }
 }
 
 .paragraph {
