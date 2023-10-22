@@ -1,12 +1,11 @@
 .poland {
     position: relative;
-
 }
 
 .poland::after {
     content: "";
     position: absolute;
-    bottom: 675%;
+    bottom: 500%;
     right: 22%;
     width: 2rem;
     height: 2rem;

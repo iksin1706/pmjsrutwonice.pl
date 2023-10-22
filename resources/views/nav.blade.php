@@ -45,16 +45,22 @@
 
                 <li class="nav--mobile__item"><a href="#contact" class="nav--mobile__link">Kontakt</a></li>
                 <li class="nav--mobile__item"><a href="faq.html" class="nav--mobile__link">FAQ</a></li>
+                <ul class="nav__languages--mobile ">
+                    <li><a href="/pl_pl">Polski</a></li>
+                    <li><a href="/en_en">English</a></li>
+                    <li><a href="/de_de">Deutsch</a></li>
+                    <li><a href="/es_es">Español</a></li>
+                </ul>
             </ul>
         </div>
     </div>
     <div class="nav__dropdown-trigger nav__languages">
         <i class="fa fa-globe"></i>
         <ul class="nav__languages__dropdown ">
-            <li><a href="/pl_pl"><img src="images/render.png" alt="">Polski</a></li>
-            <li><a href="/en_en"><img src="images/rb77.png" alt="">English</a></li>
-            <li><a href="/de_de"><img src="images/filtr.png" alt="">Deutsch</a></li>
-            <li><a href="/es_es"><img src="images/pk1.png" alt="">Español</a></li>
+            <li><a href="/pl_pl">Polski</a></li>
+            <li><a href="/en_en">English</a></li>
+            <li><a href="/de_de">Deutsch</a></li>
+            <li><a href="/es_es">Español</a></li>
         </ul>
     </div>
 </nav>

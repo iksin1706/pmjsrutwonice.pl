@@ -22,7 +22,7 @@
         width: 100vw;
         height: 20vh;
 
-        background-image: linear-gradient(to top, $color-dark-0 10%, rgba($color-dark-0,00) 100%);
+        background-image: linear-gradient(to top, $color-dark-0 10%, rgba($color-dark-0, 00) 100%);
     }
 }
 
@@ -36,7 +36,7 @@
         left: 0;
         width: 100vw;
         height: 20vh;
-        background-image: linear-gradient(to bottom,  $color-dark-0 10%, rgba($color-dark-0,00) 100%);
+        background-image: linear-gradient(to bottom, $color-dark-0 10%, rgba($color-dark-0, 00) 100%);
     }
     background: $color-dark-0;
     background-size: contain;
@@ -55,7 +55,7 @@
 
             @include respond(tab-port) {
                 & {
-                    display: none; 
+                    display: none;
                 }
             }
         }
@@ -146,7 +146,7 @@
         width: 100vw;
         height: 20vh;
 
-        background-image: linear-gradient(to top, #000000 10%, #00000000 100%);
+        background-image: linear-gradient(to top, $color-dark-0 10%, rgba($color-dark-0, 00) 100%);
     }
     &__container {
         padding-bottom: 10rem;
@@ -176,22 +176,52 @@
         text-align: left;
     }
 
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
     &__card {
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 6rem;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        border-radius: 1rem;
-        padding: 5rem;
-        text-align: left;
-        box-shadow: 0 1.5rem 4rem rgb(0, 0, 0);
-        background: radial-gradient(circle at 5% 0%, #333, #000);
-        @include respond(tab-port) {
-            & {
-                padding: 3rem;
-            }
+        align-items: center;
+        font-weight: bold;
+        box-shadow: 0 1.5rem 4rem $color-dark-0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            left: -50%;
+            top: -50%;
+            width: 200%;
+            height: 200%;
+            background-repeat: no-repeat;
+            background-size: 50% 50%, 50% 50%;
+            background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+            background-image: conic-gradient(#00000000, $color-primary);
+            animation: rotate 6s linear infinite;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 2px;
+            top: 2px;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background: radial-gradient(circle at 0 0, $color-dark-2, $color-dark-0 50%);
+            border-radius: 15px;
         }
     }
+
     &__list {
         color: $color-white;
         font-size: $font-size-2;
@@ -211,7 +241,12 @@
 }
 
 .write-to-us {
-    background-image: linear-gradient(105deg, rgba($color-black, 0.9) 0%, rgba($color-black, 0.9) 50%, transparent 50%),
+    background-image: linear-gradient(
+            105deg,
+            rgba($color-dark-0, 0.9) 0%,
+            rgba($color-dark-0, 0.9) 50%,
+            transparent 50%
+        ),
         url("img/contact-background.webp");
 
     background-size: cover;
@@ -241,7 +276,7 @@
 .email-popup {
     width: 100vw;
     height: 100vh;
-    background-color: #00000099;
+    background-color: rgba($color-dark-0, 0.7);
     position: fixed;
     top: 0;
     left: 0;
@@ -256,7 +291,7 @@
         height: 20rem;
         padding: 2rem;
         border-radius: 2rem;
-        background-image: radial-gradient(circle at 20% 20%, #202020, #000);
+        background-image: radial-gradient(circle at 20% 20%, $color-dark-2, $color-dark-0);
     }
 
     &__info {
@@ -265,17 +300,16 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    &__success{
+    &__success {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%) scale(0); 
+        transform: translate(-50%, -50%) scale(0);
         transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-        
-        &>i {
+
+        & > i {
             font-size: 10rem;
-            color: $color-primary
-        
+            color: $color-primary;
         }
     }
 
@@ -285,7 +319,7 @@
         border-radius: 50%;
         border: 5px solid #303030;
         border-top: 5px solid $color-primary;
-        transform: translate(-50%, -50%) scale(1); 
+        transform: translate(-50%, -50%) scale(1);
         transition: all 1s ease-in-out;
         animation: spin 2s ease-in-out infinite;
     }
@@ -309,9 +343,15 @@
 }
 
 .hidd {
-    transform: scale(0); 
+    transform: scale(0);
     animation: none;
 }
-.shown{
-    transform: translate(-50%, -50%) scale(1); 
+.shown {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-1turn);
+    }
 }

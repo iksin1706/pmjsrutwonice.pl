@@ -206,8 +206,13 @@
     }
 }
 .background--dark--gradient {
-    background: linear-gradient(#000, #20202000 15%, #20202000 85%, #000 100%),
-        radial-gradient(circle at 20% 50%, #303030, #000);
+    background: linear-gradient(
+            $color-dark-0,
+            rgba($color-dark-2, 00) 15%,
+            rgba($color-dark-2, 00) 85%,
+            $color-dark-0 100%
+        ),
+        radial-gradient(circle at 20% 50%, $color-dark-3, rgba($color-dark-0, 00));
 }
 
 .side-line {
@@ -294,6 +299,14 @@
     }
 }
 
-.no-scroll{
+.no-scroll {
     overflow: hidden;
+}
+
+.stroke-primary {
+    -webkit-text-stroke: 2px $color_primary;
+}
+
+.stroke-black {
+    -webkit-text-stroke: 2px $color_black;
 }

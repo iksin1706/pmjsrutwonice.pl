@@ -48,6 +48,9 @@
         transform: translateX(-50%) skewX(10deg) scale(1);
         object-fit: cover;
         transition: 1s;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
         @include respond(tab-port) {
             & {
                 transform: none;
