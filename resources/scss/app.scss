@@ -8,8 +8,10 @@
 
 @import 'layout/navigation';
 @import 'layout/footer';
+@import 'layout/grid';
 
-
+@import 'components/loading';
+@import 'components/table';
 @import 'components/scroll-down';
 @import 'components/bg-video';
 @import 'components/button';

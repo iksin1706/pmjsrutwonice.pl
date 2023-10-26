@@ -203,9 +203,9 @@
             width: 200%;
             height: 200%;
             background-repeat: no-repeat;
-            background-size: 50% 50%, 50% 50%;
+            
             background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-            background-image: conic-gradient(#00000000, $color-primary);
+            background-image: conic-gradient(#00000000, $color-primary, #00000000 50%);
             animation: rotate 6s linear infinite;
         }
 
@@ -217,7 +217,7 @@
             top: 2px;
             width: calc(100% - 4px);
             height: calc(100% - 4px);
-            background: radial-gradient(circle at 0 0, $color-dark-2, $color-dark-0 50%);
+            background: radial-gradient(circle at 0 0, rgba($color-dark-2,0.9), $color-dark-0 50%);
             border-radius: 15px;
         }
     }
@@ -350,8 +350,4 @@
     transform: translate(-50%, -50%) scale(1);
 }
 
-@keyframes rotate {
-    100% {
-        transform: rotate(-1turn);
-    }
-}
+

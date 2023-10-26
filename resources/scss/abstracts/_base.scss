@@ -3,7 +3,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 @mixin respond($breakpoint) {
@@ -65,17 +65,17 @@ body {
         }
     }
 }
-.row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    @include respond(tab-port) {
-        & {
-           justify-content: center;
-        }
-    }
-}
+// .row {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     @include respond(tab-port) {
+//         & {
+//            justify-content: center;
+//         }
+//     }
+// }
 
 a {
     text-decoration: none;

@@ -1,0 +1,55 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 99999;
+    background-color: black;
+    flex-direction: column;
+
+    &__svg__line {
+        fill: none;
+        stroke: #ffe500;
+        stroke-width: 1;
+        stroke-dasharray: 100;
+        animation: loading-animation infinite 2s linear;
+    
+    }
+    &__text{
+        color: white;
+        font-size: 2rem;
+        &::after{
+            content: '';
+           // animation: loading-text 2s infinite;
+        };
+    }
+}
+
+
+
+@keyframes loading-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: 200;
+    }
+}
+
+@keyframes loading-text {
+    0% {
+        content: '';
+    }
+    33% {
+        content: '.';
+    }
+    66% {
+        content: '..';
+    }
+    
+    100% {
+        content: '...';
+    }
+}

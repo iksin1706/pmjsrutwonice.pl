@@ -77,8 +77,11 @@
     }
 
     &__dimensions {
-        max-width: 100rem;
+        max-width: 80rem;
         width: 100%;
+        min-width: 30rem;
+
+
     }
 
     &__info {
@@ -122,9 +125,14 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
+        padding-bottom: 5rem;
 
         &__image {
             height: 50rem;
+
+            @include respond(tab-land) {
+                display: none;
+            }
         }
 
         &__item {
@@ -163,22 +171,155 @@
         }
     }
 
+    &__info {
+        background-color: #000;
+    }
+
+    &__text-image {
+        &__wrapper {
+        }
+        &__text {
+            font-size: 2rem;
+            max-width: 50rem;
+        }
+        &__image {
+            max-height: 40rem;
+            object-fit: contain;
+            margin-top: 2rem;
+        }
+        &--right {
+            .product__text-image__wrapper {
+                @include respond(big-screen) {
+                    flex-direction: column-reverse;
+                }
+            }
+        }
+    }
+
+    .product__text-image--right > .product__text-image__wrapper {
+        @include respond(tab-port) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__technical-data {
+        position: relative;
+        width: 100%;
+        padding-top: 20rem;
+        padding-bottom: 15rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5rem;
+
+        @include respond(tab-port){
+            flex-wrap: wrap;
+        }
+        &::before {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            width: 100vw;
+            height: 15vh;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, #000000 30%, #00000000 100%);
+        }
+        &::after {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            width: 100vw;
+            height: 15vh;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, #00000000 30%, #000000 100%);
+        }
+
+        width: 100%;
+        height: 100%;
+        --color: rgba(114, 114, 114, 0.3);
+        background-color: #191a1a;
+        background-image: linear-gradient(
+                0deg,
+                transparent 24%,
+                var(--color) 25%,
+                var(--color) 26%,
+                transparent 27%,
+                transparent 74%,
+                var(--color) 75%,
+                var(--color) 76%,
+                transparent 77%,
+                transparent
+            ),
+            linear-gradient(
+                90deg,
+                transparent 24%,
+                var(--color) 25%,
+                var(--color) 26%,
+                transparent 27%,
+                transparent 74%,
+                var(--color) 75%,
+                var(--color) 76%,
+                transparent 77%,
+                transparent
+            );
+        background-size: 55px 55px;
+    }
+
     &__video {
         background-size: 100% 100%;
-        background-attachment: fixed;
+        position: relative;
 
         height: 100vh;
-        background-image: url("images/darkbg.jpg");
+        background-image: radial-gradient(circle at 50% 50%, $color-dark-2,$color-dark-0);
         background-position: 100% 100%;
         background-repeat: no-repeat;
 
         &__box {
             box-shadow: 1px 10px 40px #0a0a0a;
         }
+        &::before {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            width: 100vw;
+            height: 15vh;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, #000000 30%, #00000000 100%);
+        }
+        &::after {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            width: 100vw;
+            height: 15vh;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, #00000000 30%, #000000 100%);
+        }
     }
 
-    &__form {
-        background-position: 130%;
-        background-repeat: no-repeat;
+    &__recommend {
+        background-color: #000;
+        gap: 10rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+    }
+}
+
+.cards__wrapper {
+    justify-content: space-between;
+
+    @include respond(tab-land) {
+        justify-content: center;
     }
 }

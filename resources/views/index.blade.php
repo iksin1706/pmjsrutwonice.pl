@@ -13,32 +13,43 @@
 
     @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
 
+
+
 </head>
 
 <body>
     @include('nav')
 
-	<div id="blasters" class="pop-up  rim-blasters">
-		<button class="rim-blasters__btn btn btn--empty"
-			onclick="document.querySelector('.pop-up').classList.remove('pop-up--active')"><i
-				class="fa fa-arrow-left"></i></button>
-		<div class="rim-blasters__wrapper d-flex flex-sa">
-			<a href="rb7.html" class="rim-blaster rim-blaster__left">
-				<img src="{{ asset('img/RB7.png') }}" alt="" class="rim-blaster__image">
-				<p class="rim-blaster__info-wrapper w-100 text--center color--primary mt-1">
-					Rozmiar i Oszczędność
-				</p>
-				<h4 class="rim-blaster__name w-100 text--center stroke-primary">RB7</h4>
-			</a>
-			<a href="rb11.html" class="rim-blaster rim-blaster__right">
-				<img src="{{ asset('img/RB11.png') }}" alt="" class="rim-blaster__image">
-				<p class="rim-blaster__info-wrapper w-100 text--center color--black mt-1">
-					Moc i Pojemność
-				</p>
-				<h4 class="rim-blaster__name w-100 text--center stroke-black ">RB11</h4>
-			</a>
-		</div>
-	</div>
+    <div class="loading">
+        <svg class="loading__svg" xmlns="http://www.w3.org/2000/svg" width="250" height="100" viewBox="0 0 84 23" fill="none">
+            <path class="loading__svg__line" d="M8.45663 1H30L23.6391 22H2L8.45663 1Z" stroke="#121212" stroke-width="2" />
+            <path class="loading__svg__line" d="M34.4566 1H56L49.6391 22H28L34.4566 1Z" stroke="#121212" stroke-width="2" />
+            <path style="stroke: rgb(247, 49, 49)" class="loading__svg__line" d="M60.4566 1H82L75.6391 22H54L60.4566 1Z" stroke="#121212" stroke-width="2" />
+        </svg>
+        <h5 class="loading__text">Loading</div>
+    </div>
+
+    <div id="blasters" class="pop-up  rim-blasters">
+        <button class="rim-blasters__btn btn btn--empty"
+            onclick="document.querySelector('.pop-up').classList.remove('pop-up--active')"><i
+                class="fa fa-arrow-left"></i></button>
+        <div class="rim-blasters__wrapper d-flex flex-sa">
+            <a href="rb7.html" class="rim-blaster rim-blaster__left">
+                <img src="{{ asset('img/RB7.png') }}" alt="" class="rim-blaster__image">
+                <p class="rim-blaster__info-wrapper w-100 text--center color--primary mt-1">
+                    Rozmiar i Oszczędność
+                </p>
+                <h4 class="rim-blaster__name w-100 text--center stroke-primary">RB7</h4>
+            </a>
+            <a href="rb11.html" class="rim-blaster rim-blaster__right">
+                <img src="{{ asset('img/RB11.png') }}" alt="" class="rim-blaster__image">
+                <p class="rim-blaster__info-wrapper w-100 text--center color--black mt-1">
+                    Moc i Pojemność
+                </p>
+                <h4 class="rim-blaster__name w-100 text--center stroke-black ">RB11</h4>
+            </a>
+        </div>
+    </div>
 
     <main>
         <section class="section hero">
@@ -77,7 +88,8 @@
                         {{ __('home.aboutUsDescription') }}
                     </p>
                 </div>
-                <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}" alt="{{ __('home.logoAlt') }}">
+                <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}"
+                    alt="{{ __('home.logoAlt') }}">
             </section>
             <section class="section company-info background--dark--gradient pt-3 pb-3">
                 <div class="row flex-sa">
@@ -229,7 +241,8 @@
                 <div class="slider trigger animation-finished pb-3">
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image " draggable="false" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.rimBlastersAlt') }}">
+                            <img class="slide__image " draggable="false" src="{{ asset('img/rb11.JPG') }}"
+                                alt="{{ __('home.rimBlastersAlt') }}">
                         </div>
                         <h3 class="slide__preview">{{ __('home.rimBlasters') }}</h3>
                         <div class="slide__text">
@@ -242,7 +255,8 @@
                     </div>
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.dustCollectorsAlt') }}">
+                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
+                                alt="{{ __('home.dustCollectorsAlt') }}">
                         </div>
                         <h3 class="slide__preview">{{ __('home.dustCollectors') }}</h3>
                         <div class="slide__text">
@@ -253,7 +267,8 @@
                     </div>
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.sandblastersAlt') }}">
+                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
+                                alt="{{ __('home.sandblastersAlt') }}">
                         </div>
                         <h3 class="slide__preview">{{ __('home.sandblasters') }}</h3>
                         <div class="slide__text">
@@ -264,7 +279,8 @@
                     </div>
                     <div class="slide">
                         <div class=" slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.ovenAlt') }}">
+                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
+                                alt="{{ __('home.ovenAlt') }}">
                         </div>
                         <h3 class="slide__preview">{{ __('home.oven') }}</h3>
                         <div class="slide__text">
@@ -275,7 +291,8 @@
                     </div>
                     <div class="slide">
                         <div class="slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}" alt="{{ __('home.otherAlt') }}">
+                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
+                                alt="{{ __('home.otherAlt') }}">
                         </div>
                         <h3 class="slide__preview">{{ __('home.other') }}</h3>
                         <div class="slide__text">
@@ -296,7 +313,8 @@
                     </p>
                     <div class="flagship__btn btn btn--filled">{{ __('home.learnMore') }}</div>
                 </div>
-                <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}" alt="{{ __('home.rimBlastersAlt') }}">
+                <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}"
+                    alt="{{ __('home.rimBlastersAlt') }}">
             </div>
             <div class="beforeafter">
                 <h3 class="color--black">{{ __('home.before') }}</h3>
@@ -307,18 +325,19 @@
                 <div id="banner-wrapper" class="banner-wrapper">
                     <div class="banner design">
                         <div class="banner-content">
-                            <img src="{{ asset('img/normal2.png') }}" alt="{{ __('home.normalRimAlt') }}"/>
+                            <img src="{{ asset('img/normal2.png') }}" alt="{{ __('home.normalRimAlt') }}" />
                         </div>
                     </div>
                     <div class="banner dev">
                         <div class="banner-content">
-                            <img src="{{ asset('img/rust2.png') }}" alt="{{ __('home.rustRimAlt') }}"/>
+                            <img src="{{ asset('img/rust2.png') }}" alt="{{ __('home.rustRimAlt') }}" />
                         </div>
                     </div>
                 </div>
         </section>
         <section class="section contact pt-3 pb-3" id="contact">
-            <h2 class="contact__label trigger text-center w-100">{{ __('home.interested') }} <a href="tel:+48726120051" > <span class="underlined">+48 726 120 051</span></a> </h2>
+            <h2 class="contact__label trigger text-center w-100">{{ __('home.interested') }} <a
+                    href="tel:+48726120051"> <span class="underlined">+48 726 120 051</span></a> </h2>
 
             <div class="row contact__container d-flex flex-sb">
                 <div class="contact__left clamp">
@@ -351,7 +370,8 @@
                     </picture>
                 </div>
             </div>
-            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <span class="underlined "> {{ __('home.clickHere') }}</span> {{ __('home.toFAQ') }}</h2>
+            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <span class="underlined ">
+                    {{ __('home.clickHere') }}</span> {{ __('home.toFAQ') }}</h2>
             <div class="contact__label">{{ __('home.or') }}</div>
             <div class="write-to-us"
                 style="background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 50%, transparent 50%), url('{{ asset('img/contact-background.webp') }}')">

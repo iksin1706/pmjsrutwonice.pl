@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "font-awesome": "^4.7.0",
-        "fontawesome-free": "^1.0.4"
+        "fontawesome-free": "^1.0.4",
+        "swiper": "^11.0.2"
     }
 }

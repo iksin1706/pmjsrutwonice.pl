@@ -13,6 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById('banner-wrapper');
   let prevScrollPos = window.scrollY;
 
+  window.addEventListener("load", function () {
+    this.setTimeout(() => {
+      const loader = document.querySelector(".loading");
+      loader.style.display = "none"; // Hide the preloader
+      console.log('jusz');
+    },0
+    )
+  });
+
   const toggleMobileNav = () => {
     document.body.classList.toggle("no-scroll", !mobileNavToggle.checked);
     nav.classList.toggle("nav--background", mobileNavToggle.checked);
