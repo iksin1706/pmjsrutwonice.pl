@@ -65,17 +65,17 @@ body {
         }
     }
 }
-// .row {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     flex-wrap: wrap;
-//     @include respond(tab-port) {
-//         & {
-//            justify-content: center;
-//         }
-//     }
-// }
+.section__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include respond(tab-port) {
+        & {
+           justify-content: center;
+        }
+    }
+}
 
 a {
     text-decoration: none;

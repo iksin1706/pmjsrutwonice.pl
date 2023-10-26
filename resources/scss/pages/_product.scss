@@ -77,11 +77,13 @@
     }
 
     &__dimensions {
-        max-width: 80rem;
-        width: 100%;
-        min-width: 30rem;
-
-
+      
+        @include respond(tab-port) {
+            display: none;
+        }
+        &__image{
+            margin-top: 10rem;
+        }
     }
 
     &__info {
@@ -128,7 +130,8 @@
         padding-bottom: 5rem;
 
         &__image {
-            height: 50rem;
+            width: 100%;
+            object-fit: contain;
 
             @include respond(tab-land) {
                 display: none;
@@ -180,7 +183,6 @@
         }
         &__text {
             font-size: 2rem;
-            max-width: 50rem;
         }
         &__image {
             max-height: 40rem;
@@ -212,7 +214,7 @@
         align-items: center;
         gap: 5rem;
 
-        @include respond(tab-port){
+        @include respond(tab-port) {
             flex-wrap: wrap;
         }
         &::before {
@@ -272,9 +274,10 @@
     &__video {
         background-size: 100% 100%;
         position: relative;
-
+        padding-top: 15rem;
+        padding-bottom: 15rem;
         height: 100vh;
-        background-image: radial-gradient(circle at 50% 50%, $color-dark-2,$color-dark-0);
+        background-image: radial-gradient(circle at 50% 50%, $color-dark-2, $color-dark-0);
         background-position: 100% 100%;
         background-repeat: no-repeat;
 

@@ -1,4 +1,4 @@
-.loading {
+.preloader {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,31 +25,10 @@
            // animation: loading-text 2s infinite;
         };
     }
-}
-
-
-
-@keyframes loading-animation {
-    0% {
-        stroke-dashoffset: 0;
-    }
-    100% {
-        stroke-dashoffset: 200;
+    &-hidden{
+        transition: 1s;
+        opacity: 0;
     }
 }
 
-@keyframes loading-text {
-    0% {
-        content: '';
-    }
-    33% {
-        content: '.';
-    }
-    66% {
-        content: '..';
-    }
-    
-    100% {
-        content: '...';
-    }
-}
+

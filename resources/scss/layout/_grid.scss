@@ -40,6 +40,9 @@
 
 [class^="col-"] {
     float: left;
+    & > * {
+        width: 100%;
+    }
 
     &:not(:last-child){
         margin-right: $gutter-horizontal;

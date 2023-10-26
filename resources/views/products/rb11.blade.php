@@ -11,13 +11,14 @@
     <meta name="color-scheme" content="dark">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/product.js'])
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/product.js', 'resources/js/nav.js', 'resources/js/preloader.js'])
 
 </head>
 
 <body>
 
-    @include('nav')
+    <x-navigation fontClass="color--black"></x-navigation>
+    <x-preloader></x-preloader>
     <main class="product">
         <section class="section product__hero"
             style="background-image: linear-gradient(#ffffff00 50%,rgb(0, 0, 0)), url('{{ asset('img/rb11.jpg') }}')">
@@ -39,22 +40,21 @@
             </div>
         </section>
         <section class="section product__about ">
-            <div class="product__about__wrapper d-flex flex-center">
-                <article class="product__about__text" data-aos="fade-up" data-aos-offset="300">
-                    <p class="color-white">
-                        Śrutownica RB11 jest urządzeniem, które automatyzuje - a co za tym idzie znacznie ułatwia proces
-                        obróbki
-                        strumieniowo-ściernej. Wbrew stereotypom poprzez śrutowanie nie uzyskujemy dużo bardziej
-                        chropowatej
-                        powierzchni, niż podczas procesu piaskowania. Śrutowanie śrutem o symbolu S110 odpowiada
-                        piaskowaniu
-                        przy użyciu poligritu o gradacji 0,2-1.2 przy ciśnieniu 7 bar, co pozwala na feldze aluminiowej
-                        uzyskać
-                        powierzchnie o chropowatości 28um-35um, co zapewnia bardzo dobra przyczepność, na przykład dla
-                        farb
-                        proszkowych, przy czym nie ma problemu z wyrównaniem felgi warstwą podkładową.
-                    </p>
-                </article>
+            <div class="row">
+                <h2 class="heading-2">O produkcie</h2>
+                <p class="paragraph color-white">
+                    Śrutownica RB11 jest urządzeniem, które automatyzuje - a co za tym idzie znacznie ułatwia proces
+                    obróbki
+                    strumieniowo-ściernej. Wbrew stereotypom poprzez śrutowanie nie uzyskujemy dużo bardziej
+                    chropowatej
+                    powierzchni, niż podczas procesu piaskowania. Śrutowanie śrutem o symbolu S110 odpowiada
+                    piaskowaniu
+                    przy użyciu poligritu o gradacji 0,2-1.2 przy ciśnieniu 7 bar, co pozwala na feldze aluminiowej
+                    uzyskać
+                    powierzchnie o chropowatości 28um-35um, co zapewnia bardzo dobra przyczepność, na przykład dla
+                    farb
+                    proszkowych, przy czym nie ma problemu z wyrównaniem felgi warstwą podkładową.
+                </p>
             </div>
         </section>
         <section class="swiper-section">
@@ -184,9 +184,9 @@
             </div>
         </section>
         <section class="section product__modes">
-            <div class="heading-2 side-line mb-2">
+            <h2 class="heading-2 text-center mb-2 text--center">
                 3 Tryby pracy
-            </div>
+            </h2>
 
             <div class="cards__wrapper row">
                 <div class="col-1-of-3">
@@ -211,7 +211,6 @@
                 </div>
                 <div class="col-1-of-3">
                     <div class="card card--3 m-1 " data-aos="fade-up" data-aos-delay="200">
-
                         <img class="card__image" src="{{ asset('img/kosz.png') }}" alt="">
                         <p class="card__paragraph text-left">
                             W koszu umieszczane są wszystkie elementy których nie da sie umieścić na rolkach np
@@ -221,7 +220,7 @@
                     </div>
                 </div>
             </div>
-            <h5 class="heading-3 text--center color-white mt-3">
+            <h5 class="heading-3 text--center color-white mt-3 pb-3">
                 <span class="underlined">
                     Żaden z trybów nie wymaga sprężonego powietrza!
                 </span>
@@ -230,25 +229,28 @@
 
 
         <section class="section product__info pb-3">
-            <div class="product__text-image product__text-image--left d-flex flex-center pt-3 pb-3">
-                <div class="product__text-image__wrapper d-flex flex-center w-100" data-aos="fade-right"
+            <div class="product__text-image row product__text-image--left d-flex flex-center pt-3 pb-3">
+                <div class="product__text-image__wrapper row d-flex flex-center w-100" data-aos="fade-right"
                     data-aos-delay="0" data-aos-offset="300">
-
-                    <article class="product__text-image__text side-line--fade">
-                        <div class="product__about__heading">
-                            <h2 class="heading-2 color-white">11 kW silnik z falownikiem</h2>
-                        </div>
-                        <p class="color-white">
-                            Dzięki zastosowaniu zaawansowanego falownika możesz precyzyjnie kontrolować prędkość
-                            i moc śrutownicy, co pozwala na doskonałe dostosowanie jej do różnych zadań. Bez względu
-                            na
-                            przedmiot który który chcesz wyśrutować możesz zrobić to bezpiecznie i efektywnie,
-                            nieważne
-                            czy będzie delikatna osłona z cienkiej blachy czy felga z trudno usuwalnym lakierem.
-                        </p>
-                    </article>
-                    <img class="product__text-image__image clamp" src="{{ asset('img/silnik.png') }}"
-                        alt="">
+                    <div class="col-1-of-2">
+                        <article class="product__text-image__text side-line--fade">
+                            <div class="product__about__heading">
+                                <h2 class="heading-2 color-white">11 kW silnik z falownikiem</h2>
+                            </div>
+                            <p class="color-white">
+                                Dzięki zastosowaniu zaawansowanego falownika możesz precyzyjnie kontrolować prędkość
+                                i moc śrutownicy, co pozwala na doskonałe dostosowanie jej do różnych zadań. Bez względu
+                                na
+                                przedmiot który który chcesz wyśrutować możesz zrobić to bezpiecznie i efektywnie,
+                                nieważne
+                                czy będzie delikatna osłona z cienkiej blachy czy felga z trudno usuwalnym lakierem.
+                            </p>
+                        </article>
+                    </div>
+                    <div class="col-1-of-2">
+                        <img class="product__text-image__image" src="{{ asset('img/silnik.png') }}"
+                            alt="">
+                    </div>
                 </div>
             </div>
             <div class="product__text-image--right row d-flex flex-center pt-3 pb-3">
@@ -275,43 +277,48 @@
             </div>
         </section>
         <section class="section product__technical-data pb-3">
-
-            <table class="table-fill mb-3">
-                <thead>
-                    <tr>
-                        <th class="text-left" colspan="2">
-                            <h3>Dane techniczne</h3>
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="table-hover">
-                    <tr>
-                        <td class="text-left">Wysokość</td>
-                        <td class="text-left">208 cm</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">Szerokość</td>
-                        <td class="text-left">140 cm</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">Głębokość</td>
-                        <td class="text-left">130 cm</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">Waga</td>
-                        <td class="text-left">950 kg</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left">Moc</td>
-                        <td class="text-left">11 kW</td>
-                    </tr>
-                </tbody>
-            </table>
-            <img class="product__dimensions" src="{{ asset('img/dim.png') }}" alt="">
+            <div class="row">
+                <div class="col-1-of-2">
+                    <table class="table-fill mb-3">
+                        <thead>
+                            <tr>
+                                <th class="text-left" colspan="2">
+                                    <h3>Dane techniczne</h3>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-hover">
+                            <tr>
+                                <td class="text-left">Wysokość</td>
+                                <td class="text-left">208 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Szerokość</td>
+                                <td class="text-left">140 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Głębokość</td>
+                                <td class="text-left">130 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Waga</td>
+                                <td class="text-left">950 kg</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left">Moc</td>
+                                <td class="text-left">11 kW</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-1-of-2 product__dimensions">
+                    <img class="product__dimensions__image" src="{{ asset('img/dim.png') }}" alt="">
+                </div>
+            </div>
         </section>
 
-        <section class="product__video d-flex flex-center p-3 background--dark--gradient">
-            <h2 class="heading-2">Zobacz film prezentujący działanie śrutownicy PMJ RB11</h2>
+        <section class="section product__video d-flex flex-center background--dark--gradient">
+            <h2 class="heading-2 text--center mb-2">Zobacz film prezentujący działanie śrutownicy PMJ RB11</h2>
             <iframe class="product__video__box" width="1200" height="600"
                 src="https://www.youtube.com/embed/4O6l8ObJY2I?si=fZ7rDDWu0hVEavrt" title="YouTube video player"
                 frameborder="0"
@@ -324,7 +331,7 @@
             <div class="row">
                 <div class="col-1-of-2">
                     <article class="about__text paragraph trigger side-line--fade">
-                        <h2 class="heading-2">Polecamy również</h2>
+                        <h2 class="heading-2 mt-2">Polecamy również</h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dolorum vero recusandae
                             maxime maiores sequi ducimus eos non, adipisci odit doloribus aspernatur pariatur iusto
@@ -335,11 +342,11 @@
                     </article>
                 </div>
                 <div class="col-1-of-2">
-                    <img class="about__image" src="{{ asset('img/pf90.png') }}" alt="">
+                    <img class="product__recommend" src="{{ asset('img/pf90.png') }}" alt="">
                 </div>
             </div>
         </section>
     </main>
 
-    @include('footer')
+    @include('layout/footer')
 </body>

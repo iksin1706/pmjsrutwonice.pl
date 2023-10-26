@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav {{ $fontClass }}">
     <a href="/"><img class="nav__logo" src="{{ asset('img/logo.png') }}" alt="{{ __('nav.logoAlt') }}"
             aria-label="To Home Page"></a>
     <ul class="nav__list">

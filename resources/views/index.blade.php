@@ -11,23 +11,15 @@
     <meta name="color-scheme" content="dark">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/index.js','resources/js/preloader.js','resources/js/nav.js'])
 
 
 
 </head>
 
 <body>
-    @include('nav')
-
-    <div class="loading">
-        <svg class="loading__svg" xmlns="http://www.w3.org/2000/svg" width="250" height="100" viewBox="0 0 84 23" fill="none">
-            <path class="loading__svg__line" d="M8.45663 1H30L23.6391 22H2L8.45663 1Z" stroke="#121212" stroke-width="2" />
-            <path class="loading__svg__line" d="M34.4566 1H56L49.6391 22H28L34.4566 1Z" stroke="#121212" stroke-width="2" />
-            <path style="stroke: rgb(247, 49, 49)" class="loading__svg__line" d="M60.4566 1H82L75.6391 22H54L60.4566 1Z" stroke="#121212" stroke-width="2" />
-        </svg>
-        <h5 class="loading__text">Loading</div>
-    </div>
+    <x-navigation fontClass="color--white"></x-navigation>
+    <x-preloader></x-preloader>
 
     <div id="blasters" class="pop-up  rim-blasters">
         <button class="rim-blasters__btn btn btn--empty"
@@ -81,7 +73,7 @@
             </div>
         </section>
         <article class="about">
-            <section class="section about__description row" id="about" name="about">
+            <section class="section about__description section__row" id="about" name="about">
                 <div class="about__description__text side-line--fade clamp">
                     <h2 class="heading-2 ">{{ __('home.about') }}</h2>
                     <p class="paragraph">
@@ -92,7 +84,7 @@
                     alt="{{ __('home.logoAlt') }}">
             </section>
             <section class="section company-info background--dark--gradient pt-3 pb-3">
-                <div class="row flex-sa">
+                <div class="section__row flex-sa">
                     <div class="europe clamp">
                         <img class="europe__image" loading="lazy" src="{{ asset('img/europe.svg') }}"
                             alt="{{ __('home.europeAlt') }}">
@@ -221,7 +213,7 @@
 
                         </div>
                     </div>
-                    <div class="company-info__stats trigger clamp">
+                    <div class="company-info__stats trigger clamp d-flex flex-r">
                         <div class="stats trigger">
                             <div class="stat__number" id="number1">0</div>
                             <div class="stat__description">{{ __('home.experience') }}</div>
@@ -305,7 +297,7 @@
             </section>
         </article>
         <section class="flagship section pt-4" style="background-image: url('{{ asset('img/background.jpg') }}');">
-            <div class="row">
+            <div class="section__row">
                 <div class="flagship__text clamp ">
                     <h2 class="heading-2 color--black">{{ __('home.flagship') }}</h2>
                     <p class="paragraph mt-2 mb-2 color--black text--normal">
@@ -339,7 +331,7 @@
             <h2 class="contact__label trigger text-center w-100">{{ __('home.interested') }} <a
                     href="tel:+48726120051"> <span class="underlined">+48 726 120 051</span></a> </h2>
 
-            <div class="row contact__container d-flex flex-sb">
+            <div class="section__row contact__container d-flex flex-sb">
                 <div class="contact__left clamp">
                     <div class="contact__card ">
                         <div class="">
@@ -402,7 +394,7 @@
             </div>
         </section>
     </main>
-    @include('footer')
+    @include('layout/footer')
 
     <div class="email-popup" style="display: none">
         <div class="email-popup__container">

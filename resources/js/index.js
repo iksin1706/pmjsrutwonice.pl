@@ -4,32 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const emailPopupSuccess = emailPopup.querySelector('.email-popup__success');
   const emailPopupLoader = emailPopup.querySelector('.email-popup__loader');
   const emailPopupStatus = emailPopup.querySelector('.email-popup__status');
-  const mobileNavButton = document.querySelector(".nav--mobile__button");
-  const mobileNav = document.querySelector(".nav--mobile__nav");
-  const mobileProductsItem = document.querySelector(".nav--mobile__item--products");
-  const mobileNavToggle = document.querySelector("#navi-toggle");
-  const nav = document.querySelector(".nav");
+
   const targets = document.querySelectorAll('.trigger');
   const banner = document.getElementById('banner-wrapper');
-  let prevScrollPos = window.scrollY;
 
-  window.addEventListener("load", function () {
-    this.setTimeout(() => {
-      const loader = document.querySelector(".loading");
-      loader.style.display = "none"; // Hide the preloader
-      console.log('jusz');
-    },0
-    )
-  });
-
-  const toggleMobileNav = () => {
-    document.body.classList.toggle("no-scroll", !mobileNavToggle.checked);
-    nav.classList.toggle("nav--background", mobileNavToggle.checked);
-  };
-
-  const toggleMobileProducts = () => {
-    document.querySelector(".nav__dropdown--mobile").classList.toggle("show-products");
-  };
 
   const sliderPlugin = (activeslide = 0) => {
     const slides = document.querySelectorAll('.slide');
@@ -86,16 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let animationFrame = requestAnimationFrame(updateValue);
   };
 
-  const scrollHandler = () => {
-    const currentScrollPos = window.scrollY;
-    if (prevScrollPos > currentScrollPos) {
-      nav.style.top = "0";
-    } else {
-      nav.style.top = "-9rem";
-    }
-    nav.classList.toggle("nav--background", currentScrollPos > 10);
-    prevScrollPos = currentScrollPos;
-  };
+
 
   emailForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -131,8 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  mobileNavButton.addEventListener('click', toggleMobileNav);
-  mobileProductsItem.addEventListener('click', toggleMobileProducts);
+
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -178,5 +146,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   sliderPlugin(0);
-  window.onscroll = scrollHandler;
+
 });
