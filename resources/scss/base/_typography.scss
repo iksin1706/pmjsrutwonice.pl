@@ -27,9 +27,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   text-align: left;
-  & span {
-    line-height: 7rem !important;
-  }
   @include respond(tab-port) {
     & {
       font-size: 2rem;

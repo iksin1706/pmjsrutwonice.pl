@@ -304,11 +304,11 @@
     &::before {
         content: "";
         position: absolute;
-        bottom: -12px;
+        bottom: -5px;
         left: 0;
-        height: 7px;
+        height: 6px;
         width: 100%;
-        border: solid 8px $color-primary;
+        border: solid 4px $color-primary;
         transform-origin: left;
         border-color: $color-primary transparent transparent transparent;
         border-radius: 50%;

@@ -5,5 +5,10 @@ return [
     'products' => "Products",
     'contact' => "Contact",
     'faq' => 'FAQ',
-    'about' => 'O nas',
+    'about' => 'About us',
+    'rb' => 'Rim Blaster',
+    'ov'=> 'Oven',
+    'pf'=> 'Dust Collector',
+    'pk'=> 'Sandblaster',
+    'other'=> 'Other products',
 ];

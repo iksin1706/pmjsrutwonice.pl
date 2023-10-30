@@ -26,14 +26,14 @@
             onclick="document.querySelector('.pop-up').classList.remove('pop-up--active')"><i
                 class="fa fa-arrow-left"></i></button>
         <div class="rim-blasters__wrapper d-flex flex-sa">
-            <a href="rb7.html" class="rim-blaster rim-blaster__left">
+            <a href="rb7" class="rim-blaster rim-blaster__left">
                 <img src="{{ asset('img/RB7.png') }}" alt="" class="rim-blaster__image">
                 <p class="rim-blaster__info-wrapper w-100 text--center color--primary mt-1">
                     Rozmiar i Oszczędność
                 </p>
                 <h4 class="rim-blaster__name w-100 text--center stroke-primary">RB7</h4>
             </a>
-            <a href="rb11.html" class="rim-blaster rim-blaster__right">
+            <a href="rb11" class="rim-blaster rim-blaster__right">
                 <img src="{{ asset('img/RB11.png') }}" alt="" class="rim-blaster__image">
                 <p class="rim-blaster__info-wrapper w-100 text--center color--black mt-1">
                     Moc i Pojemność
@@ -61,8 +61,8 @@
                         </div>
                     </h1>
                     <div class="mt-1">
-                        <a href="/produkty" class="btn btn--empty">{{ __('home.ourProducts') }}</a>
-                        <a href="/o-nas" class="btn btn-text">{{ __('home.about') }}</a>
+                        <a href="/products" class="btn btn--empty">{{ __('home.ourProducts') }}</a>
+                        <a href="/about" class="btn btn-text">{{ __('home.about') }}</a>
                     </div>
                 </header>
             </div>
@@ -303,7 +303,7 @@
                     <p class="paragraph mt-2 mb-2 color--black text--normal">
                         {{ __('home.flagshipDescription') }}
                     </p>
-                    <div class="flagship__btn btn btn--filled">{{ __('home.learnMore') }}</div>
+                    <a href="rb11" class="flagship__btn btn btn--filled">{{ __('home.learnMore') }}</a>
                 </div>
                 <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}"
                     alt="{{ __('home.rimBlastersAlt') }}">
@@ -362,8 +362,8 @@
                     </picture>
                 </div>
             </div>
-            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <span class="underlined ">
-                    {{ __('home.clickHere') }}</span> {{ __('home.toFAQ') }}</h2>
+            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <a href="faq" class="underlined ">
+                    {{ __('home.clickHere') }}</a> {{ __('home.toFAQ') }}</h2>
             <div class="contact__label">{{ __('home.or') }}</div>
             <div class="write-to-us"
                 style="background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 50%, transparent 50%), url('{{ asset('img/contact-background.webp') }}')">

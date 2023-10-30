@@ -16,7 +16,7 @@
 
     &--background,
     &:hover {
-        background-color: rgba($color-dark-0,0.8);
+        background-color: rgba($color-dark-0, 0.8);
         backdrop-filter: blur(8px) brightness(0.5);
         -webkit-backdrop-filter: blur(100px) brightness(0);
         text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -34,6 +34,7 @@
             color: inherit;
             text-decoration: none;
             font-size: 1.6rem;
+            font-weight: 900;
             transition: 0.2s ease-in-out;
             padding: 3rem 0rem 3rem 0rem;
             &:hover {
@@ -56,7 +57,7 @@
 
     &__dropdown {
         position: fixed;
-        background-color: #000000aa;
+        background-color: #000000ee;
         list-style-type: none;
         left: 0;
         z-index: 1;
@@ -89,9 +90,17 @@
                 }
             }
         }
+        &--mobile--active {
+            margin-top: 2rem;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            height: auto;
+            background-color: $color-dark-1;
+        }
 
         li {
             white-space: nowrap;
+            margin-bottom: 2rem;
 
             a {
                 text-align: center;
@@ -102,7 +111,8 @@
                 font-weight: 300;
                 color: $color-white;
                 text-decoration: none;
-                font-style: italic;
+                line-height: 8rem;
+
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -154,14 +164,14 @@
             transform: scale(1.1);
         }
 
-        &--mobile{
+        &--mobile {
             display: flex;
             width: 100vw;
             list-style-type: none;
 
             & > * {
-               width: 25% 
-            };
+                width: 25%;
+            }
         }
     }
 
@@ -211,7 +221,7 @@
             list-style: none;
             text-decoration: none;
             height: 100vh;
-            padding-bottom: 10rem ;
+            padding-bottom: 10rem;
             left: 50%;
             transform: translate(-50%);
             text-align: center;
@@ -357,12 +367,4 @@
             margin-bottom: 2rem;
         }
     }
-}
-
-.show-products {
-    margin-top: 2rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    height: 90rem;
-    background-color: $color-dark-1;
 }

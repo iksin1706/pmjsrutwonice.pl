@@ -52,7 +52,7 @@
     height: 200%;
     background-repeat: no-repeat;
     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: conic-gradient(#00000000, $color-primary, #00000000 50%);
+    background-image: conic-gradient(#00000000, $color-primary, #00000000 20%);
     animation: rotate 6s linear infinite;
   }
 

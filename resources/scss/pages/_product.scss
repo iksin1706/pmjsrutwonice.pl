@@ -83,6 +83,8 @@
         }
         &__image{
             margin-top: 10rem;
+            max-height: 50rem;
+            object-fit: contain;
         }
     }
 
@@ -132,6 +134,7 @@
         &__image {
             width: 100%;
             object-fit: contain;
+            max-height: 40rem;
 
             @include respond(tab-land) {
                 display: none;
@@ -143,6 +146,7 @@
             color: $color-white;
             fill: $color_white;
             max-width: 40rem;
+            height: 22rem;
             transition: 0.2s ease-in-out;
             &__icon {
                 fill: inherit;
@@ -209,10 +213,6 @@
         width: 100%;
         padding-top: 20rem;
         padding-bottom: 15rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 5rem;
 
         @include respond(tab-port) {
             flex-wrap: wrap;
@@ -309,13 +309,43 @@
     }
 
     &__recommend {
-        background-color: #000;
+        background: radial-gradient(circle at 0 100%, $color-dark-2,$color-dark-0);
         gap: 10rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        position: relative;
+
         padding-top: 15rem;
         padding-bottom: 15rem;
+
+        &__image{
+            max-height: 50rem;
+            object-fit: contain;
+        }
+        &::before {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            width: 100vw;
+            height: 15vh;
+            pointer-events: none;
+            background-image: linear-gradient(to top, #00000000 30%, #000000 100%);
+        }
+        
+        &::after {
+            content: "";
+            z-index: 10;
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            width: 100vw;
+            height: 15vh;
+            pointer-events: none;
+            background-image: linear-gradient(to bottom, #00000000 30%, #000000 100%);
+        }
+    }
+
+    &__underlined{
     }
 }
 

@@ -7,6 +7,6 @@ return [
     'products' => "Produkty",
     'contact' => "Kontakt",
     'writeToUs' => 'Napisz do nas',
-    'socialMedia' => 'Media społecznościowe',
+    'socialMedia' => 'Social Media',
     'design' => 'Projekt i realizacja',
 ];

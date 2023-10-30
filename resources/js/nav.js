@@ -1,6 +1,6 @@
 const mobileNavButton = document.querySelector(".nav--mobile__button");
 const mobileNav = document.querySelector(".nav--mobile__nav");
-const mobileProductsItem = document.querySelector(".nav--mobile__item--products");
+const mobileProductsItems = document.querySelectorAll(".nav--mobile__item--products");
 const mobileNavToggle = document.querySelector("#navi-toggle");
 const nav = document.querySelector(".nav");
 let prevScrollPos = window.scrollY;
@@ -10,12 +10,16 @@ const toggleMobileNav = () => {
     nav.classList.toggle("nav--background", mobileNavToggle.checked);
 };
 
-const toggleMobileProducts = () => {
-    document.querySelector(".nav__dropdown--mobile").classList.toggle("show-products");
+const toggleMobileProducts = (e) => {
+    e.target.firstElementChild.classList.toggle("nav__dropdown--mobile--active");
 };
 
 mobileNavButton.addEventListener('click', toggleMobileNav);
-mobileProductsItem.addEventListener('click', toggleMobileProducts);
+mobileProductsItems.forEach((element)=>{
+    element.addEventListener('click', (e) => {
+        toggleMobileProducts(e);
+    });
+}) 
 
 const scrollHandler = () => {
     const currentScrollPos = window.scrollY;

@@ -83,7 +83,23 @@ return [
     |
     */
 
-    'locale' => 'en_en',
+    'locale' => 'pl_pl',
+    'locales' => [
+        'pl_pl',
+        'en_en',
+        'de_de',
+        'es_es',
+
+    ],
+    'localesNames' => [
+        'pl_pl' => 'Polski',
+        'en_en' => 'English',
+        'de_de' => 'Deutsch',
+        'es_es' => 'Espanol',
+
+    ],
+    'fallback_locale' => 'pl_pl',
+    
 
     /*
     |--------------------------------------------------------------------------

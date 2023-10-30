@@ -9,10 +9,12 @@ use Illuminate\View\Component;
 class Navigation extends Component
 {
     public $fontClass;
+    public $available_locales;
 
     public function __construct($fontClass = 'color--white')
     {
         $this->fontClass = $fontClass;
+        $this->available_locales=config('app.localesNames');
     }
 
     /**
