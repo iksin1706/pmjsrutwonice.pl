@@ -20,30 +20,30 @@
     <x-preloader></x-preloader>
     <main class="product">
         <section class="section product__hero"
-            style="background-image: linear-gradient(#ffffff00 50%,rgb(0, 0, 0)), url('{{ asset('img/rb7-hero.png') }}')">
+            style="background-image: linear-gradient(#ffffff00 50%,rgb(0, 0, 0)), url('{{ asset('img/pf90-hero.png') }}')">
             {{-- <h1 class="product__hero__heading">RB11</h1> --}}
             <div class="product__hero__stats \">
                 <div class="product__hero__stats__item d-flex
                 color-white flex-center">
-                <h5>7kw</h5>
-                <p>{{ __('products/rb7.power') }}</p>
+                <h5>1,1kw</h5>
+                <p>{{ __('products/pf90.power') }}</p>
             </div>
             <div class="product__hero__stats__item d-flex color-white flex-center">
-                <h5>4 min</h5>
-                <p>{{ __('products/rb7.time') }}</p>
+                <h5>2900</h5>
+                <p>{{ __('products/pf90.rpm') }}</p>
             </div>
             <div class="product__hero__stats__item d-flex color-white flex-center">
-                <h5>100%</h5>
-                <p>{{ __('products/rb7.happines') }}</p>
+                <h5>95%</h5>
+                <p>{{ __('products/pf90.dustCollected') }}</p>
             </div>
             </div>
         </section>
         <section class="section product__about ">
             <div class="row">
                 <div class="side-line--fade">
-                    <h2 class="heading-2">{{ __('products/rb7.aboutHeading') }}</h2>
+                    <h2 class="heading-2">{{ __('products/pf90.aboutHeading') }}</h2>
                     <p class="paragraph color-white">
-                        {{ __('products/rb7.aboutDescription') }}
+                        {{ __('products/pf90.aboutDescription') }}
                     </p>
                 </div>
             </div>
@@ -124,119 +124,48 @@
         </section>
         <section class="section product__usages">
             <div class="w-100">
-                <h2 class="heading-2 text--center mb-2">{{ __('products/rb7.usages') }}</h2>
+                <h2 class="heading-2 text--center mb-2">{{ __('products/pf90.benefits') }}</h2>
                 <div class="row">
                     <div class="col-1-of-3" style="margin-bottom: 0">
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="200"
+                        <div class="product__usages__item d-flex numbers side-line--fade" data-aos="fade-up" data-aos-delay="200"
                             data-aos-offset="300">
-                            <img src="{{ asset('img/icons/rim-icon.svg') }}" class="product__usages__item__icon">
-                            <h4 class="product__usages__item__header"> {{ __('products/rb7.usage1Header') }}</h4>
+                            <h4 class="product__usages__item__header"> {{ __('products/pf90.benefit1Header') }}</h4>
                             <p class="product__usages__item__text">
-                                {{ __('products/rb7.usage1Description') }}
+                                {{ __('products/pf90.benefit1Description') }}
                             </p>
                         </div>
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="300">
-                            <img src="{{ asset('img/icons/brakes-icon.svg') }}" class="product__usages__item__icon">
-                            <h4 class="product__usages__item__header"> {{ __('products/rb7.usage2Header') }}</h4>
+                        <div class="product__usages__item d-flex numbers side-line--fade" data-aos="fade-up" data-aos-delay="300">
+                            <h4 class="product__usages__item__header"> {{ __('products/pf90.benefit2Header') }}</h4>
                             <p class="product__usages__item__text">
-                                {{ __('products/rb7.usage2Description') }}
+                                {{ __('products/pf90.benefit2Description') }}
                             </p>
                         </div>
                     </div>
                     <div class="col-1-of-3 product__usages__image">
-                        <img class="product__usages__image" src="{{ asset('img/rb7.png') }}" alt=""
+                        <img class="product__usages__image" src="{{ asset('img/pf90.png') }}" alt=""
                             data-aos="fade-up">
                     </div>
                     <div class="col-1-of-3">
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="300"
+                        <div class="product__usages__item d-flex numbers side-line--fade" data-aos="fade-up" data-aos-delay="300"
                             data-aos-offset="300">
-                            <img src="{{ asset('img/icons/turbo-icon.svg') }}" class="product__usages__item__icon">
 
-                            <h4 class="product__usages__item__header"> {{ __('products/rb7.usage3Header') }}</h4>
+                            <h4 class="product__usages__item__header"> {{ __('products/pf90.benefit3Header') }}</h4>
                             <p class="product__usages__item__text">
-                                {{ __('products/rb7.usage3Description') }}
+                                {{ __('products/pf90.benefit3Description') }}
                             </p>
                         </div>
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="500">
-                            <img src="{{ asset('img/icons/starter-icon.svg') }}" class="product__usages__item__icon">
+                        <div class="product__usages__item d-flex numbers side-line--fade" data-aos="fade-up" data-aos-delay="500">
 
-                            <h4 class="product__usages__item__header"> {{ __('products/rb7.usage4Header') }}</h4>
+                            <h4 class="product__usages__item__header"> {{ __('products/pf90.benefit4Header') }}</h4>
                             <p class="product__usages__item__text">
-                                {{ __('products/rb7.usage4Description') }}
+                                {{ __('products/pf90.benefit4Description') }}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section product__modes">
-            <h2 class="heading-2 text-center mb-2 text--center">
-                {{ __('products/rb7.modes') }}
-            </h2>
-
-            <div class="cards__wrapper row">
-                <div class="col-1-of-2 d-flex flex-center">
-                    <div class="card card--1 m-1 " data-aos="fade-up">
-                        <img class="card__image" src="{{ asset('img/rollers.png') }}" alt="">
-                        <p class="card__paragraph text-left"> {{ __('products/rb7.mode1') }}</p>
-                    </div>
-                </div>
-                <div class="col-1-of-2 d-flex flex-center">
-                    <div class="card card--3 m-1 " data-aos="fade-up" data-aos-delay="200">
-                        <img class="card__image" src="{{ asset('img/kosz.png') }}" alt="">
-                        <p class="card__paragraph text-left">
-                            {{ __('products/rb7.mode3') }}
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <h5 class="heading-3 product__underlined text--center color-white mt-3 pb-3">
-
-                {{ __('products/rb7.airPart1') }} <span class="underlined"> {{ __('products/rb7.airPart2') }} </span> {{ __('products/rb7.airPart3') }}
-
-            </h5>
-        </section>
-
-
-        <section class="section product__info pb-3">
-            <div class="product__text-image row product__text-image--left d-flex flex-center pt-3 pb-3">
-                <div class="product__text-image__wrapper row d-flex flex-center w-100" data-aos="fade-right"
-                    data-aos-delay="0" data-aos-offset="300">
-                    <div class="col-1-of-2">
-                        <article class="product__text-image__text side-line--fade">
-                            <div class="product__about__heading">
-                                <h2 class="heading-2 color-white"> {{ __('products/rb7.motorHeading') }}</h2>
-                            </div>
-                            <p class="color-white">
-                                {{ __('products/rb7.motorDescription') }}
-                            </p>
-                        </article>
-                    </div>
-                    <div class="col-1-of-2">
-                        <img class="product__text-image__image" src="{{ asset('img/silnik.png') }}" alt=" {{ __('products/rb7.motorAlt') }}">
-                    </div>
-                </div>
-            </div>
-            <div class="product__text-image--right row d-flex flex-center pt-3 pb-3">
-                <div class="product__text-image__wrapper d-flex flex-center w-100" data-aos="fade-right"
-                    data-aos-delay="0" data-aos-offset="300">
-                    <div class="col-1-of-2">
-                        <img class="product__text-image__image clamp" src="{{ asset('img/pan.png') }}"
-                            alt="">
-                    </div>
-                    <div class="col-1-of-2">
-                        <article class="product__text-image__text side-line--fade--right">
-                            <div class="product__about__heading">
-                                <h2 class="heading-2 color-white"> {{ __('products/rb7.uiHeading') }}</h2>
-                            </div>
-                            <p class="color-white">
-                                {{ __('products/rb7.uiDescription') }}
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
         <section class="section product__technical-data">
             <div class="row">
                 <div class="col-1-of-2">
@@ -244,64 +173,54 @@
                         <thead>
                             <tr>
                                 <th class="text-left" colspan="2">
-                                    <h3>{{ __('products/rb7.technicalData') }}</h3>
+                                    <h3>{{ __('products/pf90.technicalData') }}</h3>
                                 </th>
                             </tr>
                         </thead>
                         <tbody class="table-hover">
                             <tr>
-                                <td class="text-left">{{ __('products/rb7.data1') }}</td>
-                                <td class="text-left">190 cm</td>
+                                <td class="text-left">{{ __('products/pf90.data1') }}</td>
+                                <td class="text-left">2800m3/h</td>
                             </tr>
                             <tr>
-                                <td class="text-left">{{ __('products/rb7.data2') }}</td>
-                                <td class="text-left">130 cm</td>
+                                <td class="text-left">{{ __('products/pf90.data2') }}</td>
+                                <td class="text-left">1,1kW</td>
                             </tr>
                             <tr>
-                                <td class="text-left">{{ __('products/rb7.data3') }}</td>
-                                <td class="text-left">100 cm</td>
+                                <td class="text-left">{{ __('products/pf90.data3') }}</td>
+                                <td class="text-left">400v</td>
                             </tr>
                             <tr>
-                                <td class="text-left">{{ __('products/rb7.data4') }}</td>
-                                <td class="text-left">850 kg</td>
+                                <td class="text-left">{{ __('products/pf90.data4') }}</td>
+                                <td class="text-left">2900obr/min</td>
                             </tr>
                             <tr>
-                                <td class="text-left">{{ __('products/rb7.data5') }}</td>
-                                <td class="text-left">7 kW</td>
+                                <td class="text-left">{{ __('products/pf90.data5') }}</td>
+                                <td class="text-left">150mm</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-1-of-2 product__dimensions">
-                    <img class="product__dimensions__image" src="{{ asset('img/rb7.png') }}" alt="">
+                    <img class="product__dimensions__image" src="{{ asset('img/pf90.png') }}" alt="">
                 </div>
             </div>
-        </section>
-
-        <section class="section product__video d-flex flex-center background--dark--gradient">
-            <h2 class="heading-2 text--center mb-2">{{ __('products/rb7.video') }}</h2>
-            <iframe class="product__video__box" width="1200" height="600"
-                src="https://www.youtube.com/embed/4O6l8ObJY2I?si=fZ7rDDWu0hVEavrt" title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-
         </section>
 
         <section class="product__recommend d-flex flex-center">
             <div class="row">
                 <div class="col-1-of-2">
                     <article class="about__text paragraph trigger side-line--fade">
-                        <h2 class="heading-2 mt-2">{{ __('products/rb7.recommendHeading') }}</h2>
+                        <h2 class="heading-2 mt-2">{{ __('products/pf90.recommendHeading') }}</h2>
                         <p>
-                            {{ __('products/rb7.recommendProductDescription') }}
+                            {{ __('products/pf90.recommendProductDescription') }}
                         </p>
-                        <a class="mt-2 btn btn--filled" href="pf90.html">{{ __('products/rb7.learnMore') }}</a>
+                        <a class="mt-2 btn btn--filled" href="rb11">{{ __('products/pf90.learnMore') }}</a>
                         </p>
                     </article>
                 </div>
                 <div class="col-1-of-2">
-                    <img class="product__recommend__image" src="{{ asset('img/pf90.png') }}" alt="{{ __('products/rb7.recommendAlt') }}">
+                    <img class="product__recommend__image" src="{{ asset('img/rb11.png') }}" alt="{{ __('products/pf90.recommendAlt') }}">
                 </div>
             </div>
         </section>

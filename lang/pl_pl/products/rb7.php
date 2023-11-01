@@ -41,7 +41,7 @@ return [
     'airPart1' => 'Żaden z trybów',
     'airPart2' => 'nie wymaga',
     'airPart3' => 'sprężonego powietrza',
-    'motorHeading' => '11 kW silnik z falownikiem',
+    'motorHeading' => '7 kW silnik z falownikiem',
     'motorDescription' => 'Dzięki zastosowaniu zaawansowanego falownika możesz precyzyjnie kontrolować prędkość
     i moc śrutownicy, co pozwala na doskonałe dostosowanie jej do różnych zadań. Bez względu
     na

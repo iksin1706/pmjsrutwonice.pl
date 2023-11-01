@@ -27,6 +27,9 @@ Route::prefix('{lang?}')->middleware('locale')->group(function() {
     Route::get('/rb7', function () {
         return view('products/rb7');
     });
+    Route::get('/pf90', function () {
+        return view('products/pf90');
+    });
     Route::get('/faq', function () {
         return view('subpages/faq');
     });
