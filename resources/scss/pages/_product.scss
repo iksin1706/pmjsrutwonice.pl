@@ -4,17 +4,33 @@
         height: 100vh;
         background-repeat: no-repeat;
         position: relative;
+        background-attachment: fixed;
         background-position: center;
         z-index: 14;
 
+        &__header {
+            position: absolute;
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 4rem;
+
+        }
         &__heading {
             position: absolute;
-            top: 10%;
-            color: #202020;
+            color: $color-white;
             text-transform: uppercase;
-            font-size: 6rem;
+            font-size: 4rem;
             left: 50%;
-            transform: translateX(-50%);
+            top: 45%;
+            opacity: .4;
+            width: 100%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+            letter-spacing: 2rem;
+            mix-blend-mode: screen;
+            @include respond(tab-port) {
+                font-size: 3rem;
+            }
         }
 
         &::after {
@@ -38,21 +54,31 @@
             gap: 5remrem;
 
             h5 {
-                font-size: 3rem;
+                font-size: 4rem;
+                letter-spacing: .2rem;
                 text-align: center;
                 width: 100%;
+                @include respond(tab-port) {
+                    font-size: 3rem;
+                }
             }
             p {
                 width: 100%;
-                font-weight: 300;
+                font-weight: 100;
+                color: #aaa;
+                letter-spacing: .2rem;
                 font-size: 2rem;
                 text-align: center;
                 white-space: nowrap;
+                @include respond(tab-port) {
+                    font-size: 1.6rem;
+                }
             }
         }
     }
 
     &__list {
+        margin-left: 2rem;
         font-size: 3rem;
         color: white;
     }
@@ -77,11 +103,11 @@
     }
 
     &__dimensions {
-      
+        position: relative;
         @include respond(tab-port) {
             display: none;
         }
-        &__image{
+        &__image {
             margin-top: 10rem;
             max-height: 50rem;
             object-fit: contain;
@@ -146,6 +172,9 @@
             color: $color-white;
             fill: $color_white;
             max-width: 40rem;
+            display: flex;
+            align-items: flex-start;
+            flex-flow: column;
             height: 22rem;
             transition: 0.2s ease-in-out;
             &__icon {
@@ -155,14 +184,17 @@
                 width: 5rem;
                 margin-right: 2rem;
                 margin-bottom: 2rem;
+                transition: 0.2s ease-in-out;
             }
             &__header {
-                font-size: $font-size-2;
+                font-size: 2.5rem;
                 line-height: 2.5rem;
+                margin-bottom: 1rem;
             }
 
             &__text {
                 font-size: $font-size-default;
+                font-style: italic;
             }
 
             &:hover {
@@ -189,7 +221,7 @@
             font-size: 2rem;
         }
         &__image {
-            max-height: 40rem;
+            max-height: 50rem;
             object-fit: contain;
             margin-top: 2rem;
         }
@@ -309,14 +341,14 @@
     }
 
     &__recommend {
-        background: radial-gradient(circle at 0 100%, $color-dark-2,$color-dark-0);
+        background: radial-gradient(circle at 0 100%, $color-dark-2, $color-dark-0);
         gap: 10rem;
         position: relative;
 
         padding-top: 15rem;
         padding-bottom: 15rem;
 
-        &__image{
+        &__image {
             max-height: 50rem;
             object-fit: contain;
         }
@@ -331,7 +363,7 @@
             pointer-events: none;
             background-image: linear-gradient(to top, #00000000 30%, #000000 100%);
         }
-        
+
         &::after {
             content: "";
             z-index: 10;
@@ -345,7 +377,7 @@
         }
     }
 
-    &__underlined{
+    &__underlined {
     }
 }
 

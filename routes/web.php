@@ -30,6 +30,9 @@ Route::prefix('{lang?}')->middleware('locale')->group(function() {
     Route::get('/pf90', function () {
         return view('products/pf90');
     });
+    Route::get('/pk1', function () {
+        return view('products/pk1');
+    });
     Route::get('/faq', function () {
         return view('subpages/faq');
     });
