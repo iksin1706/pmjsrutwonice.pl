@@ -34,12 +34,39 @@
             color: inherit;
             text-decoration: none;
             font-size: 1.6rem;
-            font-weight: 900;
+            font-weight: 700;
             transition: 0.2s ease-in-out;
             padding: 3rem 0rem 3rem 0rem;
+
+            & {
+                background-image: linear-gradient(to right, $color-primary, $color-primary 50%, white 50%);
+                background-size: 200% 100%;
+                background-position: -100%;
+                display: inline-block;
+                position: relative;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &:before {
+                content: "";
+                background: $color-primary;
+                display: block;
+                position: absolute;
+                bottom: 3rem;
+                left: 0;
+                width: 0;
+                height: 3px;
+                transition: all 0.3s ease-in-out;
+            }
+
             &:hover {
-                color: $color-primary;
-                transform: scale(1.05);
+                background-position: 0;
+            }
+
+            &:hover::before {
+                width: 100%;
             }
         }
     }
@@ -74,6 +101,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+       
 
         &--mobile {
             position: relative;
@@ -82,6 +110,7 @@
             height: 0;
             padding: 0;
             width: auto;
+            transition: .5s ease-in-out;
             li {
                 white-space: nowrap;
 
@@ -95,7 +124,7 @@
             padding-top: 5rem;
             padding-bottom: 5rem;
             height: auto;
-            background-color: $color-dark-1;
+            background-color: #050505;
         }
 
         li {
@@ -108,7 +137,7 @@
                 color: $color-white;
                 text-decoration: none;
                 font-size: 2rem;
-                font-weight: 300;
+                font-weight: 400;
                 color: $color-white;
                 text-decoration: none;
                 line-height: 8rem;
@@ -237,6 +266,8 @@
             font-style: italic;
             text-transform: uppercase;
             padding: 1rem;
+            padding-left: 0;
+            padding-right: 0;
         }
 
         &__link {

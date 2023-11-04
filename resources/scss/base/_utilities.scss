@@ -227,15 +227,26 @@
 .side-line--fade {
     padding-left: 4rem;
     position: relative;
+
+    @include respond(phone){
+        padding-left: 2rem; 
+    }
     &::after {
         content: "";
         position: absolute;
-        background: linear-gradient(rgba($color-primary, 00),$color-primary, rgba($color-primary, 00));
+        background: linear-gradient(rgba($color-primary, .05) 40%,$color-primary 50%, rgba($color-primary, .05) 75%);
+        width: 5px;
+        background-attachment: fixed;
+        filter: drop-shadow(0px 0px 5px $color_primary);
         width: 5px;
         height: 100%;
 
         top: 0;
         left: 0;
+
+        @include respond(phone){
+            width: 2px; 
+        }
     }
 }
 .side-line--fade--right {
@@ -244,12 +255,16 @@
     &::after {
         content: "";
         position: absolute;
-        background: linear-gradient(rgba($color-primary, 00),$color-primary, rgba($color-primary, 00));
+        background: linear-gradient(rgba($color-primary, .05) 40%,$color-primary 50%, rgba($color-primary, .05) 75%);
         width: 5px;
         height: 100%;
-
+        background-attachment: fixed;
         top: 0;
         right: 0;
+        filter: drop-shadow(0px 0px 5px $color_primary);
+        @include respond(phone){
+            width: 2px; 
+        }
     }
 }
 

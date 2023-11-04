@@ -42,8 +42,8 @@
         <section class="section product__about ">
             <div class="row">
                 <div class="side-line--fade">
-                    <h2 class="heading-2">{{ __('products/rb11.aboutHeading') }}</h2>
-                    <p class="paragraph color-white">
+                    <h2 class="heading-2" data-aos="fade-up">{{ __('products/rb11.aboutHeading') }}</h2>
+                    <p class="paragraph color-white" data-aos="fade-up">
                         {{ __('products/rb11.aboutDescription') }}
                     </p>
                 </div>
@@ -51,7 +51,8 @@
         </section>
         <section class="swiper-section background--dark--gradient">
             <div class="row" style="height: 100%">
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2"
+                    data-aos="fade-up">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -128,15 +129,14 @@
                 <h2 class="heading-2 text--center mb-2">{{ __('products/rb11.usages') }}</h2>
                 <div class="row">
                     <div class="col-1-of-3" style="margin-bottom: 0">
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="200"
-                            data-aos-offset="300">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="0">
                             <img src="{{ asset('img/icons/rim-icon.svg') }}" class="product__usages__item__icon">
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage1Header') }}</h4>
                             <p class="product__usages__item__text">
                                 {{ __('products/rb11.usage1Description') }}
                             </p>
                         </div>
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="300">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="100">
                             <img src="{{ asset('img/icons/brakes-icon.svg') }}" class="product__usages__item__icon">
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage2Header') }}</h4>
                             <p class="product__usages__item__text">
@@ -149,8 +149,7 @@
                             data-aos="fade-up">
                     </div>
                     <div class="col-1-of-3">
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="300"
-                            data-aos-offset="300">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="200">
                             <img src="{{ asset('img/icons/turbo-icon.svg') }}" class="product__usages__item__icon">
 
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage3Header') }}</h4>
@@ -158,7 +157,7 @@
                                 {{ __('products/rb11.usage3Description') }}
                             </p>
                         </div>
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-delay="500">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="300">
                             <img src="{{ asset('img/icons/starter-icon.svg') }}" class="product__usages__item__icon">
 
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage4Header') }}</h4>
@@ -176,22 +175,22 @@
             </h2>
 
             <div class="cards__wrapper row">
-                <div class="col-1-of-3">
-                    <div class="card card--1 m-1 " data-aos="fade-up">
+                <div class="col-1-of-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card card--1 m-1 " >
                         <img class="card__image" src="{{ asset('img/rollers.png') }}" alt="">
                         <p class="card__paragraph text-left"> {{ __('products/rb11.mode1') }}</p>
                     </div>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="card card--2 m-1 data-aos="fade-up" data-aos-delay="100">
+                <div class="col-1-of-3"  data-aos="fade-up">
+                    <div class="card card--2 m-1" >
                         <img class="card__image" src="{{ asset('img/zaw.png') }}" alt="">
                         <p class="card__paragraph text-left" style="text-align: justify;">
                             {{ __('products/rb11.mode2') }}
                         </p>
                     </div>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="card card--3 m-1 " data-aos="fade-up" data-aos-delay="200">
+                <div class="col-1-of-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card card--3 m-1 " >
                         <img class="card__image" src="{{ asset('img/kosz.png') }}" alt="">
                         <p class="card__paragraph text-left">
                             {{ __('products/rb11.mode3') }}
@@ -201,7 +200,8 @@
             </div>
             <h5 class="heading-3 product__underlined text--center color-white mt-3 pb-3">
 
-                {{ __('products/rb11.airPart1') }} <span class="underlined"> {{ __('products/rb11.airPart2') }} </span> {{ __('products/rb11.airPart3') }}
+                {{ __('products/rb11.airPart1') }} <span class="underlined"> {{ __('products/rb11.airPart2') }}
+                </span> {{ __('products/rb11.airPart3') }}
 
             </h5>
         </section>
@@ -222,16 +222,16 @@
                         </article>
                     </div>
                     <div class="col-1-of-2">
-                        <img class="product__text-image__image" src="{{ asset('img/silnik.png') }}" alt=" {{ __('products/rb11.motorAlt') }}">
+                        <img class="product__text-image__image" src="{{ asset('img/silnik.png') }}"
+                            alt=" {{ __('products/rb11.motorAlt') }}">
                     </div>
                 </div>
             </div>
             <div class="product__text-image--right row d-flex flex-center pt-3 pb-3">
-                <div class="product__text-image__wrapper d-flex flex-center w-100" data-aos="fade-right"
+                <div class="product__text-image__wrapper d-flex flex-center w-100" data-aos="fade-left"
                     data-aos-delay="0" data-aos-offset="300">
                     <div class="col-1-of-2">
-                        <img class="product__text-image__image" src="{{ asset('img/pan.png') }}"
-                            alt="">
+                        <img class="product__text-image__image" src="{{ asset('img/pan.png') }}" alt="">
                     </div>
                     <div class="col-1-of-2">
                         <article class="product__text-image__text side-line--fade--right">
@@ -310,7 +310,8 @@
                     </article>
                 </div>
                 <div class="col-1-of-2">
-                    <img class="product__recommend__image" src="{{ asset('img/pf90.png') }}" alt="{{ __('products/rb11.recommendAlt') }}">
+                    <img class="product__recommend__image" src="{{ asset('img/pf90.png') }}"
+                        alt="{{ __('products/rb11.recommendAlt') }}">
                 </div>
             </div>
         </section>

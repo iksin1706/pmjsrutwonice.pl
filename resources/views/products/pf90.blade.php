@@ -142,8 +142,7 @@
                         </div>
                     </div>
                     <div class="col-1-of-3 product__usages__image">
-                        <img class="product__usages__image" src="{{ asset('img/pf90.png') }}" alt=""
-                            data-aos="fade-up">
+                        <img class="product__usages__image" src="{{ asset('img/pf90.png') }}" alt="" data-aos="fade-up">
                     </div>
                     <div class="col-1-of-3">
                         <div class="product__usages__item d-flex numbers side-line--fade" data-aos="fade-up" data-aos-delay="300"

@@ -105,9 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (entry.target.classList.contains('text-to-animate')) {
-          animate();
-        }
         if (entry.target.classList.contains('stats') && !entry.target.classList.contains('done')) {
           entry.target.classList.add('done');
           animateCountUp(document.getElementById("number1"), 10, 1000);
@@ -129,13 +126,30 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }, {
-    rootMargin: '50%',
     threshold: [0.5]
   });
 
   targets.forEach((target) => {
     observer.observe(target);
   });
+
+
+  const linesObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        console.log("text")
+      }
+    });
+  }, {
+    rootMargin: '0px 0px -30% 0px',
+    threshold: [0.5]
+  });
+  const lines = document.querySelectorAll('.about__line');
+  lines.forEach((target) => {
+    linesObserver.observe(target);
+  });
+
 
   banner.addEventListener('mousemove', (e) => handleMoveEvent(e.clientX));
   banner.addEventListener('touchmove', (e) => {
@@ -148,3 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sliderPlugin(0);
 
 });
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();

@@ -73,15 +73,17 @@
             </div>
         </section>
         <article class="about">
-            <section class="section about__description section__row" id="about" name="about">
-                <div class="about__description__text side-line--fade clamp">
-                    <h2 class="heading-2 ">{{ __('home.about') }}</h2>
-                    <p class="paragraph">
-                        {{ __('home.aboutUsDescription') }}
+            <section class="section section__row pt-3 pb-3" id="about" name="about">
+                <div class="clamp">
+                    <p class="about__description side-line--fade">
+                        <span class="about__line">Jesteśmy polską firmą, która doskonale rozumie potrzeby firm renowacyjnych i regeneracyjnych w całej Europie. </span>
+                        <span class="about__line">Nasza mocna historia w renowacji felg stanowi solidne fundamenty   naszego know-how. </span>
+                        <span class="about__line">Obecnie skupiamy się na produkcji wysokiej jakości maszyn oraz dostarczaniu  nowatorskich rozwiązań, aby wesprzeć rozwój branży</span>
+                        <span class="about__line">Tworzymy artnerskie relacje oparte na wiedzy i doświadczeniu,  gotowe sprostać wyzwaniom Twojego biznesu.</span>
                     </p>
                 </div>
                 <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}"
-                    alt="{{ __('home.logoAlt') }}">
+                    alt="{{ __('home.logoAlt') }}"  data-aos-offset="200" data-aos="fade-right">
             </section>
             <section class="section company-info background--dark--gradient pt-3 pb-3">
                 <div class="section__row flex-sa">
@@ -215,13 +217,13 @@
                     </div>
                     <div class="company-info__stats trigger clamp d-flex flex-r">
                         <div class="stats trigger">
-                            <div class="stat__number" id="number1">0</div>
+                            <div class="stat__number" id="number1">0+</div>
                             <div class="stat__description">{{ __('home.experience') }}</div>
 
-                            <div class="stat__number" id="number2">0</div>
+                            <div class="stat__number" id="number2">0+</div>
                             <div class="stat__description">{{ __('home.countries') }}</div>
 
-                            <div class="stat__number" id="number3">0</div>
+                            <div class="stat__number" id="number3">0+</div>
                             <div class="stat__description">{{ __('home.happyClients') }}</div>
                         </div>
                     </div>
@@ -257,7 +259,7 @@
                         </div>
                         <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
-                    <div class="slide">
+                    <div class="slide" >
                         <div class="slide__image-container">
                             <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
                                 alt="{{ __('home.sandblastersAlt') }}">
@@ -269,7 +271,7 @@
                         </div>
                         <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
-                    <div class="slide">
+                    <div class="slide" >
                         <div class=" slide__image-container">
                             <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
                                 alt="{{ __('home.ovenAlt') }}">
@@ -281,7 +283,7 @@
                         </div>
                         <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
-                    <div class="slide">
+                    <div class="slide" >
                         <div class="slide__image-container">
                             <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
                                 alt="{{ __('home.otherAlt') }}">

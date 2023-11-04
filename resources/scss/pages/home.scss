@@ -41,11 +41,31 @@
     background: $color-dark-0;
     background-size: contain;
 
-    &__description {
-        background: $color-dark-0;
+    &__line {
+        background-clip: text;
+        color: transparent;
+        background-image: radial-gradient(circle at 0 0, #303030 50%, #eee 50%);
+        background-position: -0% 0%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Lato';
+        display: inline-block;
+        transition: 1s;
+        background-size: 210%;
+    }
 
+    &__line.animated {
+        background-position: -90% 0%;
+
+
+    }
+
+    &__description {
+        font-size: 2.5rem;
+        font-weight: 900;
+        width: clamp(10rem, 100%, 100rem);
         &__text {
-            width: clamp(30rem, 50%, 70rem);
+  
         }
         &__image {
             opacity: 1;
