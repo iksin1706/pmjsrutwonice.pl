@@ -68,7 +68,8 @@
     &.dev {
         transform: skew(0deg);
         border-right: rgba(white, 0.5) solid 4px;
-        width: 50%;
+        width: 75%;
+        transition: 1s ease-in-out;
 
         .banner-content {
             transform: skew(0deg);

@@ -1,0 +1,17 @@
+#cookie-popup {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background-color: #101010cc;
+    z-index: 20;
+    gap: 2rem;
+    display: none;
+    justify-content: space-around;
+
+    .paragraph {
+        width: 70%;
+        @include respond(tab-port){
+            width: 100%;
+        }
+    }
+}

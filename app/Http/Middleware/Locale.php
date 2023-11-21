@@ -17,15 +17,15 @@ class Locale
     {
         if ($request->method() === 'GET') {
             $segment = $request->segment(1);
-
+        
             if (!in_array($segment, config('app.locales'))) {
                 $segments = $request->segments();
                 $fallback = session('locale') ?: config('app.fallback_locale');
-                $segments = array_prepend($segments, $fallback);
-
-                return redirect()->to(implode('/', $segments));
+                array_unshift($segments, $fallback); // Use array_unshift to prepend the fallback locale
+        
+                return redirect()->to('/' . implode('/', $segments)); // Add a leading slash to the URL
             }
-
+        
             session(['locale' => $segment]);
             app()->setLocale($segment);
         }

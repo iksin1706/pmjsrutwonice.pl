@@ -1,3 +1,6 @@
+let isComparisonAnimationDone = false;
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const emailForm = document.getElementById("email-form");
   const emailPopup = document.querySelector('.email-popup');
@@ -7,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const targets = document.querySelectorAll('.trigger');
   const banner = document.getElementById('banner-wrapper');
+  const devLayer = banner.querySelector('.dev');
+
 
 
   const sliderPlugin = (activeslide = 0) => {
@@ -29,10 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const handleMoveEvent = (xPosition) => {
-    const devLayer = banner.querySelector('.dev');
-    const delta = xPosition - banner.offsetLeft;
-    devLayer.style.width = `${delta}px`;
-    devLayer.style.borderRight = banner.offsetWidth / 2 > delta ? "solid 5px #ffffff99" : "solid 5px #ffffff99";
+    if (isComparisonAnimationDone) {
+      const delta = xPosition - banner.offsetLeft;
+      devLayer.style.width = `${delta}px`;
+      devLayer.style.borderRight = banner.offsetWidth / 2 > delta ? "solid 5px #ffffff99" : "solid 5px #ffffff99";
+    }
   };
 
   const animateCountUp = (targetElement, endValue, duration) => {
@@ -121,6 +127,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 1500);
           }
           return;
+        }
+        if (entry.target.classList.contains("banner")) {
+
+          devLayer.style.width = "25%";
+          console.log('anim');
+          setTimeout(function () {
+            devLayer.style.width = "45%";
+            setTimeout(function () {
+              isComparisonAnimationDone = true;
+              devLayer.style.transition = "0s";
+            }, 1000);
+          }, 1000);
         }
         entry.target.classList.add('animated');
       }

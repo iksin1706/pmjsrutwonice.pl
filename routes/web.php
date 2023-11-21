@@ -36,6 +36,9 @@ Route::prefix('{lang?}')->middleware('locale')->group(function() {
     Route::get('/faq', function () {
         return view('subpages/faq');
     });
+    Route::get('/policy', function () {
+        return view('subpages/policy-terms');
+    });
     
 });
 

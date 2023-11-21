@@ -5,19 +5,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PMJ | Śrutownice, Piaskarki, Malowanie Proszkowe</title>
+    <meta name="description"
+        content="Produkcja maszyn do renowacji i obróbki metali -  śrutowania, piaskowania, malowania proszkowego">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/index.js','resources/js/preloader.js','resources/js/nav.js'])
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N1NN596J"></script>
+    <script>
+
+    </script>
+
+
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/index.js', 'resources/js/preloader.js', 'resources/js/nav.js'])
 
 
 
 </head>
 
 <body>
+
+    @include('cookies/cookies')
     <x-navigation fontClass="color--white"></x-navigation>
     <x-preloader></x-preloader>
 
@@ -76,14 +86,18 @@
             <section class="section section__row pt-3 pb-3" id="about" name="about">
                 <div class="clamp">
                     <p class="about__description side-line--fade">
-                        <span class="about__line">Jesteśmy polską firmą, która doskonale rozumie potrzeby firm renowacyjnych i regeneracyjnych w całej Europie. </span>
-                        <span class="about__line">Nasza mocna historia w renowacji felg stanowi solidne fundamenty   naszego know-how. </span>
-                        <span class="about__line">Obecnie skupiamy się na produkcji wysokiej jakości maszyn oraz dostarczaniu  nowatorskich rozwiązań, aby wesprzeć rozwój branży</span>
-                        <span class="about__line">Tworzymy artnerskie relacje oparte na wiedzy i doświadczeniu,  gotowe sprostać wyzwaniom Twojego biznesu.</span>
+                        <span class="about__line">Jesteśmy polską firmą, która doskonale rozumie potrzeby firm
+                            renowacyjnych i regeneracyjnych w całej Europie. </span>
+                        <span class="about__line">Nasza mocna historia w renowacji felg stanowi solidne fundamenty
+                            naszego know-how. </span>
+                        <span class="about__line">Obecnie skupiamy się na produkcji wysokiej jakości maszyn oraz
+                            dostarczaniu nowatorskich rozwiązań, aby wesprzeć rozwój branży</span>
+                        <span class="about__line">Tworzymy artnerskie relacje oparte na wiedzy i doświadczeniu, gotowe
+                            sprostać wyzwaniom Twojego biznesu.</span>
                     </p>
                 </div>
                 <img class="about__description__image clamp" src="{{ asset('img/logo2.png') }}"
-                    alt="{{ __('home.logoAlt') }}"  data-aos-offset="200" data-aos="fade-right">
+                    alt="{{ __('home.logoAlt') }}" data-aos-offset="200" data-aos="fade-right">
             </section>
             <section class="section company-info background--dark--gradient pt-3 pb-3">
                 <div class="section__row flex-sa">
@@ -259,7 +273,7 @@
                         </div>
                         <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
-                    <div class="slide" >
+                    <div class="slide">
                         <div class="slide__image-container">
                             <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
                                 alt="{{ __('home.sandblastersAlt') }}">
@@ -271,7 +285,7 @@
                         </div>
                         <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
-                    <div class="slide" >
+                    <div class="slide">
                         <div class=" slide__image-container">
                             <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
                                 alt="{{ __('home.ovenAlt') }}">
@@ -283,7 +297,7 @@
                         </div>
                         <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
-                    <div class="slide" >
+                    <div class="slide">
                         <div class="slide__image-container">
                             <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
                                 alt="{{ __('home.otherAlt') }}">
@@ -317,7 +331,7 @@
 
             <div class="banner-container">
                 <div id="banner-wrapper" class="banner-wrapper">
-                    <div class="banner design">
+                    <div class="banner design trigger">
                         <div class="banner-content">
                             <img src="{{ asset('img/normal2.png') }}" alt="{{ __('home.normalRimAlt') }}" />
                         </div>
@@ -364,7 +378,8 @@
                     </picture>
                 </div>
             </div>
-            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <a href="faq" class="underlined ">
+            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <a href="faq"
+                    class="underlined ">
                     {{ __('home.clickHere') }}</a> {{ __('home.toFAQ') }}</h2>
             <div class="contact__label">{{ __('home.or') }}</div>
             <div class="write-to-us"
