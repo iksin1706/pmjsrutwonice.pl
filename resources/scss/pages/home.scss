@@ -143,10 +143,17 @@
     width: 20rem;
     & .fa {
         font-size: 3rem;
+        transition: .2s;
     }
     &__item {
+    
         &:hover {
             cursor: pointer;
+            
+            & .fa {
+                transform: scale(1.2);
+                color: $color-primary;
+            }
         }
     }
 }

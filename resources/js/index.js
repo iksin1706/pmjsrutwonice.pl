@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const banner = document.getElementById('banner-wrapper');
   const devLayer = banner.querySelector('.dev');
 
-
-
   const sliderPlugin = (activeslide = 0) => {
     const slides = document.querySelectorAll('.slide');
 
@@ -112,10 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         if (entry.target.classList.contains('stats') && !entry.target.classList.contains('done')) {
-          entry.target.classList.add('done');
-          animateCountUp(document.getElementById("number1"), 10, 1000);
-          animateCountUp(document.getElementById("number2"), 15, 1500);
-          animateCountUp(document.getElementById("number3"), 1000, 2000);
+          animateOdometers();
         }
         if (entry.target.classList.contains('slider')) {
           if (!entry.target.classList.contains('animated') && !entry.target.classList.contains('animation-finished')) {
@@ -182,5 +177,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+const animateOdometers = () => {
+
+  let elements = document.querySelectorAll('.odometer');
+
+  elements.forEach((el, index) => {
+    const od = new Odometer({
+      el: el,
+      value: 0,
+      format: '',
+      theme: 'minimal'
+    });
+
+    od.update(el.getAttribute('value'));
+  })
+}
+
+document.querySelector(".slider").onmousemove = e => {
+  for(const card of document.getElementsByClassName("slide")) {
+    const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x-50}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+}
 
 AOS.init();

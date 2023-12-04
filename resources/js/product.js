@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination ,Thumbs} from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -13,7 +13,7 @@ var swiper = new Swiper(".mySwiper", {
     watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".mySwiper2", {
-    modules: [Navigation, Pagination,Thumbs],
+    modules: [Navigation, Pagination, Thumbs],
     lazy: true,
     spaceBetween: 10,
     navigation: {
@@ -28,3 +28,16 @@ var swiper2 = new Swiper(".mySwiper2", {
 // import 'aos/dist/aos.css';
 
 // AOS.init();
+
+let elements = document.querySelectorAll('.odometer');
+
+elements.forEach((el, index) => {
+    const od = new Odometer({
+        el: el,
+        value: 0,
+        format: '',
+        theme: 'minimal'
+    });
+
+    od.update(el.getAttribute('value'));
+})

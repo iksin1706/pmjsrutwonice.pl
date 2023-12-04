@@ -5,14 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RB11 - Śrutownica, Piaskarka Automaczyna</title>
-    <meta name="description" content="Śrutownica piaskarka automatyczna RB11 - urządzenie do czyszczenia felg, zacisków, turbiny">
+    <meta name="description"
+        content="Śrutownica piaskarka automatyczna RB11 - urządzenie do czyszczenia felg, zacisków, turbiny">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/product.js', 'resources/js/nav.js', 'resources/js/preloader.js'])
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/odometer.min.js', 'resources/js/product.js', 'resources/js/nav.js', 'resources/js/preloader.js'])
 
 </head>
 
@@ -24,20 +25,20 @@
         <section class="section product__hero"
             style="background-image: linear-gradient(#ffffff00 70%,rgb(0, 0, 0)), url('{{ asset('img/rb11.jpg') }}')">
             <h1 class="product__hero__heading">Śrutownica RB11</h1>
-            <div class="product__hero__stats \">
+            <div class="product__hero__stats">
                 <div class="product__hero__stats__item d-flex
                 color-white flex-center">
-                <h5>11kW</h5>
-                <p>{{ __('products/rb11.power') }}</p>
-            </div>
-            <div class="product__hero__stats__item d-flex color-white flex-center">
-                <h5>4 min</h5>
-                <p>{{ __('products/rb11.time') }}</p>
-            </div>
-            <div class="product__hero__stats__item d-flex color-white flex-center">
-                <h5>100%</h5>
-                <p>{{ __('products/rb11.happines') }}</p>
-            </div>
+                    <h5 class="odometer " value="11" data-after="kW">11</h5>
+                    <p>{{ __('products/rb11.power') }}</p>
+                </div>
+                <div class="product__hero__stats__item d-flex color-white flex-center">
+                    <h5 class="odometer" value="4" data-after="min"></h5>
+                    <p>{{ __('products/rb11.time') }}</p>
+                </div>
+                <div class="product__hero__stats__item d-flex color-white flex-center">
+                    <h5 class="odometer" value="100" data-after="%">100</h5>
+                    <p>{{ __('products/rb11.happines') }}</p>
+                </div>
             </div>
         </section>
         <section class="section product__about ">
@@ -56,16 +57,16 @@
                     data-aos="fade-up">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
                             <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
@@ -92,13 +93,13 @@
                 <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            <img src="{{ asset('img/rb11.jpg') }}" />
                         </div>
                         <div class="swiper-slide">
                             <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
@@ -130,14 +131,16 @@
                 <h2 class="heading-2 text--center mb-2">{{ __('products/rb11.usages') }}</h2>
                 <div class="row">
                     <div class="col-1-of-3" style="margin-bottom: 0">
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="0">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300"
+                            data-aos-delay="0">
                             <img src="{{ asset('img/icons/rim-icon.svg') }}" class="product__usages__item__icon">
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage1Header') }}</h4>
                             <p class="product__usages__item__text">
                                 {{ __('products/rb11.usage1Description') }}
                             </p>
                         </div>
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="100">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300"
+                            data-aos-delay="100">
                             <img src="{{ asset('img/icons/brakes-icon.svg') }}" class="product__usages__item__icon">
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage2Header') }}</h4>
                             <p class="product__usages__item__text">
@@ -150,7 +153,8 @@
                             data-aos="fade-up">
                     </div>
                     <div class="col-1-of-3">
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="200">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300"
+                            data-aos-delay="200">
                             <img src="{{ asset('img/icons/turbo-icon.svg') }}" class="product__usages__item__icon">
 
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage3Header') }}</h4>
@@ -158,7 +162,8 @@
                                 {{ __('products/rb11.usage3Description') }}
                             </p>
                         </div>
-                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300" data-aos-delay="300">
+                        <div class="product__usages__item d-flex numbers" data-aos="fade-up" data-aos-offset="300"
+                            data-aos-delay="300">
                             <img src="{{ asset('img/icons/starter-icon.svg') }}" class="product__usages__item__icon">
 
                             <h4 class="product__usages__item__header"> {{ __('products/rb11.usage4Header') }}</h4>
@@ -175,15 +180,15 @@
                 {{ __('products/rb11.modes') }}
             </h2>
 
-            <div class="cards__wrapper row">
+            <div class="cards__wrapper cards row">
                 <div class="col-1-of-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card card--1 m-1 " >
+                    <div class="card card--1 m-1 ">
                         <img class="card__image" src="{{ asset('img/rollers.png') }}" alt="">
                         <p class="card__paragraph text-left"> {{ __('products/rb11.mode1') }}</p>
                     </div>
                 </div>
-                <div class="col-1-of-3"  data-aos="fade-up">
-                    <div class="card card--2 m-1" >
+                <div class="col-1-of-3" data-aos="fade-up">
+                    <div class="card card--2 m-1 card--border-animation">
                         <img class="card__image" src="{{ asset('img/zaw.png') }}" alt="">
                         <p class="card__paragraph text-left" style="text-align: justify;">
                             {{ __('products/rb11.mode2') }}
@@ -191,7 +196,7 @@
                     </div>
                 </div>
                 <div class="col-1-of-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card card--3 m-1 " >
+                    <div class="card card--3 m-1 ">
                         <img class="card__image" src="{{ asset('img/kosz.png') }}" alt="">
                         <p class="card__paragraph text-left">
                             {{ __('products/rb11.mode3') }}
@@ -297,7 +302,12 @@
                 allowfullscreen></iframe>
 
         </section>
-
+        <section class="section background--dark">
+            <h2 class="heading-3 text--center">Aby zapewnić naszym klientom jak najlepsze dostosowanie do ich potrzeb
+                nasze produkty tworzone są na zamówienie. Zapytaj o wycene korzystając z naszego formularza kontaktowego kliknij tutaj
+                <a href="link" class="link">Kliknij tutaj</a>
+            </h2>
+        </section>
         <section class="product__recommend d-flex flex-center">
             <div class="row">
                 <div class="col-1-of-2">

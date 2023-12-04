@@ -13,7 +13,6 @@
             color: $color-white;
             text-transform: uppercase;
             font-size: 4rem;
-
         }
         &__heading {
             position: absolute;
@@ -22,10 +21,10 @@
             font-size: 4rem;
             left: 50%;
             top: 45%;
-            opacity: .4;
+            opacity: 0.4;
             width: 100%;
             text-align: center;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             letter-spacing: 2rem;
             mix-blend-mode: screen;
             @include respond(tab-port) {
@@ -53,20 +52,26 @@
             bottom: 10%;
             gap: 5remrem;
 
-            h5 {
+            h5[data-after] {
                 font-size: 4rem;
-                letter-spacing: .2rem;
+                letter-spacing: 0.2rem;
+                line-height: 4rem;
                 text-align: center;
                 width: 100%;
+                display: flex !important;
+                justify-content: center !important;
                 @include respond(tab-port) {
                     font-size: 3rem;
+                }
+                &::after {
+                    content: attr(data-after);
                 }
             }
             p {
                 width: 100%;
                 font-weight: 100;
                 color: #aaa;
-                letter-spacing: .2rem;
+                letter-spacing: 0.2rem;
                 font-size: 2rem;
                 text-align: center;
                 white-space: nowrap;

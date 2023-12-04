@@ -11,7 +11,7 @@
     <meta name="color-scheme" content="dark">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/product.js', 'resources/js/nav.js', 'resources/js/preloader.js'])
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/odometer.min.js', 'resources/js/product.js', 'resources/js/nav.js', 'resources/js/preloader.js'])
 
 </head>
 
@@ -21,21 +21,21 @@
     <main class="product">
         <section class="section product__hero"
             style="background-image: linear-gradient(#ffffff00 50%,rgb(0, 0, 0)), url('{{ asset('img/rb7-hero.png') }}')">
-            {{-- <h1 class="product__hero__heading">RB11</h1> --}}
-            <div class="product__hero__stats \">
+            <h1 class="product__hero__heading">Śrutownica RB7</h1>
+            <div class="product__hero__stats">
                 <div class="product__hero__stats__item d-flex
                 color-white flex-center">
-                <h5>7kw</h5>
-                <p>{{ __('products/rb7.power') }}</p>
-            </div>
-            <div class="product__hero__stats__item d-flex color-white flex-center">
-                <h5>4 min</h5>
-                <p>{{ __('products/rb7.time') }}</p>
-            </div>
-            <div class="product__hero__stats__item d-flex color-white flex-center">
-                <h5>100%</h5>
-                <p>{{ __('products/rb7.happines') }}</p>
-            </div>
+                    <h5 class="odometer " value="7" data-after="kW">7</h5>
+                    <p>{{ __('products/rb11.power') }}</p>
+                </div>
+                <div class="product__hero__stats__item d-flex color-white flex-center">
+                    <h5 class="odometer" value="4" data-after="min"></h5>
+                    <p>{{ __('products/rb11.time') }}</p>
+                </div>
+                <div class="product__hero__stats__item d-flex color-white flex-center">
+                    <h5 class="odometer" value="100" data-after="%">100</h5>
+                    <p>{{ __('products/rb11.happines') }}</p>
+                </div>
             </div>
         </section>
         <section class="section product__about ">
@@ -192,7 +192,8 @@
             </div>
             <h5 class="heading-3 product__underlined text--center color-white mt-3 pb-3">
 
-                {{ __('products/rb7.airPart1') }} <span class="underlined"> {{ __('products/rb7.airPart2') }} </span> {{ __('products/rb7.airPart3') }}
+                {{ __('products/rb7.airPart1') }} <span class="underlined"> {{ __('products/rb7.airPart2') }} </span>
+                {{ __('products/rb7.airPart3') }}
 
             </h5>
         </section>
@@ -213,7 +214,8 @@
                         </article>
                     </div>
                     <div class="col-1-of-2">
-                        <img class="product__text-image__image" src="{{ asset('img/silnik.png') }}" alt=" {{ __('products/rb7.motorAlt') }}">
+                        <img class="product__text-image__image" src="{{ asset('img/silnik.png') }}"
+                            alt=" {{ __('products/rb7.motorAlt') }}">
                     </div>
                 </div>
             </div>
@@ -287,6 +289,11 @@
                 allowfullscreen></iframe>
 
         </section>
+        <section class="section background--dark--gradient">
+            <h2 class="heading-2">Aby zapewnić naszym klientom jak najlepsze dostosowanie do ich potrzeb nasze produkty
+                tworzone są na zamówienie. Aby przejść do formularza kontaktowego kliknij tutaj 
+                <a href="link">Kliknij tutaj</a></h2>
+        </section>
 
         <section class="product__recommend d-flex flex-center">
             <div class="row">
@@ -301,7 +308,8 @@
                     </article>
                 </div>
                 <div class="col-1-of-2">
-                    <img class="product__recommend__image" src="{{ asset('img/pf90.png') }}" alt="{{ __('products/rb7.recommendAlt') }}">
+                    <img class="product__recommend__image" src="{{ asset('img/pf90.png') }}"
+                        alt="{{ __('products/rb7.recommendAlt') }}">
                 </div>
             </div>
         </section>

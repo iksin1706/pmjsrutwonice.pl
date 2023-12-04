@@ -14,12 +14,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0N1NN596J"></script>
-    <script>
-
-    </script>
+    <script></script>
 
 
-    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/index.js', 'resources/js/preloader.js', 'resources/js/nav.js'])
+    @vite(['resources/scss/app.scss', 'resources/css/app.css', 'resources/js/odometer.min.js', 'resources/js/index.js', 'resources/js/preloader.js', 'resources/js/nav.js'])
 
 
 
@@ -231,13 +229,16 @@
                     </div>
                     <div class="company-info__stats trigger clamp d-flex flex-r">
                         <div class="stats trigger">
-                            <div class="stat__number" id="number1">0+</div>
+                            <div class="stat__number flex-r odometer" id="number1" value="10" data-after="+">
+                                00</div>
                             <div class="stat__description">{{ __('home.experience') }}</div>
 
-                            <div class="stat__number" id="number2">0+</div>
+                            <div class="stat__number flex-r odometer" id="number2" value="11" data-after="+">
+                                00</div>
                             <div class="stat__description">{{ __('home.countries') }}</div>
 
-                            <div class="stat__number" id="number3">0+</div>
+                            <div class="stat__number flex-r odometer" id="number3" value="684"data-after="+">000
+                            </div>
                             <div class="stat__description">{{ __('home.happyClients') }}</div>
                         </div>
                     </div>
@@ -248,66 +249,76 @@
                 </p>
                 <div class="slider trigger animation-finished pb-3">
                     <div class="slide">
-                        <div class="slide__image-container">
-                            <img class="slide__image " draggable="false" src="{{ asset('img/rb11.JPG') }}"
-                                alt="{{ __('home.rimBlastersAlt') }}">
-                        </div>
-                        <h3 class="slide__preview">{{ __('home.rimBlasters') }}</h3>
-                        <div class="slide__text">
-                            <h3>{{ __('home.rimBlasters') }}</h3>
-                            <p>{{ __('home.rimBlastersDescription') }}</p>
+                        <div class="slide-content">
+                            <div class="slide__image-container">
+                                <img class="slide__image " draggable="false" src="{{ asset('img/test.png') }}"
+                                    alt="{{ __('home.rimBlastersAlt') }}">
+                            </div>
+                            <h3 class="slide__preview">{{ __('home.rimBlasters') }}</h3>
+                            <div class="slide__text">
+                                <h3>{{ __('home.rimBlasters') }}</h3>
+                                <p>{{ __('home.rimBlastersDescription') }}</p>
 
+                            </div>
+                            <a class="slide__btn btn btn--filled"
+                                onclick="document.querySelector('.pop-up').classList.add('pop-up--active')">{{ __('home.seeOffer') }}</a>
                         </div>
-                        <a class="slide__btn btn btn--filled"
-                            onclick="document.querySelector('.pop-up').classList.add('pop-up--active')">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
-                        <div class="slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
-                                alt="{{ __('home.dustCollectorsAlt') }}">
+                        <div class="slide-content">
+                            <div class="slide__image-container">
+                                <img class="slide__image" draggable="false" src="{{ asset('img/test.png') }}"
+                                    alt="{{ __('home.dustCollectorsAlt') }}">
+                            </div>
+                            <h3 class="slide__preview">{{ __('home.dustCollectors') }}</h3>
+                            <div class="slide__text">
+                                <h3>{{ __('home.dustCollectors') }}</h3>
+                                <p>{{ __('home.dustCollectorsDescription') }}</p>
+                            </div>
+                            <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                         </div>
-                        <h3 class="slide__preview">{{ __('home.dustCollectors') }}</h3>
-                        <div class="slide__text">
-                            <h3>{{ __('home.dustCollectors') }}</h3>
-                            <p>{{ __('home.dustCollectorsDescription') }}</p>
-                        </div>
-                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
-                        <div class="slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
-                                alt="{{ __('home.sandblastersAlt') }}">
+                        <div class="slide-content">
+                            <div class="slide__image-container">
+                                <img class="slide__image" draggable="false" src="{{ asset('img/test.png') }}"
+                                    alt="{{ __('home.sandblastersAlt') }}">
+                            </div>
+                            <h3 class="slide__preview">{{ __('home.sandblasters') }}</h3>
+                            <div class="slide__text">
+                                <h3>{{ __('home.sandblasters') }}</h3>
+                                <p>{{ __('home.sandblastersDescription') }}</p>
+                            </div>
+                            <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                         </div>
-                        <h3 class="slide__preview">{{ __('home.sandblasters') }}</h3>
-                        <div class="slide__text">
-                            <h3>{{ __('home.sandblasters') }}</h3>
-                            <p>{{ __('home.sandblastersDescription') }}</p>
-                        </div>
-                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
-                        <div class=" slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
-                                alt="{{ __('home.ovenAlt') }}">
+                        <div class="slide-content">
+                            <div class=" slide__image-container">
+                                <img class="slide__image" draggable="false" src="{{ asset('img/test.png') }}"
+                                    alt="{{ __('home.ovenAlt') }}">
+                            </div>
+                            <h3 class="slide__preview">{{ __('home.oven') }}</h3>
+                            <div class="slide__text">
+                                <h3>{{ __('home.oven') }}</h3>
+                                <p>{{ __('home.ovenDescription') }}</p>
+                            </div>
+                            <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                         </div>
-                        <h3 class="slide__preview">{{ __('home.oven') }}</h3>
-                        <div class="slide__text">
-                            <h3>{{ __('home.oven') }}</h3>
-                            <p>{{ __('home.ovenDescription') }}</p>
-                        </div>
-                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                     <div class="slide">
-                        <div class="slide__image-container">
-                            <img class="slide__image" draggable="false" src="{{ asset('img/rb11.JPG') }}"
-                                alt="{{ __('home.otherAlt') }}">
+                        <div class="slide-content">
+                            <div class="slide__image-container">
+                                <img class="slide__image" draggable="false" src="{{ asset('img/test.png') }}"
+                                    alt="{{ __('home.otherAlt') }}">
+                            </div>
+                            <h3 class="slide__preview">{{ __('home.other') }}</h3>
+                            <div class="slide__text">
+                                <h3>{{ __('home.other') }}</h3>
+                                <p>{{ __('home.otherDescription') }}</p>
+                            </div>
+                            <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                         </div>
-                        <h3 class="slide__preview">{{ __('home.other') }}</h3>
-                        <div class="slide__text">
-                            <h3>{{ __('home.other') }}</h3>
-                            <p>{{ __('home.otherDescription') }}</p>
-                        </div>
-                        <a class="slide__btn btn btn--filled">{{ __('home.seeOffer') }}</a>
                     </div>
                 </div>
             </section>
