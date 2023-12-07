@@ -31,13 +31,13 @@
 
             @foreach( __('faq.qa') as $qa)
             <div class="faq-item">
-                <div class="faq-question"> {{!!$qa->question!!}}</div>
+                <div class="faq-question">{!! $qa->question !!}</div>
                 <div class="icon-container"><i class="fa fa-arrow-right"></i></div>
             </div>
             <div class="faq-answer">
-                <p> {{!! $qa->anserw !!}}</p>
+                <p>{!! $qa->anserw !!}</p>
             </div>             
-            @endforeach
+        @endforeach
         </div>
     </div>
     @include('layout/footer')

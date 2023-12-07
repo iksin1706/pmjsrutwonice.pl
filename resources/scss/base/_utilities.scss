@@ -201,6 +201,11 @@
     background: #101010;
 }
 
+.background--black {
+    background: #000;
+}
+
+
 .background--skew {
     transform: skewY(-2deg);
 
@@ -208,6 +213,11 @@
         transform: skewY(2deg);
     }
 }
+
+.glow {
+    filter: drop-shadow(0 0 5px $color-primary);
+}
+
 .background--dark--gradient {
     background: linear-gradient(
             $color-dark-0,

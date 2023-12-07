@@ -267,7 +267,7 @@
                     <div class="slide">
                         <div class="slide-content">
                             <div class="slide__image-container">
-                                <img class="slide__image" draggable="false" src="{{ asset('img/test.png') }}"
+                                <img class="slide__image" draggable="false" src="{{ asset('img/test2.png') }}"
                                     alt="{{ __('home.dustCollectorsAlt') }}">
                             </div>
                             <h3 class="slide__preview">{{ __('home.dustCollectors') }}</h3>
@@ -414,7 +414,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button class="email-send btn btn--filled">{{ __('home.send') }} &rarr;</button>
+                            <button class="email-send btn btn--filled"> {{ __('home.send') }} <i class="fa fa-paper-plane"></i></button>
                         </div>
 
                     </form>
