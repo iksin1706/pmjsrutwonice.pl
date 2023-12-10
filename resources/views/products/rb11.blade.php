@@ -51,7 +51,7 @@
                 </div>
             </div>
         </section>
-        <section class="swiper-section background--dark--gradient">
+        <section class="swiper-section background--dark--gradient2">
             <div class="row" style="height: 100%">
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2"
                     data-aos="fade-up">

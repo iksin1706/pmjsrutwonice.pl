@@ -359,6 +359,10 @@
         clear: both;
     }
 }
+
+.background--dark--gradient2 {
+    background: linear-gradient(#000, rgba(32, 32, 32, 0) 15%, rgba(32, 32, 32, 0) 85%, #000 100%), linear-gradient(to right, #101010, #101010);;
+}
 .link {
     box-sizing: border-box;
     border-bottom: 2px solid rgba($color-primary, 0);

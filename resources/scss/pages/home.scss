@@ -91,19 +91,26 @@
 }
 
 .flagship {
-    animation: flagship-background 10s infinite ease-in-out;
-    background: url("img/123123.jpg");
+    //animation: flagship-background 10s infinite ease-in-out;
+    //background: url("img/123123.jpg");
     background-position: 100% 50%;
     background-attachment: fixed;
     background-color: #000000;
+    position: relative;
+    overflow: hidden;
 
     z-index: 2;
     @include respond(tab-port) {
         & {
             text-align: center;
-            background: $color-primary !important;
+            //background: $color-primary !important;
             background-attachment: local;
         }
+    }
+
+    &-content{
+        z-index: 10;
+        position: relative;
     }
 
     &__text {
@@ -134,6 +141,45 @@
         z-index: 3;
     }
 }
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    
+    50% {
+      scale: 1 1.5;
+    }
+    
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  #blob {
+    background-color: white;
+    height: 24vmax;
+    aspect-ratio: 1.5;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, $color-primary, rgb(255, 123, 0));
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+  }
+  
+  #blur {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+  }
+  
 
 .social-media {
     margin-top: 2rem;

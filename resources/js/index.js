@@ -32,11 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const handleMoveEvent = (xPosition) => {
-    if (isComparisonAnimationDone) {
-      const delta = xPosition - banner.offsetLeft;
+    // if (isComparisonAnimationDone) {
+      const delta = xPosition - banner.getBoundingClientRect().left;
       devLayer.style.width = `${delta}px`;
       devLayer.style.borderRight = banner.offsetWidth / 2 > delta ? "solid 5px #ffffff99" : "solid 5px #ffffff99";
-    }
+    // }
   };
 
   const animateCountUp = (targetElement, endValue, duration) => {
@@ -123,17 +123,30 @@ document.addEventListener("DOMContentLoaded", () => {
           }
           return;
         }
+        if (entry.target.classList.contains('flagship__text')) {
+          blob.animate({
+            left: `80%`,
+            top: `25%`,
+          // aspectRatio: '1.5'
+          }, { duration: 2000, fill: "forwards", easing: "ease-out" });
+        }
         if (entry.target.classList.contains("banner")) {
-
-          devLayer.style.width = "25%";
-          console.log('anim');
-          setTimeout(function () {
-            devLayer.style.width = "45%";
-            setTimeout(function () {
-              isComparisonAnimationDone = true;
-              devLayer.style.transition = "0s";
-            }, 1000);
-          }, 1000);
+          blob.animate({
+            left: `50%`,
+            top: `80%`,
+            //aspectRatio: '3'
+          }, { duration: 2000, fill: "forwards", easing: "ease-out" });
+          if (!isComparisonAnimationDone) {
+            // devLayer.style.width = "25%";
+            // console.log('anim');
+            // setTimeout(function () {
+            //   devLayer.style.width = "50%";
+            //   setTimeout(function () {
+            //     isComparisonAnimationDone = true;
+            //     devLayer.style.transition = "0s";
+            //   }, 1000);
+            // }, 1000);
+          }
         }
         entry.target.classList.add('animated');
       }
@@ -195,14 +208,25 @@ const animateOdometers = () => {
 }
 
 document.querySelector(".slider").onmousemove = e => {
-  for(const card of document.getElementsByClassName("slide")) {
+  for (const card of document.getElementsByClassName("slide")) {
     const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
+      x = e.clientX - rect.left,
+      y = e.clientY - rect.top;
 
-    card.style.setProperty("--mouse-x", `${x-50}px`);
+    card.style.setProperty("--mouse-x", `${x - 50}px`);
     card.style.setProperty("--mouse-y", `${y}px`);
   };
 }
 
 AOS.init();
+
+
+document.querySelector('.flagship').onpointermove = event => {
+  // const { clientX, clientY } = event;
+
+  // blob.animate({
+  //   left: `${clientX}px`,
+  //   top: `${clientY}px`
+  // }, { duration: 3000, fill: "forwards" });
+}
+

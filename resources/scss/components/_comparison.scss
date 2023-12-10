@@ -35,7 +35,7 @@
         & {
             font-size: 3rem;
             & > .color--primary {
-                color: black !important;
+                // color: black !important;
             }
         }
     }
@@ -64,12 +64,12 @@
 .banner {
     position: absolute;
     overflow: hidden;
-    filter: drop-shadow(0px 10px 10px #202020);
+    //filter: drop-shadow(0px 10px 10px #202020);
     &.dev {
         transform: skew(0deg);
         border-right: rgba(white, 0.5) solid 4px;
-        width: 75%;
-        transition: 1s ease-in-out;
+        width: 47.5%;
+        // /transition: 1s ease-in-out;
 
         .banner-content {
             transform: skew(0deg);

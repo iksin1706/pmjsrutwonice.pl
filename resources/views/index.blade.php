@@ -323,36 +323,41 @@
                 </div>
             </section>
         </article>
-        <section class="flagship section pt-4" style="background-image: url('{{ asset('img/background.jpg') }}');">
-            <div class="section__row">
-                <div class="flagship__text clamp ">
-                    <h2 class="heading-2 color--black">{{ __('home.flagship') }}</h2>
-                    <p class="paragraph mt-2 mb-2 color--black text--normal">
-                        {{ __('home.flagshipDescription') }}
-                    </p>
-                    <a href="rb11" class="flagship__btn btn btn--filled">{{ __('home.learnMore') }}</a>
+        <section class="flagship section pt-4" style="postion:absolute;">
+            <div id="blob"></div>
+            <div id="blur"></div>
+            <div class="flagship-content d-flex flex-center">
+                <div class="section__row">
+                    <div class="flagship__text clamp trigger">
+                        <h2 class="heading-2 color--white">{{ __('home.flagship') }}</h2>
+                        <p class="paragraph mt-2 mb-2 color--white text--normal">
+                            {{ __('home.flagshipDescription') }}
+                        </p>
+                        <a href="rb11" class="btn btn--primary color--black">{{ __('home.learnMore') }}</a>
+                    </div>
+                    <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}"
+                        alt="{{ __('home.rimBlastersAlt') }}">
                 </div>
-                <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}"
-                    alt="{{ __('home.rimBlastersAlt') }}">
-            </div>
-            <div class="beforeafter">
-                <h3 class="color--black">{{ __('home.before') }}</h3>
-                <h3 class="color--primary">{{ __('home.after') }}</h3>
-            </div>
+                <div class="beforeafter">
+                    <h3 class="color--white">{{ __('home.before') }}</h3>
+                    <h3 class="color--primary">{{ __('home.after') }}</h3>
+                </div>
 
-            <div class="banner-container">
-                <div id="banner-wrapper" class="banner-wrapper">
-                    <div class="banner design trigger">
-                        <div class="banner-content">
-                            <img src="{{ asset('img/normal2.png') }}" alt="{{ __('home.normalRimAlt') }}" />
+                <div class="banner-container">
+                    <div id="banner-wrapper" class="banner-wrapper">
+                        <div class="banner design trigger">
+                            <div class="banner-content">
+                                <img src="{{ asset('img/normal2.png') }}" alt="{{ __('home.normalRimAlt') }}" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="banner dev">
-                        <div class="banner-content">
-                            <img src="{{ asset('img/rust2.png') }}" alt="{{ __('home.rustRimAlt') }}" />
+                        <div class="banner dev">
+                            <div class="banner-content">
+                                <img src="{{ asset('img/rust2.png') }}" alt="{{ __('home.rustRimAlt') }}" />
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
         </section>
         <section class="section contact pt-3 pb-3" id="contact">
             <h2 class="contact__label trigger text-center w-100">{{ __('home.interested') }} <a
@@ -414,7 +419,8 @@
                         </div>
 
                         <div class="form-group">
-                            <button class="email-send btn btn--filled"> {{ __('home.send') }} <i class="fa fa-paper-plane"></i></button>
+                            <button class="email-send btn btn--filled"> {{ __('home.send') }} <i
+                                    class="fa fa-paper-plane"></i></button>
                         </div>
 
                     </form>
