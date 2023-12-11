@@ -20,6 +20,7 @@
         </li>
         <li><a href="..#about">{{ __('nav.about') }}</a></li>
         <li><a href="..#contact">{{ __('nav.contact') }}</a></li>
+        <li><a href="order">{{ __('nav.order') }}</a></li>
         <li><a href="faq">{{ __('nav.faq') }}</a></li>
     </ul>
 
@@ -53,7 +54,10 @@
                     </ul>
                 </li>
 
-                <li class="nav--mobile__item"><a href="#contact" class="nav--mobile__link">{{ __('nav.contact') }}</a>
+                <li class="nav--mobile__item"><a href="/#contact" class="nav--mobile__link">{{ __('nav.contact') }}</a>
+                </li>
+
+                <li class="nav--mobile__item"><a href="order" class="nav--mobile__link">{{ __('nav.order') }}</a>
                 </li>
                 <li class="nav--mobile__item"><a href="faq" class="nav--mobile__link">{{ __('nav.faq') }}</a></li>
                 <li class="nav--mobile__item nav--mobile__item--products">

@@ -13,4 +13,5 @@ return [
     'pk'=> 'Piaskarka',
     'other'=> 'Pozostałe',
     'languages'=> 'Języki(Languages)',
+    'order' => 'Zamawianie'
 ];
