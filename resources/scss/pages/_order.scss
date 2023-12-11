@@ -1,0 +1,271 @@
+@mixin breakpoint($point) {
+	@if $point == big {
+		@media screen and (min-width: 601px){@content;}
+	}	
+	@else if $point == small {
+		@media screen and (max-width: 600px){@content;}
+	}
+}
+
+$connectorHeight: 42px;
+$connectorBorderWidth: 1px;
+$connectorBorderColor: #d8d8d8;
+
+$circleSizeSmall: 36px;
+$circlePaddingSmall: 9px;
+
+$circleSizeLarge: 174px;
+$circlePaddingLarge: 48px;
+
+
+.step-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.step-list__item {
+    counter-increment: step-counter;
+    position: relative;
+    
+    &:before {
+        content: counter(step-counter);
+        font-weight: 300;
+        color: $connectorBorderColor;
+    }
+    
+    h2 {
+        font-size: $font-size-2-5;
+        line-height: 30px;
+        font-weight: 300;
+    }
+    
+    .icon {
+        border-radius: 50%;
+        display: block;
+        flex: 0 0 auto;
+        background-color: $color-primary;
+        filter: drop-shadow(0px 0px 4px $color-primary);
+        
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    .body {
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 300;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 18px;
+    }
+    
+    &:nth-child(odd) {
+        .content {
+            justify-content: flex-start;
+        }        
+    }
+    
+    &:nth-child(even) {
+        .content {
+            justify-content: flex-end;
+        }
+    }
+    
+    &:first-child {
+        > .step-list__item__inner {
+            &:before {
+                content: none;
+            }
+        }
+    }
+    
+    &:last-child {
+        > .step-list__item__inner {
+            &:after {
+                content: none;
+            }
+        }
+    }
+    
+    + li {
+        margin-top: $connectorHeight * 2;
+        
+        > div {
+            margin-top: -$connectorBorderWidth;
+        }
+    }
+    
+    @include breakpoint(small) {
+        display: flex;
+        
+        &:before {
+            content: counter(step-counter);        
+            position: relative;
+            font-size: 36px;
+            line-height: 42px;
+            font-weight: 300;
+            margin-right: 12px;
+        }
+        
+        .icon {            
+            order: 0;
+            width: $circleSizeSmall;
+            height: $circleSizeSmall;
+            padding: $circlePaddingSmall;
+            position: absolute;
+            left: -9px;
+            top: 42px;
+        }
+        
+        .body {
+            order: 1;
+            margin-top: 8px;
+            margin-left: 12px;
+        }
+        
+        .content {
+            align-items: flex-start;
+            
+            &:before {
+                content: '';
+                position: absolute;
+                border-left: $connectorBorderColor;
+                height: 100%;
+                left: 9px;
+                bottom: 0;
+                display: block;
+                width: 1px;
+                background: $connectorBorderColor;
+                top: 84px;
+            }
+        }
+        
+        &:last-child {
+            .content {
+                &:before {
+                    content: none;
+                }
+            }
+        }
+    }
+    
+    @include breakpoint(big) {
+        &:before {
+            content: counter(step-counter);        
+            position: absolute;
+            font-size: 90px;
+            line-height: 1;
+            font-weight: 300;
+            color: #d8d8d8;
+        }
+        
+        .icon {            
+            width: $circleSizeLarge;
+            height: $circleSizeLarge;
+            padding: $circlePaddingLarge;
+        }
+        
+        .body {
+            flex: 0 1 33.3333%;
+            margin-top: $connectorHeight * 2;
+            font-size: $font-size-default;
+        }
+        
+        .content {
+            align-items: flex-end;
+        }        
+        
+        > .step-list__item__inner {
+            position: relative;
+
+            &:before,
+            &:after {
+                border-width: 0px;
+                border-style: solid;
+                border-color: #d8d8d8;
+                display: block;
+                content: '';
+                position: absolute;            
+                height: $connectorHeight;
+                width: calc( 33.3333% - #{$connectorHeight} );
+                //filter: drop-shadow(0px 0px 10px $color-primary);
+            }
+        }
+        
+        &:nth-child(odd) {
+            > .step-list__item__inner {
+                text-align: right;
+                
+                &:before,
+                &:after {
+                    border-left-width: $connectorBorderWidth;
+                    left: calc( 33.3333% - #{$connectorHeight / 2} );
+                }
+
+                &:before {
+                    border-top-width: $connectorBorderWidth;
+                    border-top-left-radius: $connectorHeight;
+                    margin-top: -$connectorHeight;
+                }
+
+                &:after {
+                    border-bottom-width: $connectorBorderWidth;
+                    border-bottom-left-radius: $connectorHeight;
+                    margin-bottom: -$connectorHeight;
+                }
+            }
+            
+            &:before {
+                left: 0;
+                margin-left: 33.3333%;
+                transform: translateX(-100%);
+            }
+            
+            .icon {
+                margin-left: 72px;
+            }
+        }
+        
+        &:nth-child(even) {
+            > .step-list__item__inner {            
+                &:before,
+                &:after {
+                    border-right-width: $connectorBorderWidth;
+                    right: calc( 33.3333% - #{$connectorHeight / 2} );
+                }
+
+                &:before {                
+                    border-top-width: $connectorBorderWidth;
+                    border-top-right-radius: $connectorHeight;                
+                    margin-top: -$connectorHeight;
+                }
+
+                &:after {
+                    border-bottom-width: $connectorBorderWidth;
+                    border-bottom-right-radius: $connectorHeight;
+                    margin-bottom: -$connectorHeight;
+                }
+            }
+            
+            &:before {
+                right: 0;
+                margin-right: 33.3333%;
+                transform: translateX(100%);
+            }
+            
+            .icon {
+                margin-right: 72px;
+            }
+            
+            .body {
+                order: 1;
+            }
+        }
+    }
+}
