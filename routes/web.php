@@ -39,6 +39,9 @@ Route::prefix('{lang?}')->middleware('locale')->group(function() {
     Route::get('/policy', function () {
         return view('subpages/policy-terms');
     });
+    Route::get('/order', function () {
+        return view('subpages/order');
+    });
     
 });
 

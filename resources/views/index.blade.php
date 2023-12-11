@@ -338,7 +338,7 @@
                     <img class="flagship__image clamp--smaller" src="{{ asset('img/rb1111.png') }}"
                         alt="{{ __('home.rimBlastersAlt') }}">
                 </div>
-                <div class="beforeafter">
+                <div class="beforeafter trigger">
                     <h3 class="color--white">{{ __('home.before') }}</h3>
                     <h3 class="color--primary">{{ __('home.after') }}</h3>
                 </div>
