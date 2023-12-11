@@ -131,11 +131,11 @@ document.addEventListener("DOMContentLoaded", () => {
           }, { duration: 2000, fill: "forwards", easing: "ease-out" });
         }
         if (entry.target.classList.contains("banner")) {
-          // blob.animate({
-          //   left: `50%`,
-          //   top: `80%`,
-          //   //aspectRatio: '3'
-          // }, { duration: 2000, fill: "forwards", easing: "ease-out" });
+          blob.animate({
+            left: `50%`,
+            top: `80%`,
+            //aspectRatio: '3'
+          }, { duration: 2000, fill: "forwards", easing: "ease-out" });
           if (!isComparisonAnimationDone) {
             // devLayer.style.width = "25%";
             // console.log('anim');
@@ -147,13 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
             //   }, 1000);
             // }, 1000);
           }
-        }
-        if (entry.target.classList.contains("beforeafter")) {
-          blob.animate({
-            left: `50%`,
-            top: `80%`,
-            //aspectRatio: '3'
-          }, { duration: 2000, fill: "forwards", easing: "ease-out" });
         }
         entry.target.classList.add('animated');
       }
