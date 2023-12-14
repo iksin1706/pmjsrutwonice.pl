@@ -394,11 +394,24 @@
                     </picture>
                 </div>
             </div>
-            <h2 class="contact__label text-center trigger">{{ __('home.question') }} <a href="faq"
-                    class="underlined ">
-                    {{ __('home.clickHere') }}</a> {{ __('home.toFAQ') }}</h2>
-            <div class="contact__label">{{ __('home.or') }}</div>
-            <div class="write-to-us"
+            <div id="cards" class="section__row w-100">
+                <div class="card ">
+                    <div class="card-content card-content--center">
+                        {{-- <img class="card__image" src="{{ asset('img/icons/faq.svg') }}" alt=""> --}}
+                        <h4 class="heading-4 p-1 text--center">Często zadawane pytania</h3>
+                            <a href="" class="btn btn--empty color--black">Zobacz</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content card-content--center">
+                        {{-- <img class="card__image" src="{{ asset('img/icons/order-icon-white.svg') }}" alt=""> --}}
+                        <h4 class="heading-4 p-1 text--center">Proces zamawiania produktów</h3>
+                            <a href="" class="btn btn--empty color--black">Zobacz</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="write-to-us mt-3"
                 style="background-image: linear-gradient(105deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.9) 50%, transparent 50%), url('{{ asset('img/contact-background.webp') }}')">
                 <div class="write-to-us__form">
                     <form action="#" class="form" id="email-form">

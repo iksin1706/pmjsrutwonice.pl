@@ -41,3 +41,23 @@ elements.forEach((el, index) => {
 
     od.update(el.getAttribute('value'));
 })
+document.querySelector("#cards").onmousemove = e => {
+    for (const card of document.getElementsByClassName("card")) {
+        const rect = card.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x - 50}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+    };
+}
+document.querySelector(".cards2").onmousemove = e => {
+    for (const card of document.getElementsByClassName("card")) {
+        const rect = card.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x - 50}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+    };
+}
